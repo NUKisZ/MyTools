@@ -10,15 +10,19 @@ import UIKit
 
 class FirstViewController: BaseViewController {
 
+    var label:UILabel{
+        let l = ZKTools.createLabel(CGRect(x: 0, y: 70, width: 100, height: 40), title: "label", textAlignment: nil, font: nil, textColor: UIColor.red)
+        return l
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.addSubview(label)
         download()
-        print(kInfoDic)
         
     }
-    fileprivate func download(){
+    private func download(){
         let download = ZKDownloader()
         download.delegate = self
         download.getWithUrl(kFirstUrl)
@@ -45,10 +49,11 @@ class FirstViewController: BaseViewController {
 extension FirstViewController:ZKDownloaderDelegate{
     func downloader(_ download: ZKDownloader, didFailWithError error: NSError) {
         print(error)
+        
     }
     func downloader(_ download: ZKDownloader, didFinishWithData data: Data?) {
         if download.type == 1 {
-            //print(ZKTools.stringWithData(data: data!))
+            print(ZKTools.stringWithData(data: data!))
         }
     }
 }
