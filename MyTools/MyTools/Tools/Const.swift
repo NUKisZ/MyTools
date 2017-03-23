@@ -16,7 +16,7 @@ public let kSysVersion = UIDevice.current.systemVersion                         
 public let kDeviceUUID = (UIDevice.current.identifierForVendor?.uuidString)!     //获取设备唯一标识符 例如：FBF2306E-A0D8-4F4B-BDED-9333B627D3E6
 public let kDeviceModel = UIDevice.current.model                                 //获取设备的型号 例如：iPhone
 
-//private let infoDic = Bundle.main.infoDictionary
+public let kInfoDic = Bundle.main.infoDictionary! as [String:Any]
 public let kAppVersion = (Bundle.main.infoDictionary?["CFBundleShortVersionString"])! // 获取App的版本
 public let kAppBuildVersion = (Bundle.main.infoDictionary?["CFBundleVersion"])!       // 获取App的build版本
 public let kAppName = (Bundle.main.infoDictionary?["CFBundleDisplayName"])!           // 获取App的名称

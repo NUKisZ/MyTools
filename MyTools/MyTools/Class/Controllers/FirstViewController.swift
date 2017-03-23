@@ -15,13 +15,13 @@ class FirstViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
         download()
-        
+        print(kInfoDic)
         
     }
     fileprivate func download(){
         let download = ZKDownloader()
         download.delegate = self
-        download.getWithUrl("https://uilucky.com/data/videoData.json")
+        download.getWithUrl(kFirstUrl)
         download.type=1
         
     }
@@ -48,7 +48,7 @@ extension FirstViewController:ZKDownloaderDelegate{
     }
     func downloader(_ download: ZKDownloader, didFinishWithData data: Data?) {
         if download.type == 1 {
-            print(ZKTools.stringWithData(data: data!))
+            //print(ZKTools.stringWithData(data: data!))
         }
     }
 }
