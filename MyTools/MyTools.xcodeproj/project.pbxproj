@@ -12,6 +12,15 @@
 		0B79C3781E8388D600CF92B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B79C3761E8388D600CF92B2 /* Main.storyboard */; };
 		0B79C37A1E8388D600CF92B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B79C3791E8388D600CF92B2 /* Assets.xcassets */; };
 		0B79C37D1E8388D600CF92B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B79C37B1E8388D600CF92B2 /* LaunchScreen.storyboard */; };
+		0B79C3901E83907D00CF92B2 /* CacheTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3851E83907D00CF92B2 /* CacheTool.swift */; };
+		0B79C3921E83907D00CF92B2 /* UIControl+recurClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3881E83907D00CF92B2 /* UIControl+recurClick.m */; };
+		0B79C3961E83907D00CF92B2 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C38D1E83907D00CF92B2 /* Const.swift */; };
+		0B79C3971E83907D00CF92B2 /* MyTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C38E1E83907D00CF92B2 /* MyTools.swift */; };
+		0B79C3981E83907D00CF92B2 /* ZKDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C38F1E83907D00CF92B2 /* ZKDownloader.swift */; };
+		0B79C39E1E8390B400CF92B2 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C39A1E8390B400CF92B2 /* ProgressHUD.swift */; };
+		0B79C39F1E8390B400CF92B2 /* 保存成功.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B79C39B1E8390B400CF92B2 /* 保存成功.png */; };
+		0B79C3A01E8390B400CF92B2 /* 提示底.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B79C39C1E8390B400CF92B2 /* 提示底.png */; };
+		0B79C3A11E8390B400CF92B2 /* 提示底@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B79C39D1E8390B400CF92B2 /* 提示底@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,17 @@
 		0B79C3791E8388D600CF92B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B79C37C1E8388D600CF92B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B79C37E1E8388D700CF92B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B79C3851E83907D00CF92B2 /* CacheTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheTool.swift; sourceTree = "<group>"; };
+		0B79C3871E83907D00CF92B2 /* UIControl+recurClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+recurClick.h"; sourceTree = "<group>"; };
+		0B79C3881E83907D00CF92B2 /* UIControl+recurClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+recurClick.m"; sourceTree = "<group>"; };
+		0B79C38D1E83907D00CF92B2 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		0B79C38E1E83907D00CF92B2 /* MyTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTools.swift; sourceTree = "<group>"; };
+		0B79C38F1E83907D00CF92B2 /* ZKDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKDownloader.swift; sourceTree = "<group>"; };
+		0B79C39A1E8390B400CF92B2 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
+		0B79C39B1E8390B400CF92B2 /* 保存成功.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保存成功.png"; sourceTree = "<group>"; };
+		0B79C39C1E8390B400CF92B2 /* 提示底.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "提示底.png"; sourceTree = "<group>"; };
+		0B79C39D1E8390B400CF92B2 /* 提示底@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "提示底@2x.png"; sourceTree = "<group>"; };
+		0B79C3A21E8390E700CF92B2 /* HeaderBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderBridge.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +74,49 @@
 		0B79C3711E8388D600CF92B2 /* MyTools */ = {
 			isa = PBXGroup;
 			children = (
+				0B79C3841E83907D00CF92B2 /* ThirdLibrary */,
+				0B79C38C1E83907D00CF92B2 /* Tools */,
 				0B79C3721E8388D600CF92B2 /* AppDelegate.swift */,
 				0B79C3741E8388D600CF92B2 /* ViewController.swift */,
 				0B79C3761E8388D600CF92B2 /* Main.storyboard */,
 				0B79C3791E8388D600CF92B2 /* Assets.xcassets */,
 				0B79C37B1E8388D600CF92B2 /* LaunchScreen.storyboard */,
 				0B79C37E1E8388D700CF92B2 /* Info.plist */,
+				0B79C3A21E8390E700CF92B2 /* HeaderBridge.h */,
 			);
 			path = MyTools;
+			sourceTree = "<group>";
+		};
+		0B79C3841E83907D00CF92B2 /* ThirdLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				0B79C3991E8390B400CF92B2 /* ProgressHUD */,
+				0B79C3851E83907D00CF92B2 /* CacheTool.swift */,
+				0B79C3871E83907D00CF92B2 /* UIControl+recurClick.h */,
+				0B79C3881E83907D00CF92B2 /* UIControl+recurClick.m */,
+			);
+			path = ThirdLibrary;
+			sourceTree = "<group>";
+		};
+		0B79C38C1E83907D00CF92B2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				0B79C38D1E83907D00CF92B2 /* Const.swift */,
+				0B79C38E1E83907D00CF92B2 /* MyTools.swift */,
+				0B79C38F1E83907D00CF92B2 /* ZKDownloader.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		0B79C3991E8390B400CF92B2 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0B79C39A1E8390B400CF92B2 /* ProgressHUD.swift */,
+				0B79C39B1E8390B400CF92B2 /* 保存成功.png */,
+				0B79C39C1E8390B400CF92B2 /* 提示底.png */,
+				0B79C39D1E8390B400CF92B2 /* 提示底@2x.png */,
+			);
+			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +180,10 @@
 			files = (
 				0B79C37D1E8388D600CF92B2 /* LaunchScreen.storyboard in Resources */,
 				0B79C37A1E8388D600CF92B2 /* Assets.xcassets in Resources */,
+				0B79C3A01E8390B400CF92B2 /* 提示底.png in Resources */,
 				0B79C3781E8388D600CF92B2 /* Main.storyboard in Resources */,
+				0B79C3A11E8390B400CF92B2 /* 提示底@2x.png in Resources */,
+				0B79C39F1E8390B400CF92B2 /* 保存成功.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +195,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B79C3751E8388D600CF92B2 /* ViewController.swift in Sources */,
+				0B79C3981E83907D00CF92B2 /* ZKDownloader.swift in Sources */,
+				0B79C39E1E8390B400CF92B2 /* ProgressHUD.swift in Sources */,
+				0B79C3921E83907D00CF92B2 /* UIControl+recurClick.m in Sources */,
+				0B79C3971E83907D00CF92B2 /* MyTools.swift in Sources */,
 				0B79C3731E8388D600CF92B2 /* AppDelegate.swift in Sources */,
+				0B79C3901E83907D00CF92B2 /* CacheTool.swift in Sources */,
+				0B79C3961E83907D00CF92B2 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +326,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uilucky.MyTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MyTools/HeaderBridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -274,6 +339,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.uilucky.MyTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MyTools/HeaderBridge.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -297,6 +363,7 @@
 				0B79C3831E8388D700CF92B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
