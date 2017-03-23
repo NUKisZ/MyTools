@@ -21,6 +21,11 @@
 		0B79C39F1E8390B400CF92B2 /* 保存成功.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B79C39B1E8390B400CF92B2 /* 保存成功.png */; };
 		0B79C3A01E8390B400CF92B2 /* 提示底.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B79C39C1E8390B400CF92B2 /* 提示底.png */; };
 		0B79C3A11E8390B400CF92B2 /* 提示底@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B79C39D1E8390B400CF92B2 /* 提示底@2x.png */; };
+		0B79C3A51E8394E800CF92B2 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3A41E8394E800CF92B2 /* MainTabBarViewController.swift */; };
+		0B79C3AD1E83962300CF92B2 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3AC1E83962300CF92B2 /* FirstViewController.swift */; };
+		0B79C3AF1E83963300CF92B2 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3AE1E83963300CF92B2 /* SecondViewController.swift */; };
+		0B79C3B11E83963C00CF92B2 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3B01E83963C00CF92B2 /* ThirdViewController.swift */; };
+		0B79C3B31E83978500CF92B2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3B21E83978500CF92B2 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		0B79C39C1E8390B400CF92B2 /* 提示底.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "提示底.png"; sourceTree = "<group>"; };
 		0B79C39D1E8390B400CF92B2 /* 提示底@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "提示底@2x.png"; sourceTree = "<group>"; };
 		0B79C3A21E8390E700CF92B2 /* HeaderBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderBridge.h; sourceTree = "<group>"; };
+		0B79C3A41E8394E800CF92B2 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		0B79C3AC1E83962300CF92B2 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		0B79C3AE1E83963300CF92B2 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		0B79C3B01E83963C00CF92B2 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
+		0B79C3B21E83978500CF92B2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +84,9 @@
 		0B79C3711E8388D600CF92B2 /* MyTools */ = {
 			isa = PBXGroup;
 			children = (
+				0B79C3AA1E83957100CF92B2 /* Resources */,
+				0B79C3A61E8394F200CF92B2 /* Class */,
+				0B79C3A31E8394E800CF92B2 /* Base */,
 				0B79C3841E83907D00CF92B2 /* ThirdLibrary */,
 				0B79C38C1E83907D00CF92B2 /* Tools */,
 				0B79C3721E8388D600CF92B2 /* AppDelegate.swift */,
@@ -117,6 +130,64 @@
 				0B79C39D1E8390B400CF92B2 /* 提示底@2x.png */,
 			);
 			path = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		0B79C3A31E8394E800CF92B2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				0B79C3A41E8394E800CF92B2 /* MainTabBarViewController.swift */,
+				0B79C3B21E83978500CF92B2 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		0B79C3A61E8394F200CF92B2 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				0B79C3A71E8394F200CF92B2 /* Controllers */,
+				0B79C3A81E8394F200CF92B2 /* Models */,
+				0B79C3A91E8394F200CF92B2 /* Views */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		0B79C3A71E8394F200CF92B2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B79C3AC1E83962300CF92B2 /* FirstViewController.swift */,
+				0B79C3AE1E83963300CF92B2 /* SecondViewController.swift */,
+				0B79C3B01E83963C00CF92B2 /* ThirdViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0B79C3A81E8394F200CF92B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0B79C3A91E8394F200CF92B2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0B79C3AA1E83957100CF92B2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B79C3AB1E83957100CF92B2 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0B79C3AB1E83957100CF92B2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,13 +265,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B79C3B31E83978500CF92B2 /* BaseViewController.swift in Sources */,
+				0B79C3AF1E83963300CF92B2 /* SecondViewController.swift in Sources */,
 				0B79C3751E8388D600CF92B2 /* ViewController.swift in Sources */,
 				0B79C3981E83907D00CF92B2 /* ZKDownloader.swift in Sources */,
 				0B79C39E1E8390B400CF92B2 /* ProgressHUD.swift in Sources */,
+				0B79C3A51E8394E800CF92B2 /* MainTabBarViewController.swift in Sources */,
 				0B79C3921E83907D00CF92B2 /* UIControl+recurClick.m in Sources */,
+				0B79C3AD1E83962300CF92B2 /* FirstViewController.swift in Sources */,
 				0B79C3971E83907D00CF92B2 /* MyTools.swift in Sources */,
 				0B79C3731E8388D600CF92B2 /* AppDelegate.swift in Sources */,
 				0B79C3901E83907D00CF92B2 /* CacheTool.swift in Sources */,
+				0B79C3B11E83963C00CF92B2 /* ThirdViewController.swift in Sources */,
 				0B79C3961E83907D00CF92B2 /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

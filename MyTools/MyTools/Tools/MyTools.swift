@@ -36,7 +36,57 @@ extension UIColor{
     }
 }
 
-class MyTools: NSObject {
+class ZKTools: NSObject {
+    
+    class func colorWithRGBA(red r:CGFloat,green g:CGFloat,blue b:CGFloat, alpha a:CGFloat)->UIColor {
+        //返回一个颜色
+        return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a/1.0)
+    }
+    class func colorWithHexString (hex: String) -> UIColor {
+        //接收到十六进制的颜色字符串,返回一个颜色
+        //var cs:String = hex.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
+        var cString: String = hex.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
+        if (cString.hasPrefix("#")) {
+            cString = (cString as NSString).substring(from: 1)
+        }
+        if (cString.characters.count != 6) {
+            return UIColor.gray
+        }
+        let rString = (cString as NSString).substring(to: 2)
+        
+        let gString = ((cString as NSString).substring(from: 2) as NSString).substring(to: 2)
+        
+        let bString = ((cString as NSString).substring(from: 4) as NSString).substring(to: 2)
+        var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
+        Scanner(string: rString).scanHexInt32(&r)
+        Scanner(string: gString).scanHexInt32(&g)
+        Scanner(string: bString).scanHexInt32(&b)
+        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
+        
+        
+    }
+    class func colorWithHexStringAndAlpha (hex: String, alpha:CGFloat) -> UIColor {
+        //接收到十六进制的颜色字符串和透明度,返回一个颜色
+        //var cs:String = hex.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
+        var cString: String = hex.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
+        if (cString.hasPrefix("#")) {
+            cString = (cString as NSString).substring(from: 1)
+        }
+        if (cString.characters.count != 6) {
+            return UIColor.gray
+        }
+        let rString = (cString as NSString).substring(to: 2)
+        
+        let gString = ((cString as NSString).substring(from: 2) as NSString).substring(to: 2)
+        
+        let bString = ((cString as NSString).substring(from: 4) as NSString).substring(to: 2)
+        var r:CUnsignedInt = 0, g:CUnsignedInt = 0, b:CUnsignedInt = 0;
+        Scanner(string: rString).scanHexInt32(&r)
+        Scanner(string: gString).scanHexInt32(&g)
+        Scanner(string: bString).scanHexInt32(&b)
+        return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: alpha)
+        
+    }
     
 
     class func createButton(_ frame:CGRect,title:String?,imageName:String?,bgImageName:String?,target:AnyObject?,action:Selector?)->UIButton {
@@ -89,7 +139,18 @@ class MyTools: NSObject {
         return imageView
     }
     
-    
+    class func alertViewCtroller(vc:UIViewController,title:String?,message:String?,cancelActionTitle:String?,sureActionTitle:String,action:((UIAlertAction)->Void)?){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let sureAction = UIAlertAction(title: sureActionTitle, style: .default, handler: action)
+        _ = UIAlertAction(title: "", style: .cancel, handler: action)
+        alert.addAction(sureAction)
+        if let cancelString = cancelActionTitle{
+            let cancelAction = UIAlertAction(title: cancelString, style: .cancel, handler: nil)
+            alert.addAction(cancelAction)
+        }
+        
+        vc.present(alert, animated: true, completion: nil)
+    }
     #if false
     class func weiXinLogin(vc:UIViewController){
             let req = SendAuthReq()
@@ -143,18 +204,7 @@ class MyTools: NSObject {
     }
     #endif
     
-    class func alertViewCtroller(vc:UIViewController,title:String?,message:String?,cancelActionTitle:String?,sureActionTitle:String,action:((UIAlertAction)->Void)?){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let sureAction = UIAlertAction(title: sureActionTitle, style: .default, handler: action)
-        _ = UIAlertAction(title: "", style: .cancel, handler: action)
-        alert.addAction(sureAction)
-        if let cancelString = cancelActionTitle{
-            let cancelAction = UIAlertAction(title: cancelString, style: .cancel, handler: nil)
-            alert.addAction(cancelAction)
-        }
-        
-        vc.present(alert, animated: true, completion: nil)
-    }
+    
     #if false
     //分享
     class func shareClick(vc:UIViewController,title:String,desc:String,imageurl:String,urlString:String){
@@ -178,9 +228,7 @@ class MyTools: NSObject {
             i = imageurl
         }
         
-        
-        
-        
+    
         let weChatAction = UIAlertAction(title: "分享至微信", style: .default) {
             (alert) in
             let alert = UIAlertController(title: t, message: d, preferredStyle: .alert)
@@ -233,8 +281,6 @@ class MyTools: NSObject {
         let cancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         aSheet.addAction(cancel)
         vc.present(aSheet, animated: true, completion: nil)
-        
-        
         
         
     }
@@ -306,7 +352,9 @@ class MyTools: NSObject {
         print(path ?? "path nil")
         do{
             try imageSmall?.write(to: url, options: NSData.WritingOptions.atomicWrite)
-              
+            
+            
+            
         }catch{
             print(error)
         }

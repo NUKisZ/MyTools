@@ -50,9 +50,27 @@ class ZKDownloader: NSObject {
         task.resume()
         
     }
-    func postWithUrl(urlString:String,paramString:String){
+    func postWithUrl(urlString:String,params:[String:String]){
         let url = URL(string: urlString)
         var request = URLRequest(url: url! as URL)
+        let dict = NSDictionary(dictionary: params)
+        var paramString = String()
+        
+        if dict.allKeys.count > 0 {
+            
+            for i in 0..<dict.allKeys.count {
+                //获取字典的每一个键值对
+                let key = dict.allKeys[i] as! String
+                let value = dict[key] as! String
+                
+                if i == 0 {
+                    paramString = paramString.appendingFormat("%@=%@", key, value)
+                }else{
+                    paramString = paramString.appendingFormat("&%@=%@", key, value)
+                }
+            }
+            
+        }
         
         let data = paramString.data(using: String.Encoding.utf8, allowLossyConversion: true)
         request.httpBody = data

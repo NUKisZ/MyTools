@@ -39,48 +39,6 @@ public let MWSGetUserInfo = "https://api.weixin.qq.com/sns/userinfo?access_token
 
 
 
-//ip 为测试服务器
-//public let MWSIp = "http://192.168.0.112"
-//public let MWSIp = "http://192.168.0.16"
-public let MWSIp = "https://www.mengwushe.com"
-public let MWSip = "http://www.mengwushe.com"
-public var userID = "0"
-public let MWSTestAccount = MWSIp + "/index.php/Weixin/Mobile/apprelog"
-public let MWSHomeUrlString = MWSIp+"/index.php/Weixin/Index/index/userid/%@/isWX/0"
-
-//http://192.168.0.16/index.php/Weixin/Goods/allgoodswthtype/userid/0/isWX/0
-public let MWSAllCommodityUrlString = MWSIp+"/index.php/Weixin/Goods/allgoods/userid/%@/isWX/0"
-//public let MWSAllCommodityUrlString = MWSIp+"/index.php/Weixin/Goods/allgoodswthtype/userid/%@/isWX/0"
-public let MWSMessagesUrlString = MWSIp+"/index.php/Weixin/Messages/messages/isWX/0/userid/%@"
-public let MWSShoppingcarUrlString = MWSIp+"/index.php/Weixin/Shoppingcar/shoppingcar/isWX/0/userid/%@"
-public let MWSMineUrlString = MWSIp+"/index.php/Weixin/User/index/userid/%@/isWX/0"
-public let MWSLoginUrlString = MWSIp+"/index.php?m=Admin&a=login"
-public let MWSSearchUrlString = MWSIp+"/index.php/Weixin/Search/search/isWX/0"
-public let MWSSearchUrlStringInfo = MWSIp+"/index.php/Weixin/Search/search_result/userid/%@/isWX/0/searchval/%@"
-public let MWSGamerecordUrlString = MWSIp+"/index.php/Weixin/Shoppingcar/gamerecord/isWX/0/userid/%@"
-//分享图片
-public let MWSShareImageUrl = "http://ww4.sinaimg.cn/mw690/ada5953fgw1f9zqjqyhd9j2050050wec.jpg"
-
-
-//找回密码时获取验证码
-public let MWSGetMyCodeUrlString = MWSIp+"/index.php/Weixin/Phone/getmycode"
-//注册时获取验证码
-public let MWSGetCodeUrlString = MWSIp+"/index.php/Weixin/Phone/getcode"
-//注册
-public let MWSRequestUrlString = MWSIp+"/index.php/Weixin/Mobile/mobileRegister"
-//登陆
-public let MWSNameLoginUrlString = MWSIp+"/index.php/Weixin/Mobile/applogin"
-
-//手机号注册
-public let MWSMobileRequestUrlString = MWSIp+"/index.php/Weixin/Mobile/mobileRegister"
-//重置密码
-public let MWSResetPasswordUrlStirng = MWSIp+"/index.php/Weixin/Mobile/repass"
-
-
-
-//用户注册
-public let MWSUserRegistered = MWSIp+"/index.php/Weixin/Mobile/appregister"
-
 
 
 
