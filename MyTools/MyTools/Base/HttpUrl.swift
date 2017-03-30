@@ -7,5 +7,5 @@
 //
 
 import UIKit
-let kADUrl = "https://www.uilucky.com/AppData/data/advertising.json"
+let kADUrl = "https://www.uilucky.com/AppData/data/advertising.php"
 let kFirstUrl = "https://uilucky.com/data/videoData.json"
