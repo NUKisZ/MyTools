@@ -55,6 +55,7 @@ class ADView: UIView {
         kUserDefaults.removeObject(forKey: kAdUrl)
         kUserDefaults.removeObject(forKey: kAdImageName)
         kUserDefaults.removeObject(forKey: "ADModel")
+        kUserDefaults.synchronize()
         let flag = CacheTool.clearCache()
         if kUserDefaults.value(forKey: kAdUrl)==nil && kUserDefaults.value(forKey: kAdImageName) == nil && flag{
             return true
