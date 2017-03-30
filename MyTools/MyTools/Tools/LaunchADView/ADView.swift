@@ -64,22 +64,18 @@ class ADView: UIView {
     }
     
     func show(){
-        print(imageExist())
         if imageExist(){
             count = showTime
             countBtn.setTitle(String(format: "跳过%@", "\(count!)"), for: .normal)
             
             adView.image = UIImage.init(contentsOfFile: imPath)
             clickAdUrl = kUserDefaults.value(forKey: kAdUrl) as! String
-            print(clickAdUrl)
             startTimer()
             
             let window = UIApplication.shared.keyWindow!
             window.addSubview(self)
         }
         setNewADImgUrl(imgUrl: imgUrl)
-        
-        
         
     }
     private func imageExist()->Bool{
@@ -90,7 +86,6 @@ class ADView: UIView {
         let fileManager = FileManager.default
         let isExist = fileManager.fileExists(atPath: imPath)
         return isExist
-        
     }
     @objc private func countDown(){
         count=count-1
@@ -145,7 +140,6 @@ class ADView: UIView {
                 print("保存成功")
                 self.deleteOldImage()
                 kUserDefaults.setValue(imageName, forKey: kAdImageName)
-                print(self.adUrl)
                 kUserDefaults.setValue(self.adUrl, forKey: kAdUrl)
                 kUserDefaults.synchronize()
                 
