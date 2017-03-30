@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B68F7651E84B71B00280D1B /* ADView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68F7631E84B71B00280D1B /* ADView.swift */; };
+		0B68F7661E84B71B00280D1B /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68F7641E84B71B00280D1B /* ADViewController.swift */; };
+		0B68F7681E84BD0800280D1B /* ADModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68F7671E84BD0800280D1B /* ADModel.swift */; };
 		0B79C3731E8388D600CF92B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3721E8388D600CF92B2 /* AppDelegate.swift */; };
 		0B79C3751E8388D600CF92B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3741E8388D600CF92B2 /* ViewController.swift */; };
 		0B79C3781E8388D600CF92B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B79C3761E8388D600CF92B2 /* Main.storyboard */; };
@@ -62,6 +65,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B68F7631E84B71B00280D1B /* ADView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADView.swift; sourceTree = "<group>"; };
+		0B68F7641E84B71B00280D1B /* ADViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
+		0B68F7671E84BD0800280D1B /* ADModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADModel.swift; sourceTree = "<group>"; };
 		0B79C36F1E8388D600CF92B2 /* MyTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B79C3721E8388D600CF92B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B79C3741E8388D600CF92B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +138,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B68F7621E84B71B00280D1B /* LaunchADView */ = {
+			isa = PBXGroup;
+			children = (
+				0B68F7631E84B71B00280D1B /* ADView.swift */,
+				0B68F7641E84B71B00280D1B /* ADViewController.swift */,
+				0B68F7671E84BD0800280D1B /* ADModel.swift */,
+			);
+			path = LaunchADView;
+			sourceTree = "<group>";
+		};
 		0B79C3661E8388D600CF92B2 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +198,7 @@
 		0B79C38C1E83907D00CF92B2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0B68F7621E84B71B00280D1B /* LaunchADView */,
 				0B79C38D1E83907D00CF92B2 /* Const.swift */,
 				0B79C38E1E83907D00CF92B2 /* MyTools.swift */,
 				0B79C38F1E83907D00CF92B2 /* ZKDownloader.swift */,
@@ -416,9 +433,11 @@
 				0B79C3921E83907D00CF92B2 /* UIControl+recurClick.m in Sources */,
 				0B79C3AD1E83962300CF92B2 /* FirstViewController.swift in Sources */,
 				0B79C3DF1E83A14900CF92B2 /* ConstraintDSL.swift in Sources */,
+				0B68F7681E84BD0800280D1B /* ADModel.swift in Sources */,
 				0B79C3E91E83A14900CF92B2 /* ConstraintMakerEditable.swift in Sources */,
 				0B79C3E61E83A14900CF92B2 /* ConstraintLayoutSupport.swift in Sources */,
 				0B79C3971E83907D00CF92B2 /* MyTools.swift in Sources */,
+				0B68F7661E84B71B00280D1B /* ADViewController.swift in Sources */,
 				0B79C3EC1E83A14900CF92B2 /* ConstraintMakerPriortizable.swift in Sources */,
 				0B79C3731E8388D600CF92B2 /* AppDelegate.swift in Sources */,
 				0B79C3901E83907D00CF92B2 /* CacheTool.swift in Sources */,
@@ -427,6 +446,7 @@
 				0B79C3B11E83963C00CF92B2 /* ThirdViewController.swift in Sources */,
 				0B79C3F21E83A14900CF92B2 /* ConstraintRelation.swift in Sources */,
 				0B79C3961E83907D00CF92B2 /* Const.swift in Sources */,
+				0B68F7651E84B71B00280D1B /* ADView.swift in Sources */,
 				0B79C3F51E83A14900CF92B2 /* ConstraintViewDSL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

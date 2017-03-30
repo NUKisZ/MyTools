@@ -310,7 +310,7 @@ class ZKTools: NSObject {
     //data编码转字符串
     class func stringWithData(data:Data)->String{
         
-        let string = (NSString(data: data, encoding: String.Encoding.utf8.rawValue)) as! String
+        let string = (NSString(data: data, encoding: String.Encoding.utf8.rawValue))! as String
         return string
     }
     

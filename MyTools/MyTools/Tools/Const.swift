@@ -7,6 +7,7 @@
 //
 
 import UIKit
+public let kUserDefaults = UserDefaults.standard
 public let kScreenWidth = UIScreen.main.bounds.size.width                       //屏幕宽度
 public let kScreenHeight = UIScreen.main.bounds.size.height                     //屏幕高度
 public let kDeviceName = UIDevice.current.name                                   //获取设备名称 例如：**的手机

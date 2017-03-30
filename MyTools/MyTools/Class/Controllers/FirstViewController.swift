@@ -19,13 +19,46 @@ class FirstViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
         view.addSubview(label)
+        creatADView()
+        let btn = ZKTools.createButton(CGRect.init(x: 0, y: 120, width: 80, height: 30), title: "清空缓存", imageName: nil, bgImageName: nil, target: self, action: #selector(cacheClick))
+        view.addSubview(btn)
+        
+    }
+    @objc private func cacheClick(){
+        let flag = ADView.clear()
+        if flag {
+            ZKTools.alertViewCtroller(vc: self, title: "提示", message: "清除缓存成功", cancelActionTitle: nil, sureActionTitle: "确定", action: nil)
+        }
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         download()
         
     }
+    func creatADView(){
+        let kADModel = kUserDefaults.data(forKey: "ADModel")
+        var model = ADModel()
+        if kADModel == nil{
+            model.adImageUrl = "https://www.uilucky.com/AppData/images/WechatIMG1.jpeg"
+            model.adUrl = "https://uilucky.com/"
+        }else{
+            model = ADModel.parseJson(kADModel!)
+        }
+        let adView = ADView(frame: self.view.frame, imagedUrl: (model.adImageUrl)!, ad: (model.adUrl)!) {
+            [weak self]
+            (adUrl) in
+            let adVC = ADViewController()
+            adVC.adUrl = adUrl
+            self?.navigationController?.pushViewController(adVC, animated: true)
+        }
+        adView.showTime = 15
+        adView.show()
+    }
+    
     private func download(){
         let download = ZKDownloader()
         download.delegate = self
-        download.getWithUrl(kFirstUrl)
+        download.getWithUrl(kADUrl)
         download.type=1
         
     }
@@ -49,11 +82,13 @@ class FirstViewController: BaseViewController {
 extension FirstViewController:ZKDownloaderDelegate{
     func downloader(_ download: ZKDownloader, didFailWithError error: NSError) {
         print(error)
-        
     }
     func downloader(_ download: ZKDownloader, didFinishWithData data: Data?) {
         if download.type == 1 {
             print(ZKTools.stringWithData(data: data!))
+            let u = UserDefaults.standard
+            u.set(data!, forKey: "ADModel")
+            u.synchronize()
         }
     }
 }

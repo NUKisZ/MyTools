@@ -16,7 +16,7 @@ class MainTabBarViewController: UITabBarController {
         // Do any additional setup after loading the view.
         createViewControllers()
     }
-    func createViewControllers() {
+    private func createViewControllers() {
         //标题
         let titleArray = ["一","二","三"]
         
@@ -25,7 +25,6 @@ class MainTabBarViewController: UITabBarController {
         //选中时的图片
         let selectImageArray = ["home_unselected","all_unselected","myinfo_unselected"]
         //视图控制器
-        //let ctrlNameArray = ["MengWuShe.HomeViewController","MengWuShe.AllCommodityViewController","MengWuShe.MineViewController"]
         let ctrlNameArray = ["MyTools.FirstViewController","MyTools.SecondViewController","MyTools.ThirdViewController"]
         
         

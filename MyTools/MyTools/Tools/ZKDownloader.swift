@@ -21,23 +21,18 @@ class ZKDownloader: NSObject {
     var type:Int?
     
     func getWithUrl(_ urlString:String){
-
-        
-        
         let session = URLSession.shared
         let url = URL(string: urlString)
         let request = URLRequest(url: url!)
         let task = session.dataTask(with: request) { (data, response, error) in
             if error != nil{
-                self.delegate?.downloader(self, didFailWithError: error as! NSError)
+                self.delegate?.downloader(self, didFailWithError: error! as NSError)
             }else{
                 //根据状态码区分
                 let httpRes = response as! HTTPURLResponse
                 if httpRes.statusCode == 200{
                     //正确返回
                     self.delegate?.downloader(self, didFinishWithData: data)
-                    
-                    
                     
                 }else {
                     //500之类的错误
