@@ -35,8 +35,10 @@ class FirstViewController: BaseViewController {
         }
         
     }
-    func goBackVCBtnAction(){
-        navigationController?.pushViewController(BackViewController(), animated: true)
+    @objc private func goBackVCBtnAction(){
+        let backVC = BackViewController()
+        backVC.delegate = self
+        navigationController?.pushViewController(backVC, animated: true)
     }
     @objc private func cacheClick(){
         let flag = ADView.clear()
@@ -104,5 +106,10 @@ extension FirstViewController:ZKDownloaderDelegate{
             u.set(data!, forKey: "ADModel")
             u.synchronize()
         }
+    }
+}
+extension FirstViewController:BackViewControllerDelegate{
+    func backTest(str: String) {
+        print(str)
     }
 }

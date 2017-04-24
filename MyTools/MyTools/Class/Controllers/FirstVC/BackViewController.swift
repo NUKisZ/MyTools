@@ -7,6 +7,9 @@
 //
 
 import UIKit
+protocol BackViewControllerDelegate {
+    func backTest(str:String)
+}
 
 class BackViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
@@ -14,12 +17,25 @@ class BackViewController: BaseViewController {
         //禁用返回手势
         //navigationController?.fd_fullscreenPopGestureRecognizer.isEnabled=false
     }
+     var delegate:BackViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let btn = UIButton(type: .system)
+        btn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
+        view.addSubview(btn)
+        btn.setTitle("强引用测试", for: .normal)
+        btn.snp.makeConstraints { (make) in
+            make.center.equalTo(self.view.snp.center)
+        }
     }
+    @objc private func btnAction(){
+        self.delegate?.backTest(str: "泄漏测试")
+        navigationController?.popViewController(animated: true)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
