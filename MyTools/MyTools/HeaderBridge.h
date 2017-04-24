@@ -9,5 +9,6 @@
 #ifndef HeaderBridge_h
 #define HeaderBridge_h
 #import "UIControl+recurClick.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
 
 #endif /* HeaderBridge_h */

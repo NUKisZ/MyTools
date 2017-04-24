@@ -22,7 +22,21 @@ class FirstViewController: BaseViewController {
         creatADView()
         let btn = ZKTools.createButton(CGRect.init(x: 0, y: 120, width: 80, height: 30), title: "清空缓存", imageName: nil, bgImageName: nil, target: self, action: #selector(cacheClick))
         view.addSubview(btn)
+        let goBackVCBtn = UIButton(type: .system)
+        view.addSubview(goBackVCBtn)
+        goBackVCBtn.setTitle("全屏返回测试", for: .normal)
+        goBackVCBtn.addTarget(self, action: #selector(goBackVCBtnAction), for: .touchUpInside)
+        goBackVCBtn.snp.makeConstraints {
+            [weak self]
+            (make) in
+            make.top.equalTo(btn.snp.bottom)
+            make.left.equalTo((self?.view.snp.left)!)
+            make.height.equalTo(20)
+        }
         
+    }
+    func goBackVCBtnAction(){
+        navigationController?.pushViewController(BackViewController(), animated: true)
     }
     @objc private func cacheClick(){
         let flag = ADView.clear()

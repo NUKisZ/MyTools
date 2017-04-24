@@ -62,6 +62,8 @@
 		0B79C3F81E83A14900CF92B2 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3D61E83A14900CF92B2 /* LayoutConstraint.swift */; };
 		0B79C3F91E83A14900CF92B2 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3D71E83A14900CF92B2 /* LayoutConstraintItem.swift */; };
 		0B79C3FA1E83A14900CF92B2 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3D91E83A14900CF92B2 /* UILayoutSupport+Extensions.swift */; };
+		0BE60A0E1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60A0D1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m */; };
+		0BE60A131EAD97BA00D21D8C /* BackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60A121EAD97BA00D21D8C /* BackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -125,6 +127,9 @@
 		0B79C3D71E83A14900CF92B2 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		0B79C3D81E83A14900CF92B2 /* SnapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapKit.h; sourceTree = "<group>"; };
 		0B79C3D91E83A14900CF92B2 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		0BE60A0C1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		0BE60A0D1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		0BE60A121EAD97BA00D21D8C /* BackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +191,7 @@
 		0B79C3841E83907D00CF92B2 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				0BE60A0B1EAD96B700D21D8C /* FDFullscreenPopGesture */,
 				0B79C3B61E83A14900CF92B2 /* SnapKit */,
 				0B79C3991E8390B400CF92B2 /* ProgressHUD */,
 				0B79C3851E83907D00CF92B2 /* CacheTool.swift */,
@@ -240,6 +246,9 @@
 		0B79C3A71E8394F200CF92B2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0BE60A0F1EAD979800D21D8C /* FirstVC */,
+				0BE60A101EAD979800D21D8C /* SecondVC */,
+				0BE60A111EAD979800D21D8C /* ThirdVC */,
 				0B79C3AC1E83962300CF92B2 /* FirstViewController.swift */,
 				0B79C3AE1E83963300CF92B2 /* SecondViewController.swift */,
 				0B79C3B01E83963C00CF92B2 /* ThirdViewController.swift */,
@@ -322,6 +331,37 @@
 				0B79C3D91E83A14900CF92B2 /* UILayoutSupport+Extensions.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		0BE60A0B1EAD96B700D21D8C /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				0BE60A0C1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.h */,
+				0BE60A0D1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
+		0BE60A0F1EAD979800D21D8C /* FirstVC */ = {
+			isa = PBXGroup;
+			children = (
+				0BE60A121EAD97BA00D21D8C /* BackViewController.swift */,
+			);
+			path = FirstVC;
+			sourceTree = "<group>";
+		};
+		0BE60A101EAD979800D21D8C /* SecondVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SecondVC;
+			sourceTree = "<group>";
+		};
+		0BE60A111EAD979800D21D8C /* ThirdVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +469,7 @@
 				0B79C3DE1E83A14900CF92B2 /* ConstraintDescription.swift in Sources */,
 				0B79C3E01E83A14900CF92B2 /* ConstraintInsets.swift in Sources */,
 				0B79C3E31E83A14900CF92B2 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
+				0BE60A0E1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				0B79C3F01E83A14900CF92B2 /* ConstraintPriorityTarget.swift in Sources */,
 				0B79C3921E83907D00CF92B2 /* UIControl+recurClick.m in Sources */,
 				0B79C3AD1E83962300CF92B2 /* FirstViewController.swift in Sources */,
@@ -440,6 +481,7 @@
 				0B68F7661E84B71B00280D1B /* ADViewController.swift in Sources */,
 				0B79C3EC1E83A14900CF92B2 /* ConstraintMakerPriortizable.swift in Sources */,
 				0B79C3731E8388D600CF92B2 /* AppDelegate.swift in Sources */,
+				0BE60A131EAD97BA00D21D8C /* BackViewController.swift in Sources */,
 				0B79C3901E83907D00CF92B2 /* CacheTool.swift in Sources */,
 				0B79C3E21E83A14900CF92B2 /* ConstraintItem.swift in Sources */,
 				0B79C3E11E83A14900CF92B2 /* ConstraintInsetTarget.swift in Sources */,
