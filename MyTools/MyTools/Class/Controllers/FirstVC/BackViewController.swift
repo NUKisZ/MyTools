@@ -30,6 +30,7 @@ class BackViewController: BaseViewController {
         btn.snp.makeConstraints { (make) in
             make.center.equalTo(self.view.snp.center)
         }
+        
     }
     @objc private func btnAction(){
         self.delegate?.backTest(str: "泄漏测试")

@@ -11,16 +11,17 @@ import UIKit
 class FirstViewController: BaseViewController {
 
     var label:UILabel{
-        let l = ZKTools.createLabel(CGRect(x: 0, y: 70, width: 100, height: 40), title: "label", textAlignment: nil, font: nil, textColor: UIColor.red)
+        let l = ZKTools.createLabel(CGRect(x: 0, y: 0, width: 100, height: 40), title: "label", textAlignment: nil, font: nil, textColor: UIColor.red)
         return l
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        navigationController?.automaticallyAdjustsScrollViewInsets=false
         // Do any additional setup after loading the view.
         view.addSubview(label)
         creatADView()
-        let btn = ZKTools.createButton(CGRect.init(x: 0, y: 120, width: 80, height: 30), title: "清空缓存", imageName: nil, bgImageName: nil, target: self, action: #selector(cacheClick))
+        let btn = ZKTools.createButton(CGRect.init(x: 0, y: 50, width: 80, height: 30), title: "清空缓存", imageName: nil, bgImageName: nil, target: self, action: #selector(cacheClick))
         view.addSubview(btn)
         let goBackVCBtn = UIButton(type: .system)
         view.addSubview(goBackVCBtn)
@@ -33,11 +34,30 @@ class FirstViewController: BaseViewController {
             make.left.equalTo((self?.view.snp.left)!)
             make.height.equalTo(20)
         }
+        let downloadVCBtn = UIButton(type: .system)
+        view.addSubview(downloadVCBtn)
+        downloadVCBtn.snp.makeConstraints {
+            [weak self]
+            (make) in
+            make.top.equalTo(goBackVCBtn.snp.bottom)
+            make.left.equalTo((self?.view.snp.left)!)
+            make.height.equalTo(20)
+        }
+        downloadVCBtn.setTitle("下载界面", for: .normal)
+        downloadVCBtn.addTarget(self, action: #selector(downloadVCAction), for: .touchUpInside)
         
+        
+    }
+    @objc private func downloadVCAction(){
+        let downloadVC = DownloadTaskViewController()
+        hidesBottomBarWhenPushed=true
+        navigationController?.pushViewController(downloadVC, animated: true)
+        hidesBottomBarWhenPushed=false
     }
     @objc private func goBackVCBtnAction(){
         let backVC = BackViewController()
         backVC.delegate = self
+        
         navigationController?.pushViewController(backVC, animated: true)
     }
     @objc private func cacheClick(){
@@ -49,6 +69,7 @@ class FirstViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         download()
+        
         
     }
     func creatADView(){

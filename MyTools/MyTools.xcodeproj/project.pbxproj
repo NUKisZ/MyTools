@@ -64,6 +64,11 @@
 		0B79C3FA1E83A14900CF92B2 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3D91E83A14900CF92B2 /* UILayoutSupport+Extensions.swift */; };
 		0BE60A0E1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60A0D1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m */; };
 		0BE60A131EAD97BA00D21D8C /* BackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60A121EAD97BA00D21D8C /* BackViewController.swift */; };
+		0BE60A151EADAD8100D21D8C /* ZKDownloadTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60A141EADAD8100D21D8C /* ZKDownloadTaskManager.swift */; };
+		0BE60A171EADD92600D21D8C /* DownloadTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60A161EADD92600D21D8C /* DownloadTaskViewController.swift */; };
+		0BE60A191EADE15D00D21D8C /* DownloadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60A181EADE15D00D21D8C /* DownloadCell.swift */; };
+		0BE60A1B1EADE75100D21D8C /* NewTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60A1A1EADE75100D21D8C /* NewTaskViewController.swift */; };
+		0BE60A1D1EADF87700D21D8C /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60A1C1EADF87700D21D8C /* TaskManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -130,6 +135,11 @@
 		0BE60A0C1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		0BE60A0D1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		0BE60A121EAD97BA00D21D8C /* BackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackViewController.swift; sourceTree = "<group>"; };
+		0BE60A141EADAD8100D21D8C /* ZKDownloadTaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKDownloadTaskManager.swift; sourceTree = "<group>"; };
+		0BE60A161EADD92600D21D8C /* DownloadTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadTaskViewController.swift; sourceTree = "<group>"; };
+		0BE60A181EADE15D00D21D8C /* DownloadCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadCell.swift; sourceTree = "<group>"; };
+		0BE60A1A1EADE75100D21D8C /* NewTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTaskViewController.swift; sourceTree = "<group>"; };
+		0BE60A1C1EADF87700D21D8C /* TaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,10 +214,12 @@
 		0B79C38C1E83907D00CF92B2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0BE60A1C1EADF87700D21D8C /* TaskManager.swift */,
 				0B68F7621E84B71B00280D1B /* LaunchADView */,
 				0B79C38D1E83907D00CF92B2 /* Const.swift */,
 				0B79C38E1E83907D00CF92B2 /* MyTools.swift */,
 				0B79C38F1E83907D00CF92B2 /* ZKDownloader.swift */,
+				0BE60A141EADAD8100D21D8C /* ZKDownloadTaskManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -346,6 +358,9 @@
 			isa = PBXGroup;
 			children = (
 				0BE60A121EAD97BA00D21D8C /* BackViewController.swift */,
+				0BE60A161EADD92600D21D8C /* DownloadTaskViewController.swift */,
+				0BE60A181EADE15D00D21D8C /* DownloadCell.swift */,
+				0BE60A1A1EADE75100D21D8C /* NewTaskViewController.swift */,
 			);
 			path = FirstVC;
 			sourceTree = "<group>";
@@ -439,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE60A171EADD92600D21D8C /* DownloadTaskViewController.swift in Sources */,
 				0B79C3E71E83A14900CF92B2 /* ConstraintLayoutSupportDSL.swift in Sources */,
 				0B79C3B31E83978500CF92B2 /* BaseViewController.swift in Sources */,
 				0B79C3F91E83A14900CF92B2 /* LayoutConstraintItem.swift in Sources */,
@@ -450,6 +466,7 @@
 				0B79C3DB1E83A14900CF92B2 /* ConstraintAttributes.swift in Sources */,
 				0B79C3F61E83A14900CF92B2 /* Debugging.swift in Sources */,
 				0B79C3AF1E83963300CF92B2 /* SecondViewController.swift in Sources */,
+				0BE60A151EADAD8100D21D8C /* ZKDownloadTaskManager.swift in Sources */,
 				0B79C3DC1E83A14900CF92B2 /* ConstraintConfig.swift in Sources */,
 				0B79C3E41E83A14900CF92B2 /* ConstraintLayoutGuide.swift in Sources */,
 				0B79C3F81E83A14900CF92B2 /* LayoutConstraint.swift in Sources */,
@@ -463,6 +480,7 @@
 				0B79C3981E83907D00CF92B2 /* ZKDownloader.swift in Sources */,
 				0B79C39E1E8390B400CF92B2 /* ProgressHUD.swift in Sources */,
 				0B79C3DD1E83A14900CF92B2 /* ConstraintConstantTarget.swift in Sources */,
+				0BE60A1D1EADF87700D21D8C /* TaskManager.swift in Sources */,
 				0B79C3F11E83A14900CF92B2 /* ConstraintRelatableTarget.swift in Sources */,
 				0B79C3A51E8394E800CF92B2 /* MainTabBarViewController.swift in Sources */,
 				0B79C3EA1E83A14900CF92B2 /* ConstraintMakerExtendable.swift in Sources */,
@@ -472,6 +490,8 @@
 				0BE60A0E1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				0B79C3F01E83A14900CF92B2 /* ConstraintPriorityTarget.swift in Sources */,
 				0B79C3921E83907D00CF92B2 /* UIControl+recurClick.m in Sources */,
+				0BE60A191EADE15D00D21D8C /* DownloadCell.swift in Sources */,
+				0BE60A1B1EADE75100D21D8C /* NewTaskViewController.swift in Sources */,
 				0B79C3AD1E83962300CF92B2 /* FirstViewController.swift in Sources */,
 				0B79C3DF1E83A14900CF92B2 /* ConstraintDSL.swift in Sources */,
 				0B68F7681E84BD0800280D1B /* ADModel.swift in Sources */,
