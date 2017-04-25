@@ -45,8 +45,26 @@ class FirstViewController: BaseViewController {
         }
         downloadVCBtn.setTitle("下载界面", for: .normal)
         downloadVCBtn.addTarget(self, action: #selector(downloadVCAction), for: .touchUpInside)
+        let webViewBtn = UIButton(type: .system)
+        view.addSubview(webViewBtn)
+        webViewBtn.snp.makeConstraints {
+            [weak self]
+            (make) in
+            make.top.equalTo(downloadVCBtn.snp.bottom)
+            make.left.equalTo((self?.view.snp.left)!)
+            make.height.equalTo(20)
+            
+        }
+        webViewBtn.setTitle("WebView", for: .normal)
+        webViewBtn.addTarget(self, action: #selector(webViewAction), for: .touchUpInside)
         
         
+    }
+    @objc private func webViewAction(){
+        let webVc = WebViewController()
+        hidesBottomBarWhenPushed=true
+        navigationController?.pushViewController(webVc, animated: true)
+        hidesBottomBarWhenPushed=false
     }
     @objc private func downloadVCAction(){
         let downloadVC = DownloadTaskViewController()
