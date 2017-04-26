@@ -16,7 +16,7 @@ class FirstViewController: BaseViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.navigationBar.isTranslucent=false
         navigationController?.automaticallyAdjustsScrollViewInsets=false
         // Do any additional setup after loading the view.
         view.addSubview(label)
@@ -57,7 +57,21 @@ class FirstViewController: BaseViewController {
         }
         webViewBtn.setTitle("WebView", for: .normal)
         webViewBtn.addTarget(self, action: #selector(webViewAction), for: .touchUpInside)
+        let albumBtn = UIButton(type: .system)
+        view.addSubview(albumBtn)
+        albumBtn.setTitle("选择图片", for: .normal)
+        albumBtn.addTarget(self, action: #selector(albumBtnAction), for: .touchUpInside)
+        albumBtn.snp.makeConstraints {
+            [weak self]
+            (make) in
+            make.top.equalTo(webViewBtn.snp.bottom)
+            make.left.equalTo((self?.view.snp.left)!)
+            make.height.equalTo(20)
+
+        }
         
+    }
+    @objc private func albumBtnAction(){
         
     }
     @objc private func webViewAction(){
