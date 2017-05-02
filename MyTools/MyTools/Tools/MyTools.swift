@@ -134,8 +134,6 @@ class ZKTools: NSObject {
         if let name = imageName{
             imageView.image = UIImage(named: name)
         }
-        
-        
         return imageView
     }
     
