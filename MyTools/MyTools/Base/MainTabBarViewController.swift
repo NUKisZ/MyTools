@@ -25,7 +25,8 @@ class MainTabBarViewController: UITabBarController {
         //选中时的图片
         let selectImageArray = ["home_unselected","all_unselected","myinfo_unselected"]
         //视图控制器
-        let ctrlNameArray = ["MyTools.FirstViewController","MyTools.SecondViewController","MyTools.ThirdViewController"]
+        //let ctrlNameArray = ["MyTools.FirstViewController","MyTools.SecondViewController","MyTools.ThirdViewController"]
+        let ctrlNameArray = ["MyTools.FirstViewController","MyTools.SecondViewController","MyTools.BKHomeViewController"]
         
         
         var array = Array<UINavigationController>()

@@ -151,6 +151,14 @@ class ZKTools: NSObject {
         
         vc.present(alert, animated: true, completion: nil)
     }
+    class func showAlert(_ msg:String,onViewController vc :UIViewController){
+        
+        let alert = UIAlertController(title: "提示", message: msg, preferredStyle: .alert)
+        let action = UIAlertAction(title: "确定", style: .default, handler: nil)
+        alert.addAction(action)
+        vc.present(alert, animated: true, completion: nil)
+        
+    }
     #if false
     class func weiXinLogin(vc:UIViewController){
             let req = SendAuthReq()

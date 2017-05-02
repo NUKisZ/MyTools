@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="NNT" customModuleProvider="target">
+            <connections>
+                <outlet property="appImageView" destination="bl3-rK-qWF" id="B4a-TP-E0v"/>
+                <outlet property="detailLabel" destination="HnR-qe-VHw" id="GI3-UW-VMW"/>
+                <outlet property="nameLabel" destination="Okb-r6-Eqf" id="gWx-Ed-pGM"/>
+                <outlet property="starView" destination="4TE-mm-ynb" id="59X-Cb-r2X"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bl3-rK-qWF" userLabel="appImage View">
+                    <rect key="frame" x="10" y="64" width="80" height="80"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Ojj-be-Jhe"/>
+                        <constraint firstAttribute="height" constant="80" id="v6N-ce-DDl"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HnR-qe-VHw" userLabel="detailLabel">
+                    <rect key="frame" x="10" y="154" width="355" height="123"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="123" id="bwN-6f-AsX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Okb-r6-Eqf" userLabel="nameLabel">
+                    <rect key="frame" x="130" y="64" width="205" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="Oak-2J-Vba"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4TE-mm-ynb" userLabel="starView" customClass="StarView" customModule="NNT" customModuleProvider="target">
+                    <rect key="frame" x="100" y="104" width="65" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="B2R-xl-YLN"/>
+                        <constraint firstAttribute="width" constant="65" id="xag-C8-ymy"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Okb-r6-Eqf" secondAttribute="trailing" constant="40" id="6aX-aW-90D"/>
+                <constraint firstAttribute="trailing" secondItem="HnR-qe-VHw" secondAttribute="trailing" constant="10" id="8BL-27-RIF"/>
+                <constraint firstItem="bl3-rK-qWF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="BwV-qU-tfg"/>
+                <constraint firstItem="bl3-rK-qWF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="FcR-AB-mTN"/>
+                <constraint firstItem="Okb-r6-Eqf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="RaD-a4-k4t"/>
+                <constraint firstItem="4TE-mm-ynb" firstAttribute="leading" secondItem="bl3-rK-qWF" secondAttribute="trailing" constant="10" id="UQr-RO-Avr"/>
+                <constraint firstItem="4TE-mm-ynb" firstAttribute="top" secondItem="Okb-r6-Eqf" secondAttribute="bottom" constant="20" id="YCR-94-MwC"/>
+                <constraint firstItem="HnR-qe-VHw" firstAttribute="top" secondItem="bl3-rK-qWF" secondAttribute="bottom" constant="10" id="lDN-x7-5mw"/>
+                <constraint firstItem="Okb-r6-Eqf" firstAttribute="leading" secondItem="bl3-rK-qWF" secondAttribute="trailing" constant="40" id="ueV-gl-sum"/>
+                <constraint firstItem="HnR-qe-VHw" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="za5-SY-ksD"/>
+            </constraints>
+            <point key="canvasLocation" x="322.5" y="230.5"/>
+        </view>
+    </objects>
+</document>

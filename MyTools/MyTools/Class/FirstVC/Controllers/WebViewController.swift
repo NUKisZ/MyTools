@@ -22,7 +22,7 @@ class WebViewController: BaseViewController {
         navigationController?.automaticallyAdjustsScrollViewInsets=false
         let webView = UIWebView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight-64))
         view.addSubview(webView)
-        let request = URLRequest(url: URL(string: "http://wedemo.96189.com/?/article/190")!)
+        let request = URLRequest(url: URL(string: "https://uilucky.com")!)
         webView.loadRequest(request)
         webView.delegate = self
     }
