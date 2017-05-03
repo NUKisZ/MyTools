@@ -7,6 +7,16 @@
 //
 
 import UIKit
+//判断真机还是模拟器
+struct Platform {
+    static let isSimulator: Bool = {
+        var isSim = false
+        #if arch(i386) || arch(x86_64)
+            isSim = true
+        #endif
+        return isSim
+    }()
+}
 
 extension UIColor{
     class func colorWithRGBA(red r:CGFloat,green g:CGFloat,blue b:CGFloat, alpha a:CGFloat)->UIColor {

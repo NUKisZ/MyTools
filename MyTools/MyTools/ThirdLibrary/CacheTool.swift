@@ -57,7 +57,12 @@ class CacheTool: NSObject {
                 do{
                     try fileManager.removeItem(atPath: cachePath)
                 }catch _{
-                    result = false
+                    if Platform.isSimulator{
+                        result = false
+                    }else{
+                        result = true
+                    }
+                    
                 }
             }
         }

@@ -17,14 +17,14 @@ class BKHomeViewController: UIViewController,ZKDownloaderDelegate,UICollectionVi
 
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white
-        self.downloaderData()
         self.createCollView()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "清除缓存", style: UIBarButtonItemStyle.done, target: self, action: #selector(clearCache))
     }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        downloaderData()
+    }
     func clearCache(){
-        
-        
-        
         let alert = UIAlertController(title: "提示", message: "缓存大小为\(CacheTool.cacheSize)", preferredStyle: .alert)
         let actionCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         let action = UIAlertAction(title: "确定", style: .default) { (alert) in
