@@ -295,7 +295,7 @@ open class XWRefreshComponent: UIView {
         if !self.isUserInteractionEnabled { return }
         
         if keyPath == XWRefreshKeyPathContentSize {
-            let dic = change as! NSDictionary
+            let dic = change! as NSDictionary
             let dict = dic as! Dictionary<String, AnyObject>
             self.scrollViewContentSizeDidChange(dict)
         }
@@ -303,12 +303,12 @@ open class XWRefreshComponent: UIView {
         if self.isHidden {return}
         
         if keyPath == XWRefreshKeyPathContentOffset{
-            let dic = change as! NSDictionary
+            let dic = change! as NSDictionary
             let dict = dic as! Dictionary<String, AnyObject>
             self.scrollViewContentOffsetDidChange(dict)
         }else if keyPath == XWRefreshKeyPathPanKeyPathState{
             
-            let dic = change as! NSDictionary
+            let dic = change! as NSDictionary
             let dict = dic as! Dictionary<String, AnyObject>
             self.scrollViewPanStateDidChange(dict)
         }

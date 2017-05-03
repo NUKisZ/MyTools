@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B432B001EB9868B00D75930 /* launcht.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B432AFF1EB9868B00D75930 /* launcht.png */; };
 		0B48CBD41EAF28F40069A213 /* BackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBC41EAF28F40069A213 /* BackViewController.swift */; };
 		0B48CBD51EAF28F40069A213 /* DownloadTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBC51EAF28F40069A213 /* DownloadTaskViewController.swift */; };
 		0B48CBD61EAF28F40069A213 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBC61EAF28F40069A213 /* FirstViewController.swift */; };
@@ -124,6 +125,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B432AFF1EB9868B00D75930 /* launcht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcht.png; sourceTree = "<group>"; };
 		0B48CBC41EAF28F40069A213 /* BackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackViewController.swift; sourceTree = "<group>"; };
 		0B48CBC51EAF28F40069A213 /* DownloadTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadTaskViewController.swift; sourceTree = "<group>"; };
 		0B48CBC61EAF28F40069A213 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -258,6 +260,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B432AFD1EB9868B00D75930 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B432AFE1EB9868B00D75930 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0B432AFE1EB9868B00D75930 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				0B432AFF1EB9868B00D75930 /* launcht.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		0B48CBC21EAF28F40069A213 /* FirstVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -534,7 +552,7 @@
 		0B79C3711E8388D600CF92B2 /* MyTools */ = {
 			isa = PBXGroup;
 			children = (
-				0B79C3AA1E83957100CF92B2 /* Resources */,
+				0B432AFD1EB9868B00D75930 /* Resources */,
 				0B79C3A61E8394F200CF92B2 /* Class */,
 				0B79C3A31E8394E800CF92B2 /* Base */,
 				0B79C3841E83907D00CF92B2 /* ThirdLibrary */,
@@ -607,21 +625,6 @@
 				0B48CBCF1EAF28F40069A213 /* ThirdVC */,
 			);
 			path = Class;
-			sourceTree = "<group>";
-		};
-		0B79C3AA1E83957100CF92B2 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				0B79C3AB1E83957100CF92B2 /* Images */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		0B79C3AB1E83957100CF92B2 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Images;
 			sourceTree = "<group>";
 		};
 		0B79C3B61E83A14900CF92B2 /* SnapKit */ = {
@@ -747,6 +750,7 @@
 				0B6F04C61EB84812005E8FBD /* GroupListCell.xib in Resources */,
 				0B6F04981EB84812005E8FBD /* StarsBackground.png in Resources */,
 				0B6F05121EB85085005E8FBD /* xw_icon.bundle in Resources */,
+				0B432B001EB9868B00D75930 /* launcht.png in Resources */,
 				0B79C3A01E8390B400CF92B2 /* 提示底.png in Resources */,
 				0B6F04991EB84812005E8FBD /* StarsForeground.png in Resources */,
 				0B79C3781E8388D600CF92B2 /* Main.storyboard in Resources */,

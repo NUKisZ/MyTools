@@ -97,7 +97,7 @@ public extension UIScrollView {
             if self.isKind(of: UITableView.self){
                 let tableView = self as! UITableView
                 let num  = tableView.numberOfSections + 1
-                for section in 0..<num {
+                for _ in 0..<num {
                     //totalCount += tableView.numberOfRows(inSection: section)
                 }
                 
