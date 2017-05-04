@@ -30,6 +30,18 @@ class BackViewController: BaseViewController {
         btn.snp.makeConstraints { (make) in
             make.center.equalTo(self.view.snp.center)
         }
+        let data = ["adsf","fff","eeee"]
+        let label = UILabel()
+        view.addSubview(label)
+        label.snp.makeConstraints { (make) in
+            make.top.equalTo(btn.snp.bottom)
+            make.left.equalTo(view.snp.left).offset(50)
+            
+            
+        }
+        label.text = data.get(at: 2)
+        label.backgroundColor = UIColor(hexString: "#FFeeFF", alpha: 1)
+        
         
     }
     @objc private func btnAction(){
