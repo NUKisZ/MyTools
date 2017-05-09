@@ -24,6 +24,10 @@ class BKHomeViewController: UIViewController,ZKDownloaderDelegate,UICollectionVi
         super.viewDidAppear(animated)
         downloaderData()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
+    }
     func clearCache(){
         let alert = UIAlertController(title: "提示", message: "缓存大小为\(CacheTool.cacheSize)", preferredStyle: .alert)
         let actionCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)

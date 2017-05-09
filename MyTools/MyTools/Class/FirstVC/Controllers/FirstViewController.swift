@@ -10,18 +10,40 @@ import UIKit
 
 class FirstViewController: BaseViewController {
 
+    
     var label:UILabel{
-        let l = ZKTools.createLabel(CGRect(x: 0, y: 0, width: 100, height: 40), title: "label", textAlignment: nil, font: nil, textColor: UIColor.red)
+        let l = ZKTools.createLabel(CGRect(x: 0, y: 64, width: 100, height: 40), title: "label", textAlignment: nil, font: nil, textColor: UIColor.red)
         return l
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.isTranslucent=false
+        //navigationController?.navigationBar.isTranslucent=false
         navigationController?.automaticallyAdjustsScrollViewInsets=false
         // Do any additional setup after loading the view.
         view.addSubview(label)
         creatADView()
-        let btn = ZKTools.createButton(CGRect.init(x: 0, y: 50, width: 80, height: 30), title: "清空缓存", imageName: nil, bgImageName: nil, target: self, action: #selector(cacheClick))
+        createSubViews()
+//        navigationController?.setNavigationBarHidden(true, animated: false)
+        //去空格
+        let str = "  adf aase  werwer wr w wer wr qw r  w"
+        print(str)
+        let str1 = str.replacingOccurrences(of: " ", with: "")
+        print(str1)
+        let mail = "aaa@qq.com"
+        print(mail.isEmail)
+        print(ez.appDisplayName as Any)
+        let share1 = SharedInstanceTest.sharedInstance
+        share1.i = 30;
+        print(share1.i as Any)
+        let share2 = SharedInstanceTest.sharedInstance
+        print(share2.i as Any)
+        share2.i = 40;
+        print(share1.i as Any)
+        print(share2.i as Any)
+        _ = UserDefaults.standard
+    }
+    private func createSubViews(){
+        let btn = ZKTools.createButton(CGRect.init(x: 0, y: 114, width: 80, height: 30), title: "清空缓存", imageName: nil, bgImageName: nil, target: self, action: #selector(cacheClick))
         view.addSubview(btn)
         let goBackVCBtn = UIButton(type: .system)
         view.addSubview(goBackVCBtn)
@@ -67,11 +89,34 @@ class FirstViewController: BaseViewController {
             make.top.equalTo(webViewBtn.snp.bottom)
             make.left.equalTo((self?.view.snp.left)!)
             make.height.equalTo(20)
-
+            
         }
+        albumBtn.uxy_ignoreEvent=false
+        albumBtn.uxy_acceptEventInterval=2
+        let accEventBtn = UIButton(type: .system)
+        view.addSubview(accEventBtn)
+        accEventBtn.snp.makeConstraints {
+            [weak self]
+            (make) in
+            make.left.equalTo((self?.view.snp.left)!)
+            make.top.equalTo(albumBtn.snp.bottom)
+            make.height.equalTo(30)
+        }
+        accEventBtn.zk_accpetEventInterval=2
+        accEventBtn.addTarget(self, action: #selector(accEventBtnAction), for: .touchUpInside)
+        accEventBtn.setTitle("SwiftRuntime", for: .normal)
         
     }
+    @objc private func accEventBtnAction(){
+        print("aaaa")
+    }
     @objc private func albumBtnAction(){
+        let style = UIApplication.shared.statusBarStyle
+        if style == UIStatusBarStyle.default{
+            UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
+        }else{
+            UIApplication.shared.setStatusBarStyle(.default, animated: true)
+        }
         
     }
     @objc private func webViewAction(){
@@ -101,10 +146,17 @@ class FirstViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         download()
-        
-        
+        //Info.plist 中添加 View controller-based status bar appearance : NO
+        UIApplication.shared.setStatusBarStyle(.default, animated: animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+//        navigationController?.navigationBar.isHidden = true
     }
-    func creatADView(){
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+//        navigationController?.navigationBar.isHidden = false
+    }
+    private func creatADView(){
         let kADModel = kUserDefaults.data(forKey: "ADModel")
         var model = ADModel()
         if kADModel == nil{
@@ -120,7 +172,7 @@ class FirstViewController: BaseViewController {
             adVC.adUrl = adUrl
             self?.navigationController?.pushViewController(adVC, animated: true)
         }
-        adView.showTime = 15
+        adView.showTime = 5
         adView.show()
     }
     
@@ -155,9 +207,8 @@ extension FirstViewController:ZKDownloaderDelegate{
     func downloader(_ download: ZKDownloader, didFinishWithData data: Data?) {
         if download.type == 1 {
             print(ZKTools.stringWithData(data: data!))
-            let u = UserDefaults.standard
-            u.set(data!, forKey: "ADModel")
-            u.synchronize()
+            kUserDefaults.set(data!, forKey: "ADModel")
+            kUserDefaults.synchronize()
         }
     }
 }

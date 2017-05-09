@@ -7,7 +7,7 @@
 //
 
 import UIKit
-protocol BackViewControllerDelegate {
+protocol BackViewControllerDelegate:NSObjectProtocol {
     func backTest(str:String)
 }
 
@@ -17,7 +17,7 @@ class BackViewController: BaseViewController {
         //禁用返回手势
         //navigationController?.fd_fullscreenPopGestureRecognizer.isEnabled=false
     }
-     var delegate:BackViewControllerDelegate?
+    weak var delegate:BackViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()

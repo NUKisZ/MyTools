@@ -63,7 +63,7 @@ class ADView: UIView {
         return false
     }
     
-    func show(){
+    public func show(){
         if imageExist(){
             count = showTime
             countBtn.setTitle(String(format: "跳过%@", "\(count!)"), for: .normal)
@@ -135,9 +135,9 @@ class ADView: UIView {
             let image = UIImage(data: data!)
             let filePath = self.getFilePathWithImageName(imageName: imageName)
             do{
-                print(filePath)
+                //print(filePath)
                 try UIImagePNGRepresentation(image!)?.write(to: URL(fileURLWithPath: filePath), options: .atomic)
-                print("保存成功")
+                //print("保存成功")
                 self.deleteOldImage()
                 kUserDefaults.setValue(imageName, forKey: kAdImageName)
                 kUserDefaults.setValue(self.adUrl, forKey: kAdUrl)
@@ -145,7 +145,7 @@ class ADView: UIView {
                 
             }catch{
                 print(error)
-                print("保存失败")
+                print("广告图片保存失败")
             }
             
         }

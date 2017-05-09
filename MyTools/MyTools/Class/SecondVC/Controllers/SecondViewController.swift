@@ -14,7 +14,13 @@ class SecondViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+//        navigationController?.setNavigationBarHidden(false, animated: false)
         
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
 
     override func didReceiveMemoryWarning() {

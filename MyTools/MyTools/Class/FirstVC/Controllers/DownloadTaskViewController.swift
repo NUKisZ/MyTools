@@ -19,6 +19,17 @@ class DownloadTaskViewController: BaseViewController {
         // Do any additional setup after loading the view.
         createTableView()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+//        navigationController?.navigationBar.isHidden = false
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+//        navigationController?.setNavigationBarHidden(false, animated: animated)
+//        navigationController?.navigationBar.isHidden = false
+    }
+    
     func createTableView(){
         navigationController?.automaticallyAdjustsScrollViewInsets = false
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(rightItemAction))
