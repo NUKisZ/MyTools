@@ -23,6 +23,7 @@ class FirstViewController: BaseViewController {
         view.addSubview(label)
         creatADView()
         createSubViews()
+        
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         //去空格
         let str = "  adf aase  werwer wr w wer wr qw r  w"
@@ -41,6 +42,9 @@ class FirstViewController: BaseViewController {
         print(share1.i as Any)
         print(share2.i as Any)
         _ = UserDefaults.standard
+    }
+    private func delay(delay:Double,closure:@escaping ()->()){
+        DispatchQueue.main.asyncAfter(deadline: .now()+delay, execute: closure)
     }
     private func createSubViews(){
         let btn = ZKTools.createButton(CGRect.init(x: 0, y: 114, width: 80, height: 30), title: "清空缓存", imageName: nil, bgImageName: nil, target: self, action: #selector(cacheClick))
@@ -111,13 +115,42 @@ class FirstViewController: BaseViewController {
         print("aaaa")
     }
     @objc private func albumBtnAction(){
-        let style = UIApplication.shared.statusBarStyle
-        if style == UIStatusBarStyle.default{
-            UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
-        }else{
-            UIApplication.shared.setStatusBarStyle(.default, animated: true)
-        }
+//        let style = UIApplication.shared.statusBarStyle
+//        if style == UIStatusBarStyle.default{
+//            UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
+//        }else{
+//            UIApplication.shared.setStatusBarStyle(.default, animated: true)
+//        }
+//        delay(delay: 1) {
+//            //            let alert = UIAlertView(title: "测试", message: "测试", delegate: nil, cancelButtonTitle: "取消")
+//            //            alert.show()
+//            let aalert = UIAlertController(title: "测试2", message: "测试2", preferredStyle: .alert)
+//            let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+//            aalert.addAction(cancelAction)
+//            aalert.show()
+//        }
         
+        let alert = LGAlertView(progressViewAndTitle: "测试", message: "测试", style: .alert, progressLabelText: "测试", buttonTitles: ["确定"], cancelButtonTitle: "取消", destructiveButtonTitle: nil)
+        alert.isCancelOnTouch = false
+        updateProgressWithAlertView(alertView: alert)
+        alert.showAnimated()
+        
+    }
+    private func updateProgressWithAlertView(alertView:LGAlertView){
+        delay(delay: 0.02) {
+            [weak self] in
+            if(alertView.progress >= 1.0){
+                alertView.dismissAnimated()
+            }else{
+                var progress = alertView.progress+0.001
+                
+                if (progress > 1.0){
+                    progress = 1.0
+                }
+                alertView.setProgress(progress, progressLabelText: NSString(format: "%.0f %%", progress*100) as String)
+                self?.updateProgressWithAlertView(alertView: alertView)
+            }
+        }
     }
     @objc private func webViewAction(){
         let webVc = WebViewController()
@@ -206,7 +239,7 @@ extension FirstViewController:ZKDownloaderDelegate{
     }
     func downloader(_ download: ZKDownloader, didFinishWithData data: Data?) {
         if download.type == 1 {
-            print(ZKTools.stringWithData(data: data!))
+            //print(ZKTools.stringWithData(data: data!))
             kUserDefaults.set(data!, forKey: "ADModel")
             kUserDefaults.synchronize()
         }

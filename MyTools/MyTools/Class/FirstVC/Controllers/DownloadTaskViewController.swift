@@ -36,6 +36,7 @@ class DownloadTaskViewController: BaseViewController {
         tbView = UITableView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight-20), style: .plain)
         tbView?.delegate = self
         tbView?.dataSource = self
+        
         view.addSubview(tbView!)
         NotificationCenter.default.addObserver(self, selector: #selector(reloadData), name: NSNotification.Name(rawValue: DownloadTaskNotification.Finish.rawValue), object: nil)
     }

@@ -66,7 +66,6 @@ class WKWebViewBaseViewController: BaseViewController {
             }
             
             })
-        
         wkWebView?.backgroundColor = UIColor.white
         wkWebView?.uiDelegate = self
         wkWebView?.navigationDelegate = self

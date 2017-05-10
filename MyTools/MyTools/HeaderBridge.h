@@ -10,6 +10,7 @@
 #define HeaderBridge_h
 #import "MJRefresh.h"
 #import "UIControl+recurClick.h"
+#import "LGAlertView.h"
 //#import "UINavigationController+FDFullscreenPopGesture.h"
 
 #endif /* HeaderBridge_h */
