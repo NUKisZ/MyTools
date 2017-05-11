@@ -11,6 +11,7 @@
 #import "MJRefresh.h"
 #import "UIControl+recurClick.h"
 #import "LGAlertView.h"
+#import "Reachability.h"
 //#import "UINavigationController+FDFullscreenPopGesture.h"
 
 #endif /* HeaderBridge_h */

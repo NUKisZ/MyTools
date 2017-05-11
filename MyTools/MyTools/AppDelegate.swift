@@ -7,20 +7,69 @@
 //
 
 import UIKit
-
+public let kNetworkReachabilityChangedNotification = "kNetworkReachabilityChangedNotification"
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+//    private var reachability:Reachability?
+    private var manager:NetworkReachabilityManager?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let hostURL = "www.baidu.com"
+//        reachability = Reachability(hostName: hostURL)
+//        reachability?.startNotifier()
+//        NotificationCenter.default.addObserver(self, selector: #selector(reachabilityChanged), name: NSNotification.Name(rawValue: kNetworkReachabilityChangedNotification), object: nil)
+        
+        manager = NetworkReachabilityManager(host: hostURL)
+        
+        manager?.startListening()
+        manager?.listener = {
+            reach in
+            switch reach {
+            case .unknown:
+                print("未知的")
+            case .notReachable:
+                print("不可用")
+            case .reachable(.wwan):
+                print("移动网络")
+            case .reachable(.ethernetOrWiFi):
+                print("WiFi")
+            }
+            NotificationCenter.default.post(name: NSNotification.Name(kNetworkReachabilityChangedNotification), object: reach)
+            
+        }
+
         window?.rootViewController = MainTabBarViewController()
         window?.makeKeyAndVisible()
         return true
     }
+//    func reachabilityChanged(n:Notification){
+//        if(n.object is Reachability){
+//            let reach = n.object as! Reachability
+//            updateInterfaceWithReachability(reach: reach)
+//        }
+//    }
+//    func updateInterfaceWithReachability(reach:Reachability){
+//        let netStatus = reach.currentReachabilityStatus();
+//        switch netStatus {
+//        case NotReachable:
+//            print("没有网络")
+//        case ReachableViaWiFi:
+//            print("WiFi")
+//        case ReachableViaWWAN:
+//            print("WWAN")
+//        default:
+//            break
+//        }
+//    }
 
+//    deinit {
+//        reachability?.stopNotifier()
+//        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(rawValue: kNetworkReachabilityChangedNotification), object: nil)
+//    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

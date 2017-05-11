@@ -58,6 +58,24 @@
 		0B1C46781EBAF684009B7BDD /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C46461EBAF684009B7BDD /* URLExtensions.swift */; };
 		0B1C46791EBAF684009B7BDD /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C46471EBAF684009B7BDD /* UserDefaultsExtension.swift */; };
 		0B20FE381EC074CB0053DB99 /* SharedInstanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20FE371EC074CB0053DB99 /* SharedInstanceTest.swift */; };
+		0B3857961EC4372800C0126C /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857821EC4372800C0126C /* AFError.swift */; };
+		0B3857971EC4372800C0126C /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857841EC4372800C0126C /* Alamofire.swift */; };
+		0B3857981EC4372800C0126C /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857851EC4372800C0126C /* DispatchQueue+Alamofire.swift */; };
+		0B38579B1EC4372900C0126C /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857881EC4372800C0126C /* MultipartFormData.swift */; };
+		0B38579C1EC4372900C0126C /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857891EC4372800C0126C /* NetworkReachabilityManager.swift */; };
+		0B38579D1EC4372900C0126C /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38578A1EC4372800C0126C /* Notifications.swift */; };
+		0B38579E1EC4372900C0126C /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38578B1EC4372800C0126C /* ParameterEncoding.swift */; };
+		0B38579F1EC4372900C0126C /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38578C1EC4372800C0126C /* Request.swift */; };
+		0B3857A01EC4372900C0126C /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38578D1EC4372800C0126C /* Response.swift */; };
+		0B3857A11EC4372900C0126C /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38578E1EC4372800C0126C /* ResponseSerialization.swift */; };
+		0B3857A21EC4372900C0126C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B38578F1EC4372800C0126C /* Result.swift */; };
+		0B3857A31EC4372900C0126C /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857901EC4372800C0126C /* ServerTrustPolicy.swift */; };
+		0B3857A41EC4372900C0126C /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857911EC4372800C0126C /* SessionDelegate.swift */; };
+		0B3857A51EC4372900C0126C /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857921EC4372800C0126C /* SessionManager.swift */; };
+		0B3857A61EC4372900C0126C /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857931EC4372800C0126C /* TaskDelegate.swift */; };
+		0B3857A71EC4372900C0126C /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857941EC4372800C0126C /* Timeline.swift */; };
+		0B3857A81EC4372900C0126C /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857951EC4372800C0126C /* Validation.swift */; };
+		0B3857B01EC43E7200C0126C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857AF1EC43E7200C0126C /* Reachability.m */; };
 		0B432B001EB9868B00D75930 /* launcht.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B432AFF1EB9868B00D75930 /* launcht.png */; };
 		0B48CBD41EAF28F40069A213 /* BackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBC41EAF28F40069A213 /* BackViewController.swift */; };
 		0B48CBD51EAF28F40069A213 /* DownloadTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBC51EAF28F40069A213 /* DownloadTaskViewController.swift */; };
@@ -263,6 +281,26 @@
 		0B1C46461EBAF684009B7BDD /* URLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
 		0B1C46471EBAF684009B7BDD /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
 		0B20FE371EC074CB0053DB99 /* SharedInstanceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedInstanceTest.swift; sourceTree = "<group>"; };
+		0B3857821EC4372800C0126C /* AFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
+		0B3857831EC4372800C0126C /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
+		0B3857841EC4372800C0126C /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		0B3857851EC4372800C0126C /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		0B3857881EC4372800C0126C /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		0B3857891EC4372800C0126C /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		0B38578A1EC4372800C0126C /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		0B38578B1EC4372800C0126C /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		0B38578C1EC4372800C0126C /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		0B38578D1EC4372800C0126C /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		0B38578E1EC4372800C0126C /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
+		0B38578F1EC4372800C0126C /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0B3857901EC4372800C0126C /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		0B3857911EC4372800C0126C /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		0B3857921EC4372800C0126C /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		0B3857931EC4372800C0126C /* TaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
+		0B3857941EC4372800C0126C /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		0B3857951EC4372800C0126C /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		0B3857AB1EC43B0E00C0126C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		0B3857AF1EC43E7200C0126C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		0B432AFF1EB9868B00D75930 /* launcht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcht.png; sourceTree = "<group>"; };
 		0B48CBC41EAF28F40069A213 /* BackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackViewController.swift; sourceTree = "<group>"; };
 		0B48CBC51EAF28F40069A213 /* DownloadTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadTaskViewController.swift; sourceTree = "<group>"; };
@@ -529,6 +567,40 @@
 				0B20FE371EC074CB0053DB99 /* SharedInstanceTest.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		0B3857811EC4372800C0126C /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				0B3857821EC4372800C0126C /* AFError.swift */,
+				0B3857831EC4372800C0126C /* Alamofire.h */,
+				0B3857841EC4372800C0126C /* Alamofire.swift */,
+				0B3857851EC4372800C0126C /* DispatchQueue+Alamofire.swift */,
+				0B3857881EC4372800C0126C /* MultipartFormData.swift */,
+				0B3857891EC4372800C0126C /* NetworkReachabilityManager.swift */,
+				0B38578A1EC4372800C0126C /* Notifications.swift */,
+				0B38578B1EC4372800C0126C /* ParameterEncoding.swift */,
+				0B38578C1EC4372800C0126C /* Request.swift */,
+				0B38578D1EC4372800C0126C /* Response.swift */,
+				0B38578E1EC4372800C0126C /* ResponseSerialization.swift */,
+				0B38578F1EC4372800C0126C /* Result.swift */,
+				0B3857901EC4372800C0126C /* ServerTrustPolicy.swift */,
+				0B3857911EC4372800C0126C /* SessionDelegate.swift */,
+				0B3857921EC4372800C0126C /* SessionManager.swift */,
+				0B3857931EC4372800C0126C /* TaskDelegate.swift */,
+				0B3857941EC4372800C0126C /* Timeline.swift */,
+				0B3857951EC4372800C0126C /* Validation.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		0B3857A91EC43B0E00C0126C /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				0B3857AB1EC43B0E00C0126C /* Reachability.h */,
+				0B3857AF1EC43E7200C0126C /* Reachability.m */,
+			);
+			path = Reachability;
 			sourceTree = "<group>";
 		};
 		0B432AFD1EB9868B00D75930 /* Resources */ = {
@@ -970,6 +1042,8 @@
 		0B79C3841E83907D00CF92B2 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				0B3857A91EC43B0E00C0126C /* Reachability */,
+				0B3857811EC4372800C0126C /* Alamofire */,
 				0B5A4AF41EC2A40500C05501 /* LGAlertView */,
 				0B5F45751EC015FC0042D19E /* MJRefresh */,
 				0B1C46151EBAF684009B7BDD /* EZSwiftSources */,
@@ -1192,6 +1266,7 @@
 				0B5A4B141EC2A40500C05501 /* LGAlertViewWindowContainer.m in Sources */,
 				0B79C3EB1E83A14900CF92B2 /* ConstraintMakerFinalizable.swift in Sources */,
 				0B79C3EE1E83A14900CF92B2 /* ConstraintMultiplierTarget.swift in Sources */,
+				0B3857A31EC4372900C0126C /* ServerTrustPolicy.swift in Sources */,
 				0B79C3F31E83A14900CF92B2 /* ConstraintView+Extensions.swift in Sources */,
 				0B6F05021EB85085005E8FBD /* Resource.swift in Sources */,
 				0B1C46651EBAF684009B7BDD /* UIBarButtonItemExtensions.swift in Sources */,
@@ -1202,12 +1277,17 @@
 				0B1C466B1EBAF684009B7BDD /* UIFontExtensions.swift in Sources */,
 				0B5A4B0F1EC2A40500C05501 /* LGAlertViewCell.m in Sources */,
 				0B6F04921EB84812005E8FBD /* DetailViewController.swift in Sources */,
+				0B3857A71EC4372900C0126C /* Timeline.swift in Sources */,
+				0B3857A11EC4372900C0126C /* ResponseSerialization.swift in Sources */,
 				0B1C46571EBAF684009B7BDD /* DateExtensions.swift in Sources */,
 				0B1C465E1EBAF684009B7BDD /* NSAttributedStringExtensions.swift in Sources */,
 				0B79C3DB1E83A14900CF92B2 /* ConstraintAttributes.swift in Sources */,
 				0B5A4B161EC2A40500C05501 /* UIWindow+LGAlertView.m in Sources */,
 				0B1C466E1EBAF684009B7BDD /* UILabelExtensions.swift in Sources */,
 				0B6F05061EB85085005E8FBD /* XWConst.swift in Sources */,
+				0B38579C1EC4372900C0126C /* NetworkReachabilityManager.swift in Sources */,
+				0B3857A61EC4372900C0126C /* TaskDelegate.swift in Sources */,
+				0B3857B01EC43E7200C0126C /* Reachability.m in Sources */,
 				0B1C46591EBAF684009B7BDD /* DoubleExtensions.swift in Sources */,
 				0B5F45AB1EC015FC0042D19E /* MJRefreshAutoStateFooter.m in Sources */,
 				0B5A4B0D1EC2A40500C05501 /* LGAlertViewButton.m in Sources */,
@@ -1226,6 +1306,7 @@
 				0B6F04C71EB84812005E8FBD /* PapapaCell.swift in Sources */,
 				0B5F45A81EC015FC0042D19E /* MJRefreshHeader.m in Sources */,
 				0B1C46641EBAF684009B7BDD /* UIApplicationExtensions.swift in Sources */,
+				0B3857A21EC4372900C0126C /* Result.swift in Sources */,
 				0B79C3E41E83A14900CF92B2 /* ConstraintLayoutGuide.swift in Sources */,
 				0B1C46621EBAF684009B7BDD /* TimerExtensions.swift in Sources */,
 				0B5A4B181EC2D03100C05501 /* TableViewBaseController.swift in Sources */,
@@ -1235,6 +1316,7 @@
 				0B79C3F41E83A14900CF92B2 /* ConstraintView.swift in Sources */,
 				0B79C3EF1E83A14900CF92B2 /* ConstraintOffsetTarget.swift in Sources */,
 				0B5F45A91EC015FC0042D19E /* MJRefreshAutoGifFooter.m in Sources */,
+				0B3857961EC4372800C0126C /* AFError.swift in Sources */,
 				0B1C46751EBAF684009B7BDD /* UIViewControllerExtensions.swift in Sources */,
 				0B1C465C1EBAF684009B7BDD /* FloatingPointExtensions.swift in Sources */,
 				0B5F45B51EC015FD0042D19E /* UIScrollView+MJExtension.m in Sources */,
@@ -1242,13 +1324,16 @@
 				0B6F050C1EB85085005E8FBD /* XWRefreshFooter.swift in Sources */,
 				0B79C3751E8388D600CF92B2 /* ViewController.swift in Sources */,
 				0B1C46491EBAF684009B7BDD /* BlockButton.swift in Sources */,
+				0B3857971EC4372800C0126C /* Alamofire.swift in Sources */,
 				0B48CBDC1EAF29970069A213 /* WebViewController.swift in Sources */,
 				0B5A4B0C1EC2A40500C05501 /* LGAlertView.m in Sources */,
+				0B3857981EC4372800C0126C /* DispatchQueue+Alamofire.swift in Sources */,
 				0B6F04FD1EB85085005E8FBD /* Indicator.swift in Sources */,
 				0B79C3DA1E83A14900CF92B2 /* Constraint.swift in Sources */,
 				0B79C3E51E83A14900CF92B2 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				0B5F45A71EC015FC0042D19E /* MJRefreshFooter.m in Sources */,
 				0B79C3B51E839CEB00CF92B2 /* HttpUrl.swift in Sources */,
+				0B38579D1EC4372900C0126C /* Notifications.swift in Sources */,
 				0B6F05091EB85085005E8FBD /* XWRefreshAutoFooter.swift in Sources */,
 				0B79C3981E83907D00CF92B2 /* ZKDownloader.swift in Sources */,
 				0B1C466F1EBAF684009B7BDD /* UISliderExtensions.swift in Sources */,
@@ -1258,6 +1343,7 @@
 				0B1C46711EBAF684009B7BDD /* UISwitchExtensions.swift in Sources */,
 				0B6F050D1EB85085005E8FBD /* XWRefreshGifHeader.swift in Sources */,
 				0B6F04FE1EB85085005E8FBD /* Kingfisher.swift in Sources */,
+				0B3857A81EC4372900C0126C /* Validation.swift in Sources */,
 				0B79C3DD1E83A14900CF92B2 /* ConstraintConstantTarget.swift in Sources */,
 				0B6F04C81EB84812005E8FBD /* StarView.swift in Sources */,
 				0B1C46481EBAF684009B7BDD /* ArrayExtensions.swift in Sources */,
@@ -1273,6 +1359,7 @@
 				0B79C3F11E83A14900CF92B2 /* ConstraintRelatableTarget.swift in Sources */,
 				0B5F45B61EC015FD0042D19E /* UIScrollView+MJRefresh.m in Sources */,
 				0B1C46611EBAF684009B7BDD /* StringExtensions.swift in Sources */,
+				0B3857A01EC4372900C0126C /* Response.swift in Sources */,
 				0B5F45AE1EC015FC0042D19E /* MJRefreshBackStateFooter.m in Sources */,
 				0B6F050E1EB85085005E8FBD /* XWRefreshHeader.swift in Sources */,
 				0B6F049D1EB84812005E8FBD /* DetailModel.swift in Sources */,
@@ -1326,9 +1413,11 @@
 				0B1C46741EBAF684009B7BDD /* UIUserInterfaceSizeClassExtensions.swift in Sources */,
 				0B5A4B111EC2A40500C05501 /* LGAlertViewHelper.m in Sources */,
 				0B1C46511EBAF684009B7BDD /* BundleExtensions.swift in Sources */,
+				0B38579F1EC4372900C0126C /* Request.swift in Sources */,
 				0B1C46671EBAF684009B7BDD /* UIColoredView.swift in Sources */,
 				0B68F7661E84B71B00280D1B /* ADViewController.swift in Sources */,
 				0B20FE381EC074CB0053DB99 /* SharedInstanceTest.swift in Sources */,
+				0B38579E1EC4372900C0126C /* ParameterEncoding.swift in Sources */,
 				0B6F049F1EB84812005E8FBD /* HomePageModel.swift in Sources */,
 				0B79C3EC1E83A14900CF92B2 /* ConstraintMakerPriortizable.swift in Sources */,
 				0B5F45B71EC015FD0042D19E /* UIView+MJExtension.m in Sources */,
@@ -1341,6 +1430,7 @@
 				0B1C464C1EBAF684009B7BDD /* BlockPinch.swift in Sources */,
 				0B6F04F71EB85085005E8FBD /* ImageCache.swift in Sources */,
 				0B5A4B1A1EC2D3B700C05501 /* FirstViewControllerCell.swift in Sources */,
+				0B38579B1EC4372900C0126C /* MultipartFormData.swift in Sources */,
 				0B5F45AA1EC015FC0042D19E /* MJRefreshAutoNormalFooter.m in Sources */,
 				0B1C46631EBAF684009B7BDD /* UIAlertControllerExtensions.swift in Sources */,
 				0B1C46601EBAF684009B7BDD /* NSObjectExtensions.swift in Sources */,
@@ -1353,11 +1443,13 @@
 				0B79C3F21E83A14900CF92B2 /* ConstraintRelation.swift in Sources */,
 				0B79C3961E83907D00CF92B2 /* Const.swift in Sources */,
 				0B6F05101EB85085005E8FBD /* XWRefreshStateHeader.swift in Sources */,
+				0B3857A41EC4372900C0126C /* SessionDelegate.swift in Sources */,
 				0B6F04F81EB85085005E8FBD /* ImageDownloader.swift in Sources */,
 				0B6F04F91EB85085005E8FBD /* ImagePrefetcher.swift in Sources */,
 				0B1C464E1EBAF684009B7BDD /* BlockTap.swift in Sources */,
 				0B6F04F21EB85085005E8FBD /* AnimatedImageView.swift in Sources */,
 				0B1C46771EBAF684009B7BDD /* UIWindowExtensions.swift in Sources */,
+				0B3857A51EC4372900C0126C /* SessionManager.swift in Sources */,
 				0B6F04971EB84812005E8FBD /* PapapaViewController.swift in Sources */,
 				0B68F7651E84B71B00280D1B /* ADView.swift in Sources */,
 				0B79C3F51E83A14900CF92B2 /* ConstraintViewDSL.swift in Sources */,

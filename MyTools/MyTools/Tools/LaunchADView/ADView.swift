@@ -132,6 +132,10 @@ class ADView: UIView {
             //下载
             let url = URL(string: imageUrl)
             let data = try? Data(contentsOf: url!)
+            if data==nil{
+                print("广告图片保存失败")
+                return
+            }
             let image = UIImage(data: data!)
             let filePath = self.getFilePathWithImageName(imageName: imageName)
             do{

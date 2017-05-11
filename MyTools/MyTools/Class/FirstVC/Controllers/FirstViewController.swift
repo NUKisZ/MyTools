@@ -18,6 +18,8 @@ class FirstViewController: TableViewBaseController {
         super.viewDidLoad()
         //navigationController?.navigationBar.isTranslucent=false
         navigationController?.automaticallyAdjustsScrollViewInsets=false
+        NotificationCenter.default.addObserver(self, selector: #selector(changeNetWorking(n:)), name: NSNotification.Name(kNetworkReachabilityChangedNotification), object: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "网络", style: .done, target: nil, action: nil)
         // Do any additional setup after loading the view.
         view.addSubview(label)
         creatADView()
@@ -50,7 +52,24 @@ class FirstViewController: TableViewBaseController {
         print(b)
         
     }
-    
+    @objc private func changeNetWorking(n:NSNotification){
+        if (n.object is NetworkReachabilityManager.NetworkReachabilityStatus){
+            let reach = n.object as! NetworkReachabilityManager.NetworkReachabilityStatus
+            var status = ""
+            switch reach {
+            case .unknown:
+                status = "未知的"
+            case .notReachable:
+                status = "不可用"
+            case .reachable(.wwan):
+                status = "移动网络"
+            case .reachable(.ethernetOrWiFi):
+                status = "WiFi"
+            }
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: status, style: .done, target: nil, action: nil)
+        }
+        
+    }
     private func delay(delay:Double,closure:@escaping ()->()){
         DispatchQueue.main.asyncAfter(deadline: .now()+delay, execute: closure)
     }
@@ -216,7 +235,9 @@ class FirstViewController: TableViewBaseController {
         adView.showTime = 5
         adView.show()
     }
-    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name(kNetworkReachabilityChangedNotification), object: nil)
+    }
     private func download(){
         let download = ZKDownloader()
         download.delegate = self
