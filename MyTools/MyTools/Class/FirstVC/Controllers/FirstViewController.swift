@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-class FirstViewController: BaseViewController {
+class FirstViewController: TableViewBaseController {
 
     
     var label:UILabel{
@@ -22,14 +21,17 @@ class FirstViewController: BaseViewController {
         // Do any additional setup after loading the view.
         view.addSubview(label)
         creatADView()
-        createSubViews()
-        
+        //createSubViews()
+        createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight), style: .plain, separatorStyle: .none)
+        dataArray = ["全屏返回测试","清空缓存","下载界面","WebView","选择图片"]
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         //去空格
         let str = "  adf aase  werwer wr w wer wr qw r  w"
         print(str)
         let str1 = str.replacingOccurrences(of: " ", with: "")
         print(str1)
+        let str1Arr = str1.toNSString.components(separatedBy: "rwrww")
+        print(str1Arr)
         let mail = "aaa@qq.com"
         print(mail.isEmail)
         print(ez.appDisplayName as Any)
@@ -41,8 +43,14 @@ class FirstViewController: BaseViewController {
         share2.i = 40;
         print(share1.i as Any)
         print(share2.i as Any)
-        _ = UserDefaults.standard
+        let arr = ["aa","cc","bb"]
+        let b = arr.sorted { (a, b) -> Bool in
+            return a < b
+        }
+        print(b)
+        
     }
+    
     private func delay(delay:Double,closure:@escaping ()->()){
         DispatchQueue.main.asyncAfter(deadline: .now()+delay, execute: closure)
     }
@@ -106,7 +114,7 @@ class FirstViewController: BaseViewController {
             make.top.equalTo(albumBtn.snp.bottom)
             make.height.equalTo(30)
         }
-        accEventBtn.zk_accpetEventInterval=2
+        accEventBtn.uxy_acceptEventInterval=2
         accEventBtn.addTarget(self, action: #selector(accEventBtnAction), for: .touchUpInside)
         accEventBtn.setTitle("SwiftRuntime", for: .normal)
         
@@ -114,7 +122,7 @@ class FirstViewController: BaseViewController {
     @objc private func accEventBtnAction(){
         print("aaaa")
     }
-    @objc private func albumBtnAction(){
+    @objc fileprivate func albumBtnAction(){
 //        let style = UIApplication.shared.statusBarStyle
 //        if style == UIStatusBarStyle.default{
 //            UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
@@ -133,14 +141,14 @@ class FirstViewController: BaseViewController {
         let alert = LGAlertView(progressViewAndTitle: "测试", message: "测试", style: .alert, progressLabelText: "测试", buttonTitles: ["确定"], cancelButtonTitle: "取消", destructiveButtonTitle: nil)
         alert.isCancelOnTouch = false
         updateProgressWithAlertView(alertView: alert)
-        alert.showAnimated()
+        alert.show(animated: false, completionHandler: nil)
         
     }
     private func updateProgressWithAlertView(alertView:LGAlertView){
         delay(delay: 0.02) {
             [weak self] in
             if(alertView.progress >= 1.0){
-                alertView.dismissAnimated()
+                alertView.dismiss()
             }else{
                 var progress = alertView.progress+0.001
                 
@@ -152,25 +160,25 @@ class FirstViewController: BaseViewController {
             }
         }
     }
-    @objc private func webViewAction(){
+    @objc fileprivate func webViewAction(){
         let webVc = WebViewController()
         hidesBottomBarWhenPushed=true
         navigationController?.pushViewController(webVc, animated: true)
         hidesBottomBarWhenPushed=false
     }
-    @objc private func downloadVCAction(){
+    @objc fileprivate func downloadVCAction(){
         let downloadVC = DownloadTaskViewController()
         hidesBottomBarWhenPushed=true
         navigationController?.pushViewController(downloadVC, animated: true)
         hidesBottomBarWhenPushed=false
     }
-    @objc private func goBackVCBtnAction(){
+    @objc fileprivate func goBackVCBtnAction(){
         let backVC = BackViewController()
         backVC.delegate = self
         
         navigationController?.pushViewController(backVC, animated: true)
     }
-    @objc private func cacheClick(){
+    @objc fileprivate func cacheClick(){
         let flag = ADView.clear()
         if flag {
             ZKTools.alertViewCtroller(vc: self, title: "提示", message: "清除缓存成功", cancelActionTitle: nil, sureActionTitle: "确定", action: nil)
@@ -181,12 +189,12 @@ class FirstViewController: BaseViewController {
         download()
         //Info.plist 中添加 View controller-based status bar appearance : NO
         UIApplication.shared.setStatusBarStyle(.default, animated: animated)
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
 //        navigationController?.navigationBar.isHidden = true
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: animated)
+//        navigationController?.setNavigationBarHidden(false, animated: animated)
 //        navigationController?.navigationBar.isHidden = false
     }
     private func creatADView(){
@@ -233,6 +241,7 @@ class FirstViewController: BaseViewController {
     */
 
 }
+// MARK: - ZKDownloaderDelegate
 extension FirstViewController:ZKDownloaderDelegate{
     func downloader(_ download: ZKDownloader, didFailWithError error: NSError) {
         print(error)
@@ -248,5 +257,40 @@ extension FirstViewController:ZKDownloaderDelegate{
 extension FirstViewController:BackViewControllerDelegate{
     func backTest(str: String) {
         print(str)
+    }
+}
+// MARK: - TableViewDelegate
+extension FirstViewController{
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataArray.count
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let ID = "FirstViewControllerID"
+        var cell = tableView.dequeueReusableCell(withIdentifier: ID)
+        if cell == nil {
+            cell = UITableViewCell(style: .default, reuseIdentifier: ID)
+        }
+        cell?.selectionStyle = .none
+        cell?.textLabel?.text = dataArray[indexPath.row] as? String
+        
+        return cell!
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            goBackVCBtnAction()
+            break
+        case 1:
+            cacheClick()
+            break
+        case 2:
+            downloadVCAction()
+        case 3:
+            webViewAction()
+        case 4:
+            albumBtnAction()
+        default:
+            break
+        }
     }
 }

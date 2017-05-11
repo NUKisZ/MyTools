@@ -79,6 +79,8 @@
 		0B5A4B141EC2A40500C05501 /* LGAlertViewWindowContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B071EC2A40500C05501 /* LGAlertViewWindowContainer.m */; };
 		0B5A4B151EC2A40500C05501 /* LGAlertViewWindowsObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B091EC2A40500C05501 /* LGAlertViewWindowsObserver.m */; };
 		0B5A4B161EC2A40500C05501 /* UIWindow+LGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B0B1EC2A40500C05501 /* UIWindow+LGAlertView.m */; };
+		0B5A4B181EC2D03100C05501 /* TableViewBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B171EC2D03100C05501 /* TableViewBaseController.swift */; };
+		0B5A4B1A1EC2D3B700C05501 /* FirstViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B191EC2D3B700C05501 /* FirstViewControllerCell.swift */; };
 		0B5F45741EC015EF0042D19E /* WKWebViewBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F45731EC015EF0042D19E /* WKWebViewBaseViewController.swift */; };
 		0B5F45A41EC015FC0042D19E /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F45781EC015FC0042D19E /* MJRefreshAutoFooter.m */; };
 		0B5F45A51EC015FC0042D19E /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F457A1EC015FC0042D19E /* MJRefreshBackFooter.m */; };
@@ -294,6 +296,8 @@
 		0B5A4B091EC2A40500C05501 /* LGAlertViewWindowsObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertViewWindowsObserver.m; sourceTree = "<group>"; };
 		0B5A4B0A1EC2A40500C05501 /* UIWindow+LGAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+LGAlertView.h"; sourceTree = "<group>"; };
 		0B5A4B0B1EC2A40500C05501 /* UIWindow+LGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+LGAlertView.m"; sourceTree = "<group>"; };
+		0B5A4B171EC2D03100C05501 /* TableViewBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewBaseController.swift; sourceTree = "<group>"; };
+		0B5A4B191EC2D3B700C05501 /* FirstViewControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewControllerCell.swift; sourceTree = "<group>"; };
 		0B5F45731EC015EF0042D19E /* WKWebViewBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewBaseViewController.swift; sourceTree = "<group>"; };
 		0B5F45771EC015FC0042D19E /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		0B5F45781EC015FC0042D19E /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
@@ -569,6 +573,7 @@
 			isa = PBXGroup;
 			children = (
 				0B48CBC91EAF28F40069A213 /* DownloadCell.swift */,
+				0B5A4B191EC2D3B700C05501 /* FirstViewControllerCell.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1012,6 +1017,7 @@
 				0B79C3A41E8394E800CF92B2 /* MainTabBarViewController.swift */,
 				0B79C3B21E83978500CF92B2 /* BaseViewController.swift */,
 				0B79C3B41E839CEB00CF92B2 /* HttpUrl.swift */,
+				0B5A4B171EC2D03100C05501 /* TableViewBaseController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1222,6 +1228,7 @@
 				0B1C46641EBAF684009B7BDD /* UIApplicationExtensions.swift in Sources */,
 				0B79C3E41E83A14900CF92B2 /* ConstraintLayoutGuide.swift in Sources */,
 				0B1C46621EBAF684009B7BDD /* TimerExtensions.swift in Sources */,
+				0B5A4B181EC2D03100C05501 /* TableViewBaseController.swift in Sources */,
 				0B5A4B101EC2A40500C05501 /* LGAlertViewController.m in Sources */,
 				0B6F05051EB85085005E8FBD /* UIButton+Kingfisher.swift in Sources */,
 				0B79C3F81E83A14900CF92B2 /* LayoutConstraint.swift in Sources */,
@@ -1333,6 +1340,7 @@
 				0B1C46581EBAF684009B7BDD /* DictionaryExtensions.swift in Sources */,
 				0B1C464C1EBAF684009B7BDD /* BlockPinch.swift in Sources */,
 				0B6F04F71EB85085005E8FBD /* ImageCache.swift in Sources */,
+				0B5A4B1A1EC2D3B700C05501 /* FirstViewControllerCell.swift in Sources */,
 				0B5F45AA1EC015FC0042D19E /* MJRefreshAutoNormalFooter.m in Sources */,
 				0B1C46631EBAF684009B7BDD /* UIAlertControllerExtensions.swift in Sources */,
 				0B1C46601EBAF684009B7BDD /* NSObjectExtensions.swift in Sources */,

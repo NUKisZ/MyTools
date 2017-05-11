@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import ObjectiveC
-
+//import ObjectiveC
+/*
 public extension UIButton{
     private struct zk_associatedKeys{
         static var accpetEventInterval  = "zk_acceptEventInterval"
@@ -60,3 +60,4 @@ public extension UIButton{
         self.zk_sendAction(action: action, to: target, forEvent: event)
     }
 }
+*/
