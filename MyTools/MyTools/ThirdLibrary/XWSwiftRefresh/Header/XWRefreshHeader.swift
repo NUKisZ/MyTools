@@ -162,7 +162,7 @@ open class XWRefreshHeader: XWRefreshComponent {
         
         if self.scrollView.isKind(of: UICollectionView.self){
             
-            xwDelay(0.1){
+            _ = xwDelay(0.1){
                 super.endRefreshing()
             }
         }else{

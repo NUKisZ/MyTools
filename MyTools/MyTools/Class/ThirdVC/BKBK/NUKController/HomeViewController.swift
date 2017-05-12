@@ -9,8 +9,8 @@
 import UIKit
 
 class BKHomeViewController: UIViewController,ZKDownloaderDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
-    var collView:UICollectionView?
-    lazy var dataArray = NSMutableArray()
+    fileprivate var collView:UICollectionView?
+    fileprivate lazy var dataArray = NSMutableArray()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,17 +19,22 @@ class BKHomeViewController: UIViewController,ZKDownloaderDelegate,UICollectionVi
         self.view.backgroundColor = UIColor.white
         self.createCollView()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "清除缓存", style: UIBarButtonItemStyle.done, target: self, action: #selector(clearCache))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "刷新", style: .done, target: self, action: #selector(reloadNewDataAction))
+        downloaderData()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        downloaderData()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //设置信号栏状态颜色
         //UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
     }
-    func clearCache(){
+    @objc private func reloadNewDataAction(){
+        downloaderData()
+    }
+    @objc private func clearCache(){
         let alert = UIAlertController(title: "提示", message: "缓存大小为\(CacheTool.cacheSize)", preferredStyle: .alert)
         let actionCancel = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         let action = UIAlertAction(title: "确定", style: .default) { (alert) in
@@ -42,20 +47,18 @@ class BKHomeViewController: UIViewController,ZKDownloaderDelegate,UICollectionVi
             alert.addAction(action)
             self.present(alert, animated: true, completion: nil)
             
-            
-            
         }
         alert.addAction(action)
         alert.addAction(actionCancel)
         self.present(alert, animated: true, completion: nil)
     }
-    func downloaderData() {
+    private func downloaderData() {
         let urlString = "http://picaman.picacomic.com/api/categories"
         let download = ZKDownloader()
         download.getWithUrl(urlString)
         download.delegate = self
     }
-    func createCollView(){
+    private func createCollView(){
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 2
         layout.minimumLineSpacing = 2
@@ -92,12 +95,14 @@ class BKHomeViewController: UIViewController,ZKDownloaderDelegate,UICollectionVi
 }
 extension BKHomeViewController{
     func downloader(_ download: ZKDownloader, didFailWithError error: NSError) {
+        collView?.headerView?.endRefreshing()
         ZKTools.showAlert(error.localizedDescription, onViewController: self)
     }
     func downloader(_ download: ZKDownloader, didFinishWithData data: Data?) {
         let jsonData = try! JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
         if (jsonData as AnyObject).isKind(of: NSArray.self){
             let array = jsonData as! NSArray
+            dataArray.removeAllObjects()
             for arrayDict in array{
                 let dict = arrayDict as! Dictionary<String,AnyObject>
                 let model = HomePageModel()
@@ -106,7 +111,8 @@ extension BKHomeViewController{
                 
             }
             DispatchQueue.main.async(execute: {
-                self.collView?.reloadData()
+                [weak self] in
+                self?.collView?.reloadData()
             })
             
         }

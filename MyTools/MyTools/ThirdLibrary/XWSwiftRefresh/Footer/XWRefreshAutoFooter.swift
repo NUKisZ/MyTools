@@ -115,7 +115,7 @@ open class XWRefreshAutoFooter: XWRefreshFooter {
         didSet{
             if state == oldValue { return }
             if state == XWRefreshState.refreshing {
-                xwDelay(0.5, task: { () -> Void in
+                _ = xwDelay(0.5, task: { () -> Void in
                     self.executeRefreshingCallback()
                 })
             }

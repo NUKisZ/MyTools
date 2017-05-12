@@ -30,6 +30,7 @@ class PhoneCodeViewController: BaseViewController {
         // Do any additional setup after loading the view.
         view.addSubview(messageLabel)
         view.addSubview(sendMessageBtn)
+        
     }
     @objc private func sendAction(){
         sendMessageCount += 1

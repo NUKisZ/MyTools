@@ -9,7 +9,6 @@
 import UIKit
 
 class UIFontViewController: TableViewBaseController {
-    
     lazy var seDataArray = NSMutableArray()
     lazy var plDataArray = NSMutableArray()
     override func viewDidLoad() {
@@ -53,8 +52,10 @@ extension UIFontViewController{
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (plDataArray[section] as! NSMutableArray).count
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let id = "UIFontViewController"
+        
         var cell = tableView.dequeueReusableCell(withIdentifier: id)
         if (cell == nil){
             cell = UITableViewCell(style: .default, reuseIdentifier: id)
