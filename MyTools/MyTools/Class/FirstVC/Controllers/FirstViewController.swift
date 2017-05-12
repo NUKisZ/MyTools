@@ -17,15 +17,15 @@ class FirstViewController: TableViewBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //navigationController?.navigationBar.isTranslucent=false
-        navigationController?.automaticallyAdjustsScrollViewInsets=false
+        automaticallyAdjustsScrollViewInsets=false
         NotificationCenter.default.addObserver(self, selector: #selector(changeNetWorking(n:)), name: NSNotification.Name(kNetworkReachabilityChangedNotification), object: nil)
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "网络", style: .done, target: nil, action: nil)
         // Do any additional setup after loading the view.
-        view.addSubview(label)
+        //view.addSubview(label)
         creatADView()
         //createSubViews()
-        createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight), style: .plain, separatorStyle: .none)
-        dataArray = ["全屏返回测试","清空缓存","下载界面","WebView","选择图片"]
+        createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64), style: .plain, separatorStyle: .none)
+        dataArray = ["全屏返回测试","清空缓存","下载界面","WebView","选择图片","多种字体"]
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         //去空格
         let str = "  adf aase  werwer wr w wer wr qw r  w"
@@ -50,7 +50,21 @@ class FirstViewController: TableViewBaseController {
             return a < b
         }
         print(b)
-        
+        print(UIFont.familyNames.count)
+        var i = 0;
+        for name in UIFont.familyNames{
+            print(name)
+            for font in UIFont.fontNames(forFamilyName: name){
+                print(font)
+                if font.length>1{
+                    i = i + 1
+                }
+            }
+            print()
+            print()
+            print()
+        }
+        print(i)
     }
     @objc private func changeNetWorking(n:NSNotification){
         if (n.object is NetworkReachabilityManager.NetworkReachabilityStatus){
@@ -203,6 +217,13 @@ class FirstViewController: TableViewBaseController {
             ZKTools.alertViewCtroller(vc: self, title: "提示", message: "清除缓存成功", cancelActionTitle: nil, sureActionTitle: "确定", action: nil)
         }
     }
+    @objc fileprivate func clickUIFontVC(){
+        let vc = UIFontViewController()
+        hidesBottomBarWhenPushed=true
+        navigationController?.pushViewController(vc, animated: true)
+        hidesBottomBarWhenPushed=false
+        
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         download()
@@ -310,6 +331,8 @@ extension FirstViewController{
             webViewAction()
         case 4:
             albumBtnAction()
+        case 5:
+            clickUIFontVC()
         default:
             break
         }

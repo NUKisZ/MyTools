@@ -31,9 +31,9 @@ class DownloadTaskViewController: BaseViewController {
     }
     
     func createTableView(){
-        navigationController?.automaticallyAdjustsScrollViewInsets = false
+        automaticallyAdjustsScrollViewInsets = false
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(rightItemAction))
-        tbView = UITableView(frame: CGRect(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight-20), style: .plain)
+        tbView = UITableView(frame: CGRect(x: 0, y: 64, width: kScreenWidth, height: kScreenHeight-64), style: .plain)
         tbView?.delegate = self
         tbView?.dataSource = self
         

@@ -76,6 +76,7 @@
 		0B3857A71EC4372900C0126C /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857941EC4372800C0126C /* Timeline.swift */; };
 		0B3857A81EC4372900C0126C /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857951EC4372800C0126C /* Validation.swift */; };
 		0B3857B01EC43E7200C0126C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857AF1EC43E7200C0126C /* Reachability.m */; };
+		0B3857B71EC4610D00C0126C /* UIFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857B61EC4610D00C0126C /* UIFontViewController.swift */; };
 		0B432B001EB9868B00D75930 /* launcht.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B432AFF1EB9868B00D75930 /* launcht.png */; };
 		0B48CBD41EAF28F40069A213 /* BackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBC41EAF28F40069A213 /* BackViewController.swift */; };
 		0B48CBD51EAF28F40069A213 /* DownloadTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBC51EAF28F40069A213 /* DownloadTaskViewController.swift */; };
@@ -301,6 +302,7 @@
 		0B3857951EC4372800C0126C /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		0B3857AB1EC43B0E00C0126C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		0B3857AF1EC43E7200C0126C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		0B3857B61EC4610D00C0126C /* UIFontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontViewController.swift; sourceTree = "<group>"; };
 		0B432AFF1EB9868B00D75930 /* launcht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcht.png; sourceTree = "<group>"; };
 		0B48CBC41EAF28F40069A213 /* BackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackViewController.swift; sourceTree = "<group>"; };
 		0B48CBC51EAF28F40069A213 /* DownloadTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadTaskViewController.swift; sourceTree = "<group>"; };
@@ -637,6 +639,7 @@
 				0B48CBC61EAF28F40069A213 /* FirstViewController.swift */,
 				0B48CBC71EAF28F40069A213 /* NewTaskViewController.swift */,
 				0B48CBDB1EAF29970069A213 /* WebViewController.swift */,
+				0B3857B61EC4610D00C0126C /* UIFontViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1307,6 +1310,7 @@
 				0B5F45A81EC015FC0042D19E /* MJRefreshHeader.m in Sources */,
 				0B1C46641EBAF684009B7BDD /* UIApplicationExtensions.swift in Sources */,
 				0B3857A21EC4372900C0126C /* Result.swift in Sources */,
+				0B3857B71EC4610D00C0126C /* UIFontViewController.swift in Sources */,
 				0B79C3E41E83A14900CF92B2 /* ConstraintLayoutGuide.swift in Sources */,
 				0B1C46621EBAF684009B7BDD /* TimerExtensions.swift in Sources */,
 				0B5A4B181EC2D03100C05501 /* TableViewBaseController.swift in Sources */,

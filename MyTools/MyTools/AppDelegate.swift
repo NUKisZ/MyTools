@@ -30,13 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             reach in
             switch reach {
             case .unknown:
-                print("未知的")
+                print("AppDelegate:未知的")
             case .notReachable:
-                print("不可用")
+                print("AppDelegate:不可用")
             case .reachable(.wwan):
-                print("移动网络")
+                print("AppDelegate:移动网络")
             case .reachable(.ethernetOrWiFi):
-                print("WiFi")
+                print("AppDelegate:WiFi")
             }
             NotificationCenter.default.post(name: NSNotification.Name(kNetworkReachabilityChangedNotification), object: reach)
             
