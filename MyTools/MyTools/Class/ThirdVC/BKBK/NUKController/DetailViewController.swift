@@ -71,8 +71,6 @@ class DetailViewController: UIViewController,ZKDownloaderDelegate {
         papapaCtrl.id = self.id
         self.navigationController?.pushViewController(papapaCtrl, animated: true)
         
-        
-        
     }
     
 

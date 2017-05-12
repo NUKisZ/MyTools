@@ -78,6 +78,9 @@
 		0B3857B01EC43E7200C0126C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857AF1EC43E7200C0126C /* Reachability.m */; };
 		0B3857B71EC4610D00C0126C /* UIFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857B61EC4610D00C0126C /* UIFontViewController.swift */; };
 		0B432B001EB9868B00D75930 /* launcht.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B432AFF1EB9868B00D75930 /* launcht.png */; };
+		0B4794481EC58C39003437D0 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4794461EC58C39003437D0 /* CustomView.swift */; };
+		0B4794491EC58C39003437D0 /* SendMessageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4794471EC58C39003437D0 /* SendMessageButton.swift */; };
+		0B47944B1EC58F6C003437D0 /* PhoneCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B47944A1EC58F6C003437D0 /* PhoneCodeViewController.swift */; };
 		0B48CBD41EAF28F40069A213 /* BackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBC41EAF28F40069A213 /* BackViewController.swift */; };
 		0B48CBD51EAF28F40069A213 /* DownloadTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBC51EAF28F40069A213 /* DownloadTaskViewController.swift */; };
 		0B48CBD61EAF28F40069A213 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBC61EAF28F40069A213 /* FirstViewController.swift */; };
@@ -184,7 +187,7 @@
 		0B79C3901E83907D00CF92B2 /* CacheTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3851E83907D00CF92B2 /* CacheTool.swift */; };
 		0B79C3921E83907D00CF92B2 /* UIControl+recurClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3881E83907D00CF92B2 /* UIControl+recurClick.m */; };
 		0B79C3961E83907D00CF92B2 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C38D1E83907D00CF92B2 /* Const.swift */; };
-		0B79C3971E83907D00CF92B2 /* MyTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C38E1E83907D00CF92B2 /* MyTools.swift */; };
+		0B79C3971E83907D00CF92B2 /* ZKTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C38E1E83907D00CF92B2 /* ZKTools.swift */; };
 		0B79C3981E83907D00CF92B2 /* ZKDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C38F1E83907D00CF92B2 /* ZKDownloader.swift */; };
 		0B79C39E1E8390B400CF92B2 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C39A1E8390B400CF92B2 /* ProgressHUD.swift */; };
 		0B79C39F1E8390B400CF92B2 /* 保存成功.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B79C39B1E8390B400CF92B2 /* 保存成功.png */; };
@@ -304,6 +307,9 @@
 		0B3857AF1EC43E7200C0126C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		0B3857B61EC4610D00C0126C /* UIFontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontViewController.swift; sourceTree = "<group>"; };
 		0B432AFF1EB9868B00D75930 /* launcht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcht.png; sourceTree = "<group>"; };
+		0B4794461EC58C39003437D0 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		0B4794471EC58C39003437D0 /* SendMessageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageButton.swift; sourceTree = "<group>"; };
+		0B47944A1EC58F6C003437D0 /* PhoneCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCodeViewController.swift; sourceTree = "<group>"; };
 		0B48CBC41EAF28F40069A213 /* BackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackViewController.swift; sourceTree = "<group>"; };
 		0B48CBC51EAF28F40069A213 /* DownloadTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadTaskViewController.swift; sourceTree = "<group>"; };
 		0B48CBC61EAF28F40069A213 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -446,7 +452,7 @@
 		0B79C3871E83907D00CF92B2 /* UIControl+recurClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+recurClick.h"; sourceTree = "<group>"; };
 		0B79C3881E83907D00CF92B2 /* UIControl+recurClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+recurClick.m"; sourceTree = "<group>"; };
 		0B79C38D1E83907D00CF92B2 /* Const.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		0B79C38E1E83907D00CF92B2 /* MyTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTools.swift; sourceTree = "<group>"; };
+		0B79C38E1E83907D00CF92B2 /* ZKTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKTools.swift; sourceTree = "<group>"; };
 		0B79C38F1E83907D00CF92B2 /* ZKDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKDownloader.swift; sourceTree = "<group>"; };
 		0B79C39A1E8390B400CF92B2 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		0B79C39B1E8390B400CF92B2 /* 保存成功.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "保存成功.png"; sourceTree = "<group>"; };
@@ -640,6 +646,7 @@
 				0B48CBC71EAF28F40069A213 /* NewTaskViewController.swift */,
 				0B48CBDB1EAF29970069A213 /* WebViewController.swift */,
 				0B3857B61EC4610D00C0126C /* UIFontViewController.swift */,
+				0B47944A1EC58F6C003437D0 /* PhoneCodeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1065,10 +1072,12 @@
 		0B79C38C1E83907D00CF92B2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0B4794461EC58C39003437D0 /* CustomView.swift */,
+				0B4794471EC58C39003437D0 /* SendMessageButton.swift */,
 				0BE60A1C1EADF87700D21D8C /* TaskManager.swift */,
 				0B68F7621E84B71B00280D1B /* LaunchADView */,
 				0B79C38D1E83907D00CF92B2 /* Const.swift */,
-				0B79C38E1E83907D00CF92B2 /* MyTools.swift */,
+				0B79C38E1E83907D00CF92B2 /* ZKTools.swift */,
 				0B79C38F1E83907D00CF92B2 /* ZKDownloader.swift */,
 				0BE60A141EADAD8100D21D8C /* ZKDownloadTaskManager.swift */,
 				0B4DFF091EC1549300BC75E9 /* AccpetEventInterval.swift */,
@@ -1315,6 +1324,7 @@
 				0B1C46621EBAF684009B7BDD /* TimerExtensions.swift in Sources */,
 				0B5A4B181EC2D03100C05501 /* TableViewBaseController.swift in Sources */,
 				0B5A4B101EC2A40500C05501 /* LGAlertViewController.m in Sources */,
+				0B47944B1EC58F6C003437D0 /* PhoneCodeViewController.swift in Sources */,
 				0B6F05051EB85085005E8FBD /* UIButton+Kingfisher.swift in Sources */,
 				0B79C3F81E83A14900CF92B2 /* LayoutConstraint.swift in Sources */,
 				0B79C3F41E83A14900CF92B2 /* ConstraintView.swift in Sources */,
@@ -1410,7 +1420,7 @@
 				0B68F7681E84BD0800280D1B /* ADModel.swift in Sources */,
 				0B79C3E91E83A14900CF92B2 /* ConstraintMakerEditable.swift in Sources */,
 				0B79C3E61E83A14900CF92B2 /* ConstraintLayoutSupport.swift in Sources */,
-				0B79C3971E83907D00CF92B2 /* MyTools.swift in Sources */,
+				0B79C3971E83907D00CF92B2 /* ZKTools.swift in Sources */,
 				0B5F45A41EC015FC0042D19E /* MJRefreshAutoFooter.m in Sources */,
 				0B6F04FC1EB85085005E8FBD /* ImageView+Kingfisher.swift in Sources */,
 				0B5F45AD1EC015FC0042D19E /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1440,9 +1450,11 @@
 				0B1C46601EBAF684009B7BDD /* NSObjectExtensions.swift in Sources */,
 				0B79C3E21E83A14900CF92B2 /* ConstraintItem.swift in Sources */,
 				0B6F04941EB84812005E8FBD /* GroupListViewController.swift in Sources */,
+				0B4794491EC58C39003437D0 /* SendMessageButton.swift in Sources */,
 				0B79C3E11E83A14900CF92B2 /* ConstraintInsetTarget.swift in Sources */,
 				0B1C464B1EBAF684009B7BDD /* BlockPan.swift in Sources */,
 				0B1C465F1EBAF684009B7BDD /* NSDictionaryExtensions.swift in Sources */,
+				0B4794481EC58C39003437D0 /* CustomView.swift in Sources */,
 				0B5F45AF1EC015FC0042D19E /* MJRefreshGifHeader.m in Sources */,
 				0B79C3F21E83A14900CF92B2 /* ConstraintRelation.swift in Sources */,
 				0B79C3961E83907D00CF92B2 /* Const.swift in Sources */,

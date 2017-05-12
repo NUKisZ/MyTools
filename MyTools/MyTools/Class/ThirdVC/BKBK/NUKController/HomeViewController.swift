@@ -26,7 +26,8 @@ class BKHomeViewController: UIViewController,ZKDownloaderDelegate,UICollectionVi
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
+        //设置信号栏状态颜色
+        //UIApplication.shared.setStatusBarStyle(.lightContent, animated: true)
     }
     func clearCache(){
         let alert = UIAlertController(title: "提示", message: "缓存大小为\(CacheTool.cacheSize)", preferredStyle: .alert)

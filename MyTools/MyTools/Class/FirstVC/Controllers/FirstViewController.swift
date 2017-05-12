@@ -25,7 +25,7 @@ class FirstViewController: TableViewBaseController {
         creatADView()
         //createSubViews()
         createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64), style: .plain, separatorStyle: .none)
-        dataArray = ["全屏返回测试","清空缓存","下载界面","WebView","选择图片","多种字体"]
+        dataArray = ["全屏返回测试","清空缓存","下载界面","WebView","选择图片","多种字体","获取手机验证码"]
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         //去空格
         let str = "  adf aase  werwer wr w wer wr qw r  w"
@@ -224,6 +224,21 @@ class FirstViewController: TableViewBaseController {
         hidesBottomBarWhenPushed=false
         
     }
+    
+    @objc fileprivate func getPhoneCode(){
+        let vc = PhoneCodeViewController()
+        hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+        hidesBottomBarWhenPushed = false
+        
+        
+    }
+    
+    
+    
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         download()
@@ -333,7 +348,12 @@ extension FirstViewController{
             albumBtnAction()
         case 5:
             clickUIFontVC()
+        case 6:
+            getPhoneCode()
+            //fallthrough穿透case
+            //fallthrough
         default:
+            print("fallthrough")
             break
         }
     }
