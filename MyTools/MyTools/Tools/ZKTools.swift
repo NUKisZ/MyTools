@@ -448,4 +448,9 @@ public extension UIDevice {
         }
     }
 }
-
+func UIImage2CGimage(_ image: UIImage?) -> CGImage? {
+    if let tryImage = image, let tryCIImage = CIImage(image: tryImage) {
+        return CIContext().createCGImage(tryCIImage, from: tryCIImage.extent)
+    }
+    return nil
+}

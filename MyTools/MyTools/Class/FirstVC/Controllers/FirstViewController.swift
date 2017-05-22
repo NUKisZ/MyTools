@@ -25,7 +25,7 @@ class FirstViewController: TableViewBaseController {
         creatADView()
         //createSubViews()
         createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64), style: .plain, separatorStyle: .none)
-        dataArray = ["全屏返回测试","清空缓存","下载界面","WebView","选择图片","多种字体","获取手机验证码"]
+        dataArray = ["全屏返回测试","清空缓存","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描"]
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         //去空格
         let str = "  adf aase  werwer wr w wer wr qw r  w"
@@ -65,6 +65,7 @@ class FirstViewController: TableViewBaseController {
             print()
         }
         print(i)
+        
     }
     @objc private func changeNetWorking(n:NSNotification){
         if (n.object is NetworkReachabilityManager.NetworkReachabilityStatus){
@@ -216,6 +217,8 @@ class FirstViewController: TableViewBaseController {
         if flag {
             ZKTools.alertViewCtroller(vc: self, title: "提示", message: "清除缓存成功", cancelActionTitle: nil, sureActionTitle: "确定", action: nil)
         }
+        //tableView回到第一行
+        //tableView?.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .bottom, animated: true)
     }
     @objc fileprivate func clickUIFontVC(){
         let vc = UIFontViewController()
@@ -234,7 +237,18 @@ class FirstViewController: TableViewBaseController {
         
     }
     
-    
+    @objc fileprivate func EFQRCode(){
+        let vc = EFQRCodeViewController()
+        hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+        hidesBottomBarWhenPushed = false
+    }
+    @objc fileprivate func QRCodeScan(){
+        let vc = SwiftScanViewController()
+        hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+        hidesBottomBarWhenPushed = false
+    }
     
     
     
@@ -352,6 +366,10 @@ extension FirstViewController{
             getPhoneCode()
             //fallthrough穿透case
             //fallthrough
+        case 7:
+            EFQRCode()
+        case 8:
+            QRCodeScan()
         default:
             print("fallthrough")
             break
