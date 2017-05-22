@@ -81,7 +81,7 @@ class GeneratorController: BaseViewController, UITextViewDelegate, UITableViewDe
 
         // Content
         textView = UITextView()
-        textView.text = "https://github.com/EyreFree/EFQRCode"
+        textView.text = ""
         textView.tintColor = UIColor(red: 97.0 / 255.0, green: 207.0 / 255.0, blue: 199.0 / 255.0, alpha: 1)
         textView.font = UIFont.systemFont(ofSize: 24)
         textView.textColor = UIColor.white

@@ -157,6 +157,10 @@
 		0B5F45B61EC015FD0042D19E /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F45A11EC015FC0042D19E /* UIScrollView+MJRefresh.m */; };
 		0B5F45B71EC015FD0042D19E /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F45A31EC015FC0042D19E /* UIView+MJExtension.m */; };
 		0B5F45B91EC0160C0042D19E /* netFail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B5F45B81EC0160C0042D19E /* netFail.jpg */; };
+		0B617A361ED297D8000C2C66 /* SliderGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B617A351ED297D8000C2C66 /* SliderGalleryController.swift */; };
+		0B617A381ED29833000C2C66 /* CycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B617A371ED29833000C2C66 /* CycleViewController.swift */; };
+		0B617A3C1ED298CA000C2C66 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B617A3A1ED298CA000C2C66 /* ImageHelper.swift */; };
+		0B617A3D1ED298CA000C2C66 /* ImageVIewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B617A3B1ED298CA000C2C66 /* ImageVIewExtension.swift */; };
 		0B68F7651E84B71B00280D1B /* ADView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68F7631E84B71B00280D1B /* ADView.swift */; };
 		0B68F7661E84B71B00280D1B /* ADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68F7641E84B71B00280D1B /* ADViewController.swift */; };
 		0B68F7681E84BD0800280D1B /* ADModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B68F7671E84BD0800280D1B /* ADModel.swift */; };
@@ -451,6 +455,10 @@
 		0B5F45A21EC015FC0042D19E /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		0B5F45A31EC015FC0042D19E /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		0B5F45B81EC0160C0042D19E /* netFail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = netFail.jpg; sourceTree = "<group>"; };
+		0B617A351ED297D8000C2C66 /* SliderGalleryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderGalleryController.swift; sourceTree = "<group>"; };
+		0B617A371ED29833000C2C66 /* CycleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleViewController.swift; sourceTree = "<group>"; };
+		0B617A3A1ED298CA000C2C66 /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		0B617A3B1ED298CA000C2C66 /* ImageVIewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageVIewExtension.swift; sourceTree = "<group>"; };
 		0B68F7631E84B71B00280D1B /* ADView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADView.swift; sourceTree = "<group>"; };
 		0B68F7641E84B71B00280D1B /* ADViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADViewController.swift; sourceTree = "<group>"; };
 		0B68F7671E84BD0800280D1B /* ADModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADModel.swift; sourceTree = "<group>"; };
@@ -708,6 +716,7 @@
 				0B5195BC1ECEF674007AF6F3 /* SwiftScan */,
 				0B5195B31ECEEF66007AF6F3 /* EFQRCode */,
 				0B48CBC41EAF28F40069A213 /* BackViewController.swift */,
+				0B617A371ED29833000C2C66 /* CycleViewController.swift */,
 				0B48CBC51EAF28F40069A213 /* DownloadTaskViewController.swift */,
 				0B48CBC61EAF28F40069A213 /* FirstViewController.swift */,
 				0B48CBC71EAF28F40069A213 /* NewTaskViewController.swift */,
@@ -978,6 +987,15 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		0B617A391ED298CA000C2C66 /* ImageHelper */ = {
+			isa = PBXGroup;
+			children = (
+				0B617A3A1ED298CA000C2C66 /* ImageHelper.swift */,
+				0B617A3B1ED298CA000C2C66 /* ImageVIewExtension.swift */,
+			);
+			path = ImageHelper;
+			sourceTree = "<group>";
+		};
 		0B68F7621E84B71B00280D1B /* LaunchADView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1180,6 +1198,7 @@
 		0B79C3841E83907D00CF92B2 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				0B617A391ED298CA000C2C66 /* ImageHelper */,
 				0B5195CD1ECEF6EC007AF6F3 /* SwiftScan */,
 				0B5195951ECEEE2D007AF6F3 /* EFQRCodeSource */,
 				0B3857A91EC43B0E00C0126C /* Reachability */,
@@ -1202,6 +1221,7 @@
 		0B79C38C1E83907D00CF92B2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0B617A351ED297D8000C2C66 /* SliderGalleryController.swift */,
 				0B4794461EC58C39003437D0 /* CustomView.swift */,
 				0B4794471EC58C39003437D0 /* SendMessageButton.swift */,
 				0BE60A1C1EADF87700D21D8C /* TaskManager.swift */,
@@ -1425,6 +1445,7 @@
 				0B6F049E1EB84812005E8FBD /* GroupListModel.swift in Sources */,
 				0B5A4B151EC2A40500C05501 /* LGAlertViewWindowsObserver.m in Sources */,
 				0B1C466B1EBAF684009B7BDD /* UIFontExtensions.swift in Sources */,
+				0B617A3D1ED298CA000C2C66 /* ImageVIewExtension.swift in Sources */,
 				0B5A4B0F1EC2A40500C05501 /* LGAlertViewCell.m in Sources */,
 				0B6F04921EB84812005E8FBD /* DetailViewController.swift in Sources */,
 				0B3857A71EC4372900C0126C /* Timeline.swift in Sources */,
@@ -1504,6 +1525,7 @@
 				0B6F04FE1EB85085005E8FBD /* Kingfisher.swift in Sources */,
 				0B3857A81EC4372900C0126C /* Validation.swift in Sources */,
 				0B5195C61ECEF674007AF6F3 /* MainTableViewController.swift in Sources */,
+				0B617A381ED29833000C2C66 /* CycleViewController.swift in Sources */,
 				0B79C3DD1E83A14900CF92B2 /* ConstraintConstantTarget.swift in Sources */,
 				0B6F04C81EB84812005E8FBD /* StarView.swift in Sources */,
 				0B1C46481EBAF684009B7BDD /* ArrayExtensions.swift in Sources */,
@@ -1603,6 +1625,7 @@
 				0B5195AE1ECEEE2D007AF6F3 /* EFQRCodeRecognizer.swift in Sources */,
 				0B1C464C1EBAF684009B7BDD /* BlockPinch.swift in Sources */,
 				0B6F04F71EB85085005E8FBD /* ImageCache.swift in Sources */,
+				0B617A361ED297D8000C2C66 /* SliderGalleryController.swift in Sources */,
 				0B5A4B1A1EC2D3B700C05501 /* FirstViewControllerCell.swift in Sources */,
 				0B38579B1EC4372900C0126C /* MultipartFormData.swift in Sources */,
 				0B5F45AA1EC015FC0042D19E /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -1622,6 +1645,7 @@
 				0B79C3961E83907D00CF92B2 /* Const.swift in Sources */,
 				0B6F05101EB85085005E8FBD /* XWRefreshStateHeader.swift in Sources */,
 				0B3857A41EC4372900C0126C /* SessionDelegate.swift in Sources */,
+				0B617A3C1ED298CA000C2C66 /* ImageHelper.swift in Sources */,
 				0B6F04F81EB85085005E8FBD /* ImageDownloader.swift in Sources */,
 				0B6F04F91EB85085005E8FBD /* ImagePrefetcher.swift in Sources */,
 				0B1C464E1EBAF684009B7BDD /* BlockTap.swift in Sources */,

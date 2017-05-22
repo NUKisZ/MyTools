@@ -25,12 +25,16 @@ class FirstViewController: TableViewBaseController {
         let netItem = UIBarButtonItem(title: "网络", style: .done, target: nil, action: nil)
         navigationItem.rightBarButtonItems = [fixItem,netItem]
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .plain, target: self, action: nil)
-        // Do any additional setup after loading the view.
+//        let target = navigationController?.interactivePopGestureRecognizer?.delegate
+//        let pan = UIPanGestureRecognizer(target: target, action: Selector(("handleNavigationTransition:")))
+//        pan.delegate = self
+//        view.addGestureRecognizer(pan)
+//        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         //view.addSubview(label)
         creatADView()
         //createSubViews()
         createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64), style: .plain, separatorStyle: .none)
-        dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描"]
+        dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描","轮播图"]
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         //去空格
         let str = "  adf aase  werwer wr w wer wr qw r  w"
@@ -259,7 +263,13 @@ class FirstViewController: TableViewBaseController {
         navigationController?.pushViewController(vc, animated: true)
         hidesBottomBarWhenPushed = false
     }
-    
+    @available(iOS 8.2, *)
+    @objc fileprivate func cycleClick(){
+        let vc = CycleViewController()
+        hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+        hidesBottomBarWhenPushed = false
+    }
     
     
     
@@ -380,19 +390,31 @@ extension FirstViewController{
             EFQRCode()
         case 8:
             QRCodeScan()
+        case 9:
+            if #available(iOS 8.2, *) {
+                cycleClick()
+            } 
         default:
             print("fallthrough")
             break
         }
     }
 }
-//extension FirstViewController:UIGestureRecognizerDelegate{
-//    //是否允许手势
+extension FirstViewController:UIGestureRecognizerDelegate{
+    //是否允许手势
 //    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+//        
 //        if(gestureRecognizer == self.navigationController?.interactivePopGestureRecognizer){
 //            //只有二级以及以下的页面允许手势返回
 //            return (self.navigationController?.viewControllers.count)! > 1
 //        }
 //        return true
 //    }
-//}
+    
+//    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+//        if(childViewControllers.count == 1){
+//            return false
+//        }
+//        return true
+//    }
+}

@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanResultController" customModule="swiftScan" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanResultController" customModule="MyTools" customModuleProvider="target">
             <connections>
                 <outlet property="codeImg" destination="fg4-Ct-oKK" id="3qT-G0-jkT"/>
                 <outlet property="codeStringLabel" destination="FYu-Sd-42q" id="3Qn-82-Vt7"/>
@@ -23,14 +23,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fg4-Ct-oKK">
-                    <rect key="frame" x="88" y="28" width="145" height="149"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fg4-Ct-oKK">
+                    <rect key="frame" x="88" y="28" width="200" height="149"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="149" id="YAA-yR-3bN"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="码的内容:123456789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYu-Sd-42q">
-                    <rect key="frame" x="31" y="506" width="248" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="码的内容:123456789" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYu-Sd-42q">
+                    <rect key="frame" x="31" y="605" width="303" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="MJs-cF-uBO"/>
                     </constraints>
@@ -38,8 +38,8 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="码的类型:...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvo-Et-qv7">
-                    <rect key="frame" x="31" y="467" width="253" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="码的类型:...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvo-Et-qv7">
+                    <rect key="frame" x="31" y="566" width="308" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="BZR-b5-hKG"/>
                     </constraints>
@@ -47,8 +47,8 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pA1-ae-BZc">
-                    <rect key="frame" x="100" y="218" width="120" height="120"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pA1-ae-BZc">
+                    <rect key="frame" x="127.5" y="218" width="120" height="120"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="5c7-3W-a55"/>
                         <constraint firstAttribute="height" constant="120" id="XMZ-PW-ONc"/>
@@ -64,8 +64,8 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="码图像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN3-zo-cJe">
-                    <rect key="frame" x="22" y="273" width="51" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="码图像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YN3-zo-cJe">
+                    <rect key="frame" x="49.5" y="273" width="51" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="8ac-wg-Ntj"/>
                         <constraint firstAttribute="width" constant="51" id="iAd-A7-wVU"/>
