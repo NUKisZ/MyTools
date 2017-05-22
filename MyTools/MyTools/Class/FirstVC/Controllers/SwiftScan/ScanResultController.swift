@@ -9,7 +9,7 @@
 import UIKit
 
 
-class ScanResultController: UIViewController {
+class ScanResultController: BaseViewController {
 
     @IBOutlet weak var codeImg: UIImageView!
     @IBOutlet weak var codeTypeLabel: UILabel!

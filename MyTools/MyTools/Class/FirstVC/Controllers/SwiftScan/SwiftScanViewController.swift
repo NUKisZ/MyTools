@@ -28,7 +28,8 @@ class SwiftScanViewController: BaseViewController , UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView = UITableView(frame: CGRect(x: 0, y: 20, width: view.frame.width, height: view.frame.height))
+        automaticallyAdjustsScrollViewInsets = false
+        tableView = UITableView(frame: CGRect(x: 0, y: 64, width: view.frame.width, height: view.frame.height))
         self.title = "swift 扫一扫"
         tableView.delegate = self
         tableView.dataSource = self

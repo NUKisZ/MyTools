@@ -26,7 +26,7 @@ class BackViewController: BaseViewController {
         let btn = UIButton(type: .system)
         btn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
         view.addSubview(btn)
-        btn.setTitle("强引用测试", for: .normal)
+        btn.setTitle("测试", for: .normal)
         btn.snp.makeConstraints { (make) in
             make.center.equalTo(self.view.snp.center)
         }

@@ -19,13 +19,18 @@ class FirstViewController: TableViewBaseController {
         //navigationController?.navigationBar.isTranslucent=false
         automaticallyAdjustsScrollViewInsets=false
         NotificationCenter.default.addObserver(self, selector: #selector(changeNetWorking(n:)), name: NSNotification.Name(kNetworkReachabilityChangedNotification), object: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "网络", style: .done, target: nil, action: nil)
+        //fixItem 用于消除左(右)边空隙，要不然按钮顶不到最前面
+        let fixItem = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+        fixItem.width = -10
+        let netItem = UIBarButtonItem(title: "网络", style: .done, target: nil, action: nil)
+        navigationItem.rightBarButtonItems = [fixItem,netItem]
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "返回", style: .plain, target: self, action: nil)
         // Do any additional setup after loading the view.
         //view.addSubview(label)
         creatADView()
         //createSubViews()
         createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64), style: .plain, separatorStyle: .none)
-        dataArray = ["全屏返回测试","清空缓存","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描"]
+        dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描"]
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         //去空格
         let str = "  adf aase  werwer wr w wer wr qw r  w"
@@ -81,7 +86,10 @@ class FirstViewController: TableViewBaseController {
             case .reachable(.ethernetOrWiFi):
                 status = "WiFi"
             }
-            navigationItem.rightBarButtonItem = UIBarButtonItem(title: status, style: .done, target: nil, action: nil)
+            let fixItem = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
+            fixItem.width = -10
+            let netItem = UIBarButtonItem(title: status, style: .done, target: nil, action: nil)
+            navigationItem.rightBarButtonItems = [fixItem,netItem]
         }
         
     }
@@ -213,12 +221,14 @@ class FirstViewController: TableViewBaseController {
         navigationController?.pushViewController(backVC, animated: true)
     }
     @objc fileprivate func cacheClick(){
-        let flag = ADView.clear()
-        if flag {
-            ZKTools.alertViewCtroller(vc: self, title: "提示", message: "清除缓存成功", cancelActionTitle: nil, sureActionTitle: "确定", action: nil)
-        }
+//        let flag = ADView.clear()
+//        if flag {
+//            ZKTools.alertViewCtroller(vc: self, title: "提示", message: "清除缓存成功", cancelActionTitle: nil, sureActionTitle: "确定", action: nil)
+//        }
         //tableView回到第一行
         //tableView?.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .bottom, animated: true)
+        let size = CacheTool.cacheSize
+        ZKTools.alertViewCtroller(vc: self, title: "提示", message: size, cancelActionTitle: nil, sureActionTitle: "确定", action: nil)
     }
     @objc fileprivate func clickUIFontVC(){
         let vc = UIFontViewController()
@@ -376,3 +386,13 @@ extension FirstViewController{
         }
     }
 }
+//extension FirstViewController:UIGestureRecognizerDelegate{
+//    //是否允许手势
+//    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+//        if(gestureRecognizer == self.navigationController?.interactivePopGestureRecognizer){
+//            //只有二级以及以下的页面允许手势返回
+//            return (self.navigationController?.viewControllers.count)! > 1
+//        }
+//        return true
+//    }
+//}

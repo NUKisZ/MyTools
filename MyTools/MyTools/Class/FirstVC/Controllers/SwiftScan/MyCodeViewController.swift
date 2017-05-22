@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MyCodeViewController: UIViewController {
+class MyCodeViewController: BaseViewController {
 
     //二维码
     var qrView = UIView()

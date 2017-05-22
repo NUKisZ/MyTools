@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BKHomeViewController: UIViewController,ZKDownloaderDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
+class BKHomeViewController: BaseViewController,ZKDownloaderDelegate,UICollectionViewDelegate,UICollectionViewDataSource {
     fileprivate var collView:UICollectionView?
     fileprivate lazy var dataArray = NSMutableArray()
 

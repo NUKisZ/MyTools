@@ -11,7 +11,7 @@ import Foundation
 import AVFoundation
 
 
-open class LBXScanViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+open class LBXScanViewController: BaseViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
    open var scanObj: LBXScanWrapper?
     
