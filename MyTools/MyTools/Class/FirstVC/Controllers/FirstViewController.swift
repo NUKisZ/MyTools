@@ -74,7 +74,12 @@ class FirstViewController: TableViewBaseController {
             print()
         }
         print(i)
-        
+        let md5 = ZKTools.stringToMD5(string: "123456")
+        print(md5.uppercased())
+        print(md5.uppercased().lowercased())
+        let des:NSString = "123"
+        let dese = des.encrypt()
+        print(dese as Any)
     }
     @objc private func changeNetWorking(n:NSNotification){
         if (n.object is NetworkReachabilityManager.NetworkReachabilityStatus){

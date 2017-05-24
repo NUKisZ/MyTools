@@ -12,6 +12,9 @@
 #import "UIControl+recurClick.h"
 #import "LGAlertView.h"
 #import "Reachability.h"
+#import "Base64.h"
+#import "NSString+DES.h"
+#import <CommonCrypto/CommonCrypto.h>
 //#import "UINavigationController+FDFullscreenPopGesture.h"
 
 #endif /* HeaderBridge_h */

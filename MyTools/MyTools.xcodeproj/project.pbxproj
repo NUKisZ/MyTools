@@ -89,6 +89,8 @@
 		0B48CBD91EAF28F40069A213 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBCC1EAF28F40069A213 /* SecondViewController.swift */; };
 		0B48CBDA1EAF28F40069A213 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBD11EAF28F40069A213 /* ThirdViewController.swift */; };
 		0B48CBDC1EAF29970069A213 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B48CBDB1EAF29970069A213 /* WebViewController.swift */; };
+		0B4A83741ED41FD400549B0D /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A83711ED41FD400549B0D /* Base64.m */; };
+		0B4A83751ED41FD400549B0D /* NSString+DES.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A83731ED41FD400549B0D /* NSString+DES.m */; };
 		0B4DFF0A1EC1549300BC75E9 /* AccpetEventInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4DFF091EC1549300BC75E9 /* AccpetEventInterval.swift */; };
 		0B5195A61ECEEE2D007AF6F3 /* CGColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5195971ECEEE2D007AF6F3 /* CGColor+.swift */; };
 		0B5195A71ECEEE2D007AF6F3 /* CGImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5195981ECEEE2D007AF6F3 /* CGImage+.swift */; };
@@ -354,6 +356,11 @@
 		0B48CBCC1EAF28F40069A213 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0B48CBD11EAF28F40069A213 /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		0B48CBDB1EAF29970069A213 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		0B4A836D1ED408CC00549B0D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0B4A83701ED41FD400549B0D /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		0B4A83711ED41FD400549B0D /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		0B4A83721ED41FD400549B0D /* NSString+DES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DES.h"; sourceTree = "<group>"; };
+		0B4A83731ED41FD400549B0D /* NSString+DES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DES.m"; sourceTree = "<group>"; };
 		0B4DFF091EC1549300BC75E9 /* AccpetEventInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccpetEventInterval.swift; sourceTree = "<group>"; };
 		0B5195971ECEEE2D007AF6F3 /* CGColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGColor+.swift"; sourceTree = "<group>"; };
 		0B5195981ECEEE2D007AF6F3 /* CGImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+.swift"; sourceTree = "<group>"; };
@@ -801,6 +808,25 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0B4A836C1ED408CC00549B0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B4A836D1ED408CC00549B0D /* Security.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B4A836F1ED41FD400549B0D /* DES */ = {
+			isa = PBXGroup;
+			children = (
+				0B4A83701ED41FD400549B0D /* Base64.h */,
+				0B4A83711ED41FD400549B0D /* Base64.m */,
+				0B4A83721ED41FD400549B0D /* NSString+DES.h */,
+				0B4A83731ED41FD400549B0D /* NSString+DES.m */,
+			);
+			path = DES;
+			sourceTree = "<group>";
+		};
 		0B5195951ECEEE2D007AF6F3 /* EFQRCodeSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -1164,6 +1190,7 @@
 			children = (
 				0B79C3711E8388D600CF92B2 /* MyTools */,
 				0B79C3701E8388D600CF92B2 /* Products */,
+				0B4A836C1ED408CC00549B0D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1198,6 +1225,7 @@
 		0B79C3841E83907D00CF92B2 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				0B4A836F1ED41FD400549B0D /* DES */,
 				0B617A391ED298CA000C2C66 /* ImageHelper */,
 				0B5195CD1ECEF6EC007AF6F3 /* SwiftScan */,
 				0B5195951ECEEE2D007AF6F3 /* EFQRCodeSource */,
@@ -1494,6 +1522,7 @@
 				0B79C3F41E83A14900CF92B2 /* ConstraintView.swift in Sources */,
 				0B79C3EF1E83A14900CF92B2 /* ConstraintOffsetTarget.swift in Sources */,
 				0B5F45A91EC015FC0042D19E /* MJRefreshAutoGifFooter.m in Sources */,
+				0B4A83741ED41FD400549B0D /* Base64.m in Sources */,
 				0B3857961EC4372800C0126C /* AFError.swift in Sources */,
 				0B1C46751EBAF684009B7BDD /* UIViewControllerExtensions.swift in Sources */,
 				0B1C465C1EBAF684009B7BDD /* FloatingPointExtensions.swift in Sources */,
@@ -1594,6 +1623,7 @@
 				0B79C3DF1E83A14900CF92B2 /* ConstraintDSL.swift in Sources */,
 				0B5F45B11EC015FC0042D19E /* MJRefreshStateHeader.m in Sources */,
 				0B68F7681E84BD0800280D1B /* ADModel.swift in Sources */,
+				0B4A83751ED41FD400549B0D /* NSString+DES.m in Sources */,
 				0B79C3E91E83A14900CF92B2 /* ConstraintMakerEditable.swift in Sources */,
 				0B79C3E61E83A14900CF92B2 /* ConstraintLayoutSupport.swift in Sources */,
 				0B79C3971E83907D00CF92B2 /* ZKTools.swift in Sources */,

@@ -359,7 +359,7 @@ class MainTableViewController: UITableViewController,UIImagePickerControllerDele
     }
     
     //MARK: -----相册选择图片识别二维码 （条形码没有找到系统方法）
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
+    private func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
     {
         picker.dismiss(animated: true, completion: nil)
         
