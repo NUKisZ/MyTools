@@ -34,52 +34,25 @@ class FirstViewController: TableViewBaseController {
         creatADView()
         //createSubViews()
         createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64), style: .plain, separatorStyle: .none)
-        dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描","轮播图"]
+        dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描","轮播图","监听照片库变化"]
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         //去空格
         let str = "  adf aase  werwer wr w wer wr qw r  w"
         print(str)
         let str1 = str.replacingOccurrences(of: " ", with: "")
         print(str1)
-        let str1Arr = str1.toNSString.components(separatedBy: "rwrww")
-        print(str1Arr)
-        let mail = "aaa@qq.com"
-        print(mail.isEmail)
-        print(ez.appDisplayName as Any)
-        let share1 = SharedInstanceTest.sharedInstance
-        share1.i = 30;
-        print(share1.i as Any)
-        let share2 = SharedInstanceTest.sharedInstance
-        print(share2.i as Any)
-        share2.i = 40;
-        print(share1.i as Any)
-        print(share2.i as Any)
         let arr = ["aa","cc","bb"]
         let b = arr.sorted { (a, b) -> Bool in
             return a < b
         }
         print(b)
-        print(UIFont.familyNames.count)
-        var i = 0;
-        for name in UIFont.familyNames{
-            print(name)
-            for font in UIFont.fontNames(forFamilyName: name){
-                print(font)
-                if font.length>1{
-                    i = i + 1
-                }
-            }
-            print()
-            print()
-            print()
-        }
-        print(i)
-        let md5 = ZKTools.stringToMD5(string: "123456")
-        print(md5.uppercased())
-        print(md5.uppercased().lowercased())
         let des:NSString = "123"
         let dese = des.encrypt()
         print(dese as Any)
+        let base = Base64.decode("123")
+        print(base as Any)
+        let str123 = dese?.base64
+        print(str123 as Any)
     }
     @objc private func changeNetWorking(n:NSNotification){
         if (n.object is NetworkReachabilityManager.NetworkReachabilityStatus){
@@ -249,8 +222,10 @@ class FirstViewController: TableViewBaseController {
     
     @objc fileprivate func getPhoneCode(){
         let vc = PhoneCodeViewController()
+        //导航栏消失
+        vc.modalTransitionStyle = .partialCurl
         hidesBottomBarWhenPushed = true
-        navigationController?.pushViewController(vc, animated: true)
+        present(vc, animated: true, completion: nil)
         hidesBottomBarWhenPushed = false
         
         
@@ -275,7 +250,14 @@ class FirstViewController: TableViewBaseController {
         navigationController?.pushViewController(vc, animated: true)
         hidesBottomBarWhenPushed = false
     }
-    
+    @objc fileprivate func photoLibraryDidChange() {
+        //监听照片库变化
+        let vc = PhotoLibraryDidChangeViewController()
+        hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+        hidesBottomBarWhenPushed = false
+        
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -398,7 +380,9 @@ extension FirstViewController{
         case 9:
             if #available(iOS 8.2, *) {
                 cycleClick()
-            } 
+            }
+        case 10:
+            photoLibraryDidChange()
         default:
             print("fallthrough")
             break

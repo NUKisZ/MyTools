@@ -127,7 +127,7 @@ open class LBXScanViewController: BaseViewController, UIImagePickerControllerDel
     {
         for result:LBXScanResult in arrayResult
         {
-            print("%@",result.strScanned)
+            print(result.strScanned as Any)
         }
         
         let result:LBXScanResult = arrayResult[0]

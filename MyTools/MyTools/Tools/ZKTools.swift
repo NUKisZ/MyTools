@@ -73,7 +73,6 @@ class ZKTools: NSObject {
         Scanner(string: bString).scanHexInt32(&b)
         return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
         
-        
     }
     class func colorWithHexStringAndAlpha (hex: String, alpha:CGFloat) -> UIColor {
         //接收到十六进制的颜色字符串和透明度,返回一个颜色

@@ -135,7 +135,7 @@ open class XWRefreshNormalHeader: XWRefreshStateHeader {
         case .pulling:
             commonFun()
             UIView.animate(withDuration: XWRefreshSlowAnimationDuration, animations: { () -> Void in
-                let tmp:CGFloat = 0.000001 - CGFloat(M_PI)
+                let tmp:CGFloat = 0.000001 - .pi
                 self.arrowView.transform = CGAffineTransform(rotationAngle: tmp);
             })
             

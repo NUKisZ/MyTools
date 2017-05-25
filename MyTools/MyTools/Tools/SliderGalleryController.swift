@@ -2,8 +2,8 @@
 //  SliderGalleryController.swift
 //  hangge_1314
 //
-//  Created by hangge on 16/9/24.
-//  Copyright © 2016年 hangge.com. All rights reserved.
+//  Created by MyTools on 17/5/23.
+//  Copyright © 2016年 zhangk. All rights reserved.
 //
 
 import UIKit

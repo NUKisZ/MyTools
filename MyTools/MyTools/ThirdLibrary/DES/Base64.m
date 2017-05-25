@@ -22,7 +22,7 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
     if (characters == NULL)
         return nil;
 
-    int end = data.length - 3;
+    int end = (int)data.length - 3;
     int index = 0;
     int charCount = 0;
     int n = 0;
@@ -74,7 +74,7 @@ static const char encodingTable[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopq
         return nil;
     }
     NSMutableData *rtnData = [[NSMutableData alloc]init];
-    int slen = data.length;
+    int slen = (int)data.length;
     int index = 0;
     while (true) {
         while (index < slen && [data characterAtIndex:index] <= ' ') {
