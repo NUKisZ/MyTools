@@ -138,6 +138,7 @@
 		0B5A4B181EC2D03100C05501 /* TableViewBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B171EC2D03100C05501 /* TableViewBaseController.swift */; };
 		0B5A4B1A1EC2D3B700C05501 /* FirstViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B191EC2D3B700C05501 /* FirstViewControllerCell.swift */; };
 		0B5DBEBB1ED6AA2C002BAE5E /* PhotoLibraryDidChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DBEBA1ED6AA2C002BAE5E /* PhotoLibraryDidChangeViewController.swift */; };
+		0B5DBEBD1ED6DE4D002BAE5E /* VideoShotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DBEBC1ED6DE4D002BAE5E /* VideoShotViewController.swift */; };
 		0B5F45741EC015EF0042D19E /* WKWebViewBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F45731EC015EF0042D19E /* WKWebViewBaseViewController.swift */; };
 		0B5F45A41EC015FC0042D19E /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F45781EC015FC0042D19E /* MJRefreshAutoFooter.m */; };
 		0B5F45A51EC015FC0042D19E /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F457A1EC015FC0042D19E /* MJRefreshBackFooter.m */; };
@@ -422,6 +423,7 @@
 		0B5A4B171EC2D03100C05501 /* TableViewBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewBaseController.swift; sourceTree = "<group>"; };
 		0B5A4B191EC2D3B700C05501 /* FirstViewControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewControllerCell.swift; sourceTree = "<group>"; };
 		0B5DBEBA1ED6AA2C002BAE5E /* PhotoLibraryDidChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryDidChangeViewController.swift; sourceTree = "<group>"; };
+		0B5DBEBC1ED6DE4D002BAE5E /* VideoShotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoShotViewController.swift; sourceTree = "<group>"; };
 		0B5F45731EC015EF0042D19E /* WKWebViewBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewBaseViewController.swift; sourceTree = "<group>"; };
 		0B5F45771EC015FC0042D19E /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		0B5F45781EC015FC0042D19E /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
@@ -733,6 +735,7 @@
 				0B3857B61EC4610D00C0126C /* UIFontViewController.swift */,
 				0B47944A1EC58F6C003437D0 /* PhoneCodeViewController.swift */,
 				0B5DBEBA1ED6AA2C002BAE5E /* PhotoLibraryDidChangeViewController.swift */,
+				0B5DBEBC1ED6DE4D002BAE5E /* VideoShotViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1498,6 +1501,7 @@
 				0B5A4B0D1EC2A40500C05501 /* LGAlertViewButton.m in Sources */,
 				0B1C466C1EBAF684009B7BDD /* UIImageExtensions.swift in Sources */,
 				0B5F45B01EC015FC0042D19E /* MJRefreshNormalHeader.m in Sources */,
+				0B5DBEBD1ED6DE4D002BAE5E /* VideoShotViewController.swift in Sources */,
 				0B5195B51ECEEF7A007AF6F3 /* EFQRCodeViewController.swift in Sources */,
 				0B79C3F61E83A14900CF92B2 /* Debugging.swift in Sources */,
 				0B1C46731EBAF684009B7BDD /* UITextViewExtensions.swift in Sources */,

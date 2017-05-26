@@ -34,7 +34,7 @@ class FirstViewController: TableViewBaseController {
         creatADView()
         //createSubViews()
         createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64), style: .plain, separatorStyle: .none)
-        dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描","轮播图","监听照片库变化"]
+        dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描","轮播图","监听照片库变化","视频截图"]
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         //去空格
         let str = "  adf aase  werwer wr w wer wr qw r  w"
@@ -258,6 +258,13 @@ class FirstViewController: TableViewBaseController {
         hidesBottomBarWhenPushed = false
         
     }
+    @objc fileprivate func videoShotClick(){
+        
+        let vc = VideoShotViewController()
+        hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+        hidesBottomBarWhenPushed = false
+    }
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -383,6 +390,8 @@ extension FirstViewController{
             }
         case 10:
             photoLibraryDidChange()
+        case 11:
+            videoShotClick()
         default:
             print("fallthrough")
             break
