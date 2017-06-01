@@ -23,6 +23,7 @@ class BackViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        automaticallyAdjustsScrollViewInsets = false
         let btn = UIButton(type: .system)
         btn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
         view.addSubview(btn)
@@ -40,8 +41,36 @@ class BackViewController: BaseViewController {
             
         }
         label.text = data.get(at: 2)
+        label.sizeToFit()
         label.backgroundColor = UIColor(hexString: "#FFeeFF", alpha: 1)
-        
+        let str = "人生若只如初见，何事悲风秋画扇。\n等闲变却故人心，却道故人心易变。\n骊山语罢清宵半，泪雨霖铃终不怨。\n何如薄幸锦衣郎，比翼连枝当日愿。"
+        let attrStr = NSMutableAttributedString(string: str)
+        //设置字体和字体范围
+        attrStr.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: 30), range: NSMakeRange(0, 3))
+        //添加文字颜色
+        attrStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.red ,range: NSMakeRange(17, 7))
+        //添加文字背景颜色
+        attrStr.addAttribute(NSBackgroundColorAttributeName, value: UIColor.orange, range: NSMakeRange(17, 7))
+        //添加下划线
+        //let num = NSUnderlineStyle.styleSingle
+        attrStr.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.styleSingle.rawValue, range: NSMakeRange(8, 7))
+        //attrStr.addAttributes([NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue], range: NSMakeRange(8, 7))
+        //attrStr.addAttribute(NSUnderlineStyleAttributeName, value:NSUnderlineStyle.styleThick.rawValue, range: NSMakeRange(8, 7))
+        let attLabel = UILabel()
+        view.addSubview(attLabel)
+        attLabel.snp.makeConstraints {
+            [weak self]
+            (make) in
+            make.left.equalTo((self?.view.snp.left)!).offset(20)
+            make.right.equalTo((self?.view.snp.right)!).offset(-20)
+            make.top.equalTo(label.snp.bottom)
+            
+        }
+        attLabel.backgroundColor = UIColor.green
+        attLabel.preferredMaxLayoutWidth = kScreenWidth - 40
+        attLabel.sizeToFit()
+        attLabel.numberOfLines = 0
+        attLabel.attributedText = attrStr
         
     }
     @objc private func btnAction(){

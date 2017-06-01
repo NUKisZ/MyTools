@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 class MainTabBarViewController: UITabBarController {
 
     override func viewDidLoad() {
@@ -48,7 +47,8 @@ class MainTabBarViewController: UITabBarController {
             
             
             //导航
-            let navCtrl = UINavigationController(rootViewController: vc)
+            let navCtrl = RTRootNavigationController(rootViewController: vc)
+            //let navCtrl = UINavigationController(rootViewController: vc)
             array.append(navCtrl)
             
             

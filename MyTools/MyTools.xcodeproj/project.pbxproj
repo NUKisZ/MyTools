@@ -78,6 +78,8 @@
 		0B3857B01EC43E7200C0126C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857AF1EC43E7200C0126C /* Reachability.m */; };
 		0B3857B71EC4610D00C0126C /* UIFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857B61EC4610D00C0126C /* UIFontViewController.swift */; };
 		0B432B001EB9868B00D75930 /* launcht.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B432AFF1EB9868B00D75930 /* launcht.png */; };
+		0B43321F1ED983DE00A53A58 /* RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B43321C1ED983DE00A53A58 /* RTRootNavigationController.m */; };
+		0B4332201ED983DE00A53A58 /* UIViewController+RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B43321E1ED983DE00A53A58 /* UIViewController+RTRootNavigationController.m */; };
 		0B4794481EC58C39003437D0 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4794461EC58C39003437D0 /* CustomView.swift */; };
 		0B4794491EC58C39003437D0 /* SendMessageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4794471EC58C39003437D0 /* SendMessageButton.swift */; };
 		0B47944B1EC58F6C003437D0 /* PhoneCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B47944A1EC58F6C003437D0 /* PhoneCodeViewController.swift */; };
@@ -347,6 +349,10 @@
 		0B3857AF1EC43E7200C0126C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		0B3857B61EC4610D00C0126C /* UIFontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontViewController.swift; sourceTree = "<group>"; };
 		0B432AFF1EB9868B00D75930 /* launcht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcht.png; sourceTree = "<group>"; };
+		0B43321B1ED983DE00A53A58 /* RTRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRootNavigationController.h; sourceTree = "<group>"; };
+		0B43321C1ED983DE00A53A58 /* RTRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRootNavigationController.m; sourceTree = "<group>"; };
+		0B43321D1ED983DE00A53A58 /* UIViewController+RTRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RTRootNavigationController.h"; sourceTree = "<group>"; };
+		0B43321E1ED983DE00A53A58 /* UIViewController+RTRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RTRootNavigationController.m"; sourceTree = "<group>"; };
 		0B4794461EC58C39003437D0 /* CustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		0B4794471EC58C39003437D0 /* SendMessageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendMessageButton.swift; sourceTree = "<group>"; };
 		0B47944A1EC58F6C003437D0 /* PhoneCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCodeViewController.swift; sourceTree = "<group>"; };
@@ -364,6 +370,7 @@
 		0B4A83721ED41FD400549B0D /* NSString+DES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DES.h"; sourceTree = "<group>"; };
 		0B4A83731ED41FD400549B0D /* NSString+DES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DES.m"; sourceTree = "<group>"; };
 		0B4DFF091EC1549300BC75E9 /* AccpetEventInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccpetEventInterval.swift; sourceTree = "<group>"; };
+		0B4E74DE1EDE55F400FCEC78 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		0B5195971ECEEE2D007AF6F3 /* CGColor+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGColor+.swift"; sourceTree = "<group>"; };
 		0B5195981ECEEE2D007AF6F3 /* CGImage+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGImage+.swift"; sourceTree = "<group>"; };
 		0B5195991ECEEE2D007AF6F3 /* CGSize+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGSize+.swift"; sourceTree = "<group>"; };
@@ -712,6 +719,17 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		0B43321A1ED983DE00A53A58 /* RTRootNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				0B43321B1ED983DE00A53A58 /* RTRootNavigationController.h */,
+				0B43321C1ED983DE00A53A58 /* RTRootNavigationController.m */,
+				0B43321D1ED983DE00A53A58 /* UIViewController+RTRootNavigationController.h */,
+				0B43321E1ED983DE00A53A58 /* UIViewController+RTRootNavigationController.m */,
+			);
+			path = RTRootNavigationController;
+			sourceTree = "<group>";
+		};
 		0B48CBC21EAF28F40069A213 /* FirstVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,6 +849,14 @@
 				0B4A83731ED41FD400549B0D /* NSString+DES.m */,
 			);
 			path = DES;
+			sourceTree = "<group>";
+		};
+		0B4E74DD1EDE55E200FCEC78 /* Playground */ = {
+			isa = PBXGroup;
+			children = (
+				0B4E74DE1EDE55F400FCEC78 /* MyPlayground.playground */,
+			);
+			path = Playground;
 			sourceTree = "<group>";
 		};
 		0B5195951ECEEE2D007AF6F3 /* EFQRCodeSource */ = {
@@ -1231,6 +1257,7 @@
 		0B79C3841E83907D00CF92B2 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				0B43321A1ED983DE00A53A58 /* RTRootNavigationController */,
 				0B4A836F1ED41FD400549B0D /* DES */,
 				0B617A391ED298CA000C2C66 /* ImageHelper */,
 				0B5195CD1ECEF6EC007AF6F3 /* SwiftScan */,
@@ -1295,6 +1322,7 @@
 		0B79C3A61E8394F200CF92B2 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				0B4E74DD1EDE55E200FCEC78 /* Playground */,
 				0B48CBC21EAF28F40069A213 /* FirstVC */,
 				0B48CBCA1EAF28F40069A213 /* SecondVC */,
 				0B48CBCF1EAF28F40069A213 /* ThirdVC */,
@@ -1598,6 +1626,7 @@
 				0B48CBD61EAF28F40069A213 /* FirstViewController.swift in Sources */,
 				0B5195DA1ECEF6EC007AF6F3 /* LBXScanViewStyle.swift in Sources */,
 				0B1C466D1EBAF684009B7BDD /* UIImageViewExtensions.swift in Sources */,
+				0B43321F1ED983DE00A53A58 /* RTRootNavigationController.m in Sources */,
 				0B6F050A1EB85085005E8FBD /* XWRefreshAutoNormalFooter.swift in Sources */,
 				0B5195C81ECEF674007AF6F3 /* QQScanViewController.swift in Sources */,
 				0B6F04951EB84812005E8FBD /* HomeViewController.swift in Sources */,
@@ -1616,6 +1645,7 @@
 				0B5195C71ECEF674007AF6F3 /* MyCodeViewController.swift in Sources */,
 				0B1C46541EBAF684009B7BDD /* CGRectExtensions.swift in Sources */,
 				0B79C3F01E83A14900CF92B2 /* ConstraintPriorityTarget.swift in Sources */,
+				0B4332201ED983DE00A53A58 /* UIViewController+RTRootNavigationController.m in Sources */,
 				0B1C46791EBAF684009B7BDD /* UserDefaultsExtension.swift in Sources */,
 				0B1C465A1EBAF684009B7BDD /* ErrorTypeExtensions.swift in Sources */,
 				0B48CBDA1EAF28F40069A213 /* ThirdViewController.swift in Sources */,
