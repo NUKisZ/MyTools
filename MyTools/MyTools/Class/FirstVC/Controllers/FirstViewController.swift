@@ -9,7 +9,7 @@
 import UIKit
 class FirstViewController: TableViewBaseController {
 
-    
+    var actionArray = NSMutableArray()
     var label:UILabel{
         let l = ZKTools.createLabel(CGRect(x: 0, y: 64, width: 100, height: 40), title: "label", textAlignment: nil, font: nil, textColor: UIColor.red)
         return l
@@ -35,6 +35,8 @@ class FirstViewController: TableViewBaseController {
         //createSubViews()
         createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64), style: .plain, separatorStyle: .none)
         dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描","轮播图","监听照片库变化","视频截图"]
+        actionArray = ["goBackVCBtnAction","cacheClick","downloadVCAction","webViewAction","albumBtnAction","clickUIFontVC","getPhoneCode","EFQRCode","QRCodeScan","cycleClick","photoLibraryDidChange","videoShotClick"]
+        
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         //去空格
         let str = "  adf aase  werwer wr w wer wr qw r  w"
@@ -361,7 +363,13 @@ extension FirstViewController{
         return cell!
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
+        let action = NSSelectorFromString(actionArray[indexPath.row] as! String)
+        if responds(to: action ){
+            perform(action)
+        }
+        //取消选中状态
+        tableView.deselectRow(at: indexPath, animated: true)
+        /*switch indexPath.row {
         case 0:
             goBackVCBtnAction()
             break
@@ -395,7 +403,7 @@ extension FirstViewController{
         default:
             print("fallthrough")
             break
-        }
+        }*/
     }
 }
 extension FirstViewController:UIGestureRecognizerDelegate{

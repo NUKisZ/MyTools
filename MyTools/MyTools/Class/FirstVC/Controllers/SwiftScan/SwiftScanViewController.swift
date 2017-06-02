@@ -112,6 +112,7 @@ class SwiftScanViewController: BaseViewController , UITableViewDelegate, UITable
         let vc = LBXScanViewController();
         
         vc.scanStyle = style
+        vc.arrayCodeType = LBXScanWrapper.defaultMetaDataObjectTypes()
         hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(vc, animated: true)
         

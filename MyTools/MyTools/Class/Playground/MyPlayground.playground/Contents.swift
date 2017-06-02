@@ -10,3 +10,5 @@ var k = i + j
 let btn = UIButton(type: .system)
 btn.tag = 99
 print(btn.tag)
+print(UIFontWeightMedium)
+

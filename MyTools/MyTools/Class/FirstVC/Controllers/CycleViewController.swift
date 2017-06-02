@@ -41,6 +41,8 @@ class CycleViewController: BaseViewController, SliderGalleryControllerDelegate {
         let tap = UITapGestureRecognizer(target: self,
                         action: #selector(handleTapAction(_:)))
         sliderGallery.view.addGestureRecognizer(tap)
+        let reloadDataBtn = ZKTools.createButton(CGRect(x: sliderGallery.view.centerX, y: sliderGallery.view.frame.maxY, w: 50, h: 30), title: "刷新", imageName: nil, bgImageName: nil, target: self, action: #selector(reloadBtnTap))
+        view.addSubview(reloadDataBtn)
     }
     
     //图片轮播组件协议方法：获取内部scrollView尺寸
@@ -67,9 +69,10 @@ class CycleViewController: BaseViewController, SliderGalleryControllerDelegate {
     
     //“刷新数据”按钮点击
     func reloadBtnTap() {
-        images = ["http://tupian.enterdesk.com/2012/1015/zyz/03/5.jpg",
-                  "http://img.web07.cn/UpImg/Desk/201301/12/desk230393121053551.jpg",
-                  "http://bizhi.zhuoku.com/wall/jie/20061124/cartoon2/cartoon014.jpg"]
+        images = ["https://www.uilucky.com/AppData/images/WechatIMG1.jpeg",
+                  "https://www.uilucky.com/AppData/images/WechatIMG3.jpeg",
+                  "https://www.uilucky.com/AppData/images/WechatIMG7.jpeg",
+                  "https://www.uilucky.com/AppData/images/WechatIMG10.jpeg"]
         sliderGallery.reloadData()
     }
     

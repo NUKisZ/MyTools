@@ -18,7 +18,9 @@ class BackViewController: BaseViewController {
         //navigationController?.fd_fullscreenPopGestureRecognizer.isEnabled=false
     }
     weak var delegate:BackViewControllerDelegate?
-
+    private var label:UILabel!
+    private var lock:NSLock!
+    private var ticker = 20
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,7 +34,7 @@ class BackViewController: BaseViewController {
             make.center.equalTo(self.view.snp.center)
         }
         let data = ["adsf","fff","eeee"]
-        let label = UILabel()
+        label = UILabel()
         view.addSubview(label)
         label.snp.makeConstraints { (make) in
             make.top.equalTo(btn.snp.bottom)
@@ -43,6 +45,25 @@ class BackViewController: BaseViewController {
         label.text = data.get(at: 2)
         label.sizeToFit()
         label.backgroundColor = UIColor(hexString: "#FFeeFF", alpha: 1)
+        createAttTextLabel()
+        lock = NSLock()
+        
+        let thread1 = Thread(target: self, selector: #selector(saleTickets(thread:)), object: nil)
+        thread1.name = "窗口1"
+        let thread2 = Thread(target: self, selector: #selector(saleTickets(thread:)), object: nil)
+        thread2.name = "窗口2"
+        thread1.start()
+        thread2.start()
+        
+        
+        
+        
+    }
+    @objc private func btnAction(){
+        self.delegate?.backTest(str: "泄漏测试")
+        navigationController?.popViewController(animated: true)
+    }
+    @objc private func createAttTextLabel(){
         let str = "人生若只如初见，何事悲风秋画扇。\n等闲变却故人心，却道故人心易变。\n骊山语罢清宵半，泪雨霖铃终不怨。\n何如薄幸锦衣郎，比翼连枝当日愿。"
         let attrStr = NSMutableAttributedString(string: str)
         //设置字体和字体范围
@@ -63,7 +84,7 @@ class BackViewController: BaseViewController {
             (make) in
             make.left.equalTo((self?.view.snp.left)!).offset(20)
             make.right.equalTo((self?.view.snp.right)!).offset(-20)
-            make.top.equalTo(label.snp.bottom)
+            make.top.equalTo((self?.label.snp.bottom)!)
             
         }
         attLabel.backgroundColor = UIColor.green
@@ -71,14 +92,32 @@ class BackViewController: BaseViewController {
         attLabel.sizeToFit()
         attLabel.numberOfLines = 0
         attLabel.attributedText = attrStr
-        
-    }
-    @objc private func btnAction(){
-        self.delegate?.backTest(str: "泄漏测试")
-        navigationController?.popViewController(animated: true)
     }
     
-
+    @objc private func saleTickets(thread:Thread){
+        while true {
+            lock.lock()
+            if(ticker<=0){
+                lock.unlock()
+                let str = "\(String(describing: Thread.current.name!))票卖完了"
+                DispatchQueue.main.async {
+                    [weak self] in
+                    self?.label.text = str
+                }
+                return
+            }
+            ticker -= 1
+            let str = "\(String(describing: Thread.current.name!))售出 1 张,还剩 \(ticker)"
+            print(str)
+            DispatchQueue.main.async {
+                [weak self] in
+                self?.label.text = str
+            }
+            lock.unlock()
+            Thread.sleep(forTimeInterval: TimeInterval(arc4random()%3))
+        }
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
