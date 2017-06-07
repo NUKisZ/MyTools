@@ -163,6 +163,7 @@
 		0B5F45B61EC015FD0042D19E /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F45A11EC015FC0042D19E /* UIScrollView+MJRefresh.m */; };
 		0B5F45B71EC015FD0042D19E /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F45A31EC015FC0042D19E /* UIView+MJExtension.m */; };
 		0B5F45B91EC0160C0042D19E /* netFail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0B5F45B81EC0160C0042D19E /* netFail.jpg */; };
+		0B5F7B5C1EE163E2003754BC /* SIMInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F7B5B1EE163E2003754BC /* SIMInfoViewController.swift */; };
 		0B617A361ED297D8000C2C66 /* SliderGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B617A351ED297D8000C2C66 /* SliderGalleryController.swift */; };
 		0B617A381ED29833000C2C66 /* CycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B617A371ED29833000C2C66 /* CycleViewController.swift */; };
 		0B617A3C1ED298CA000C2C66 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B617A3A1ED298CA000C2C66 /* ImageHelper.swift */; };
@@ -473,6 +474,7 @@
 		0B5F45A21EC015FC0042D19E /* UIView+MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MJExtension.h"; sourceTree = "<group>"; };
 		0B5F45A31EC015FC0042D19E /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		0B5F45B81EC0160C0042D19E /* netFail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = netFail.jpg; sourceTree = "<group>"; };
+		0B5F7B5B1EE163E2003754BC /* SIMInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SIMInfoViewController.swift; sourceTree = "<group>"; };
 		0B617A351ED297D8000C2C66 /* SliderGalleryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderGalleryController.swift; sourceTree = "<group>"; };
 		0B617A371ED29833000C2C66 /* CycleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleViewController.swift; sourceTree = "<group>"; };
 		0B617A3A1ED298CA000C2C66 /* ImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
@@ -754,6 +756,7 @@
 				0B47944A1EC58F6C003437D0 /* PhoneCodeViewController.swift */,
 				0B5DBEBA1ED6AA2C002BAE5E /* PhotoLibraryDidChangeViewController.swift */,
 				0B5DBEBC1ED6DE4D002BAE5E /* VideoShotViewController.swift */,
+				0B5F7B5B1EE163E2003754BC /* SIMInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1527,6 +1530,7 @@
 				0B5F45AB1EC015FC0042D19E /* MJRefreshAutoStateFooter.m in Sources */,
 				0B5195AA1ECEEE2D007AF6F3 /* CIImage+.swift in Sources */,
 				0B5A4B0D1EC2A40500C05501 /* LGAlertViewButton.m in Sources */,
+				0B5F7B5C1EE163E2003754BC /* SIMInfoViewController.swift in Sources */,
 				0B1C466C1EBAF684009B7BDD /* UIImageExtensions.swift in Sources */,
 				0B5F45B01EC015FC0042D19E /* MJRefreshNormalHeader.m in Sources */,
 				0B5DBEBD1ED6DE4D002BAE5E /* VideoShotViewController.swift in Sources */,

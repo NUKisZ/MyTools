@@ -33,9 +33,9 @@ class FirstViewController: TableViewBaseController {
         //view.addSubview(label)
         creatADView()
         //createSubViews()
-        createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64), style: .plain, separatorStyle: .none)
-        dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描","轮播图","监听照片库变化","视频截图"]
-        actionArray = ["goBackVCBtnAction","cacheClick","downloadVCAction","webViewAction","albumBtnAction","clickUIFontVC","getPhoneCode","EFQRCode","QRCodeScan","cycleClick","photoLibraryDidChange","videoShotClick"]
+        createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64-44), style: .plain, separatorStyle: .none)
+        dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描","轮播图","监听照片库变化","视频截图","SIM信息"]
+        actionArray = ["goBackVCBtnAction","cacheClick","downloadVCAction","webViewAction","albumBtnAction","clickUIFontVC","getPhoneCode","EFQRCode","QRCodeScan","cycleClick","photoLibraryDidChange","videoShotClick","simInfoClick"]
         
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         //去空格
@@ -267,7 +267,12 @@ class FirstViewController: TableViewBaseController {
         navigationController?.pushViewController(vc, animated: true)
         hidesBottomBarWhenPushed = false
     }
-    
+    @objc fileprivate func simInfoClick(){
+        let vc = SIMInfoViewController()
+        hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+        hidesBottomBarWhenPushed = false
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

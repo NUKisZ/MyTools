@@ -17,7 +17,6 @@ struct Platform {
         return isSim
     }()
 }
-
 extension UIColor{
     class func colorWithRGBA(red r:CGFloat,green g:CGFloat,blue b:CGFloat, alpha a:CGFloat)->UIColor {
         //返回一个颜色
@@ -444,8 +443,10 @@ public extension UIDevice {
         case "iPhone8,1":                               return "iPhone 6s"
         case "iPhone8,2":                               return "iPhone 6s Plus"
         case "iPhone8,4":                               return "iPhone SE"
-        case "iPhone9,1":                               return "iPhone 7"
-        case "iPhone9,2":                               return "iPhone 7 Plus"
+        case "iPhone9,1":                               return "iPhone 7 (CDMA)"
+        case "iPhone9,3":                               return "iPhone 7 (GSM)"
+        case "iPhone9,2":                               return "iPhone 7 Plus (CDMA)"
+        case "iPhone9,4":                               return "iPhone 7 Plus (GSM)"
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4":return "iPad 2"
         case "iPad3,1", "iPad3,2", "iPad3,3":           return "iPad 3"
         case "iPad3,4", "iPad3,5", "iPad3,6":           return "iPad 4"
