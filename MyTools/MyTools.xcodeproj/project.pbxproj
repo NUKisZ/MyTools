@@ -588,6 +588,7 @@
 		0B79C3D71E83A14900CF92B2 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
 		0B79C3D81E83A14900CF92B2 /* SnapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapKit.h; sourceTree = "<group>"; };
 		0B79C3D91E83A14900CF92B2 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
+		0B8873871EEE838500FE22BE /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		0BE60A0C1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		0BE60A0D1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		0BE60A141EADAD8100D21D8C /* ZKDownloadTaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKDownloadTaskManager.swift; sourceTree = "<group>"; };
@@ -1260,6 +1261,7 @@
 		0B79C3841E83907D00CF92B2 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				0B8873861EEE838500FE22BE /* Async */,
 				0B43321A1ED983DE00A53A58 /* RTRootNavigationController */,
 				0B4A836F1ED41FD400549B0D /* DES */,
 				0B617A391ED298CA000C2C66 /* ImageHelper */,
@@ -1379,6 +1381,14 @@
 				0B79C3D91E83A14900CF92B2 /* UILayoutSupport+Extensions.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		0B8873861EEE838500FE22BE /* Async */ = {
+			isa = PBXGroup;
+			children = (
+				0B8873871EEE838500FE22BE /* Async.swift */,
+			);
+			path = Async;
 			sourceTree = "<group>";
 		};
 		0BE60A0B1EAD96B700D21D8C /* FDFullscreenPopGesture */ = {
