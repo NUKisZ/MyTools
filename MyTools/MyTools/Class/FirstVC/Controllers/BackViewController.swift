@@ -118,6 +118,15 @@ class BackViewController: BaseViewController {
         }
         
     }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //获取点击屏幕的坐标点.
+        let touchArray = (touches as NSSet).allObjects
+        let touch = touchArray[0] as! UITouch
+        let point = touch.location(in: self.view)
+        print(touchArray.count)
+        print(point.x,point.y)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

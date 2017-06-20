@@ -34,6 +34,8 @@ class FirstViewController: TableViewBaseController {
         creatADView()
         //createSubViews()
         createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64-44), style: .plain, separatorStyle: .none)
+        tableView?.delegate = self
+        tableView?.dataSource = self
         dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描","轮播图","监听照片库变化","视频截图","SIM信息"]
         actionArray = ["goBackVCBtnAction","cacheClick","downloadVCAction","webViewAction","albumBtnAction","clickUIFontVC","getPhoneCode","EFQRCode","QRCodeScan","cycleClick","photoLibraryDidChange","videoShotClick","simInfoClick"]
         
@@ -357,6 +359,7 @@ extension FirstViewController{
         return dataArray.count
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let ID = "FirstViewControllerID"
         var cell = tableView.dequeueReusableCell(withIdentifier: ID)
         if cell == nil {
