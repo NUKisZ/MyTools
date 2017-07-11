@@ -12,12 +12,20 @@ public let kNetworkReachabilityChangedNotification = "kNetworkReachabilityChange
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var performanceView: GDPerformanceMonitor?
 //    private var reachability:Reachability?
     private var manager:NetworkReachabilityManager?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        #if DEBUG
+            GDPerformanceMonitor.sharedInstance.startMonitoring()
+            GDPerformanceMonitor.sharedInstance.configure(configuration: { (textLabel) in
+                textLabel?.backgroundColor = .black
+                textLabel?.textColor = .white
+                textLabel?.layer.borderColor = UIColor.black.cgColor
+            })
+        #endif
         let hostURL = "www.baidu.com"
 //        reachability = Reachability(hostName: hostURL)
 //        reachability?.startNotifier()

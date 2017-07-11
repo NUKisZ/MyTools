@@ -55,6 +55,11 @@ class BackViewController: BaseViewController {
         thread1.start()
         thread2.start()
         
+        let actView = ActivityView(frame: CGRect(x: 0, y: 0, w: 100, h: 100))
+        actView.center = view.center
+        actView.titleString = "加载中..."
+        view.addSubview(actView)
+        
         
         
         

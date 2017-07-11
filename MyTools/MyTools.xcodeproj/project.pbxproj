@@ -77,6 +77,12 @@
 		0B3857A81EC4372900C0126C /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857951EC4372800C0126C /* Validation.swift */; };
 		0B3857B01EC43E7200C0126C /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857AF1EC43E7200C0126C /* Reachability.m */; };
 		0B3857B71EC4610D00C0126C /* UIFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3857B61EC4610D00C0126C /* UIFontViewController.swift */; };
+		0B4014591F13731C003AFC0C /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4014581F13731C003AFC0C /* ActivityView.swift */; };
+		0B4014601F13833B003AFC0C /* GDMarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B40145B1F13833B003AFC0C /* GDMarginLabel.swift */; };
+		0B4014611F13833B003AFC0C /* GDPerformanceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B40145C1F13833B003AFC0C /* GDPerformanceMonitor.swift */; };
+		0B4014621F13833B003AFC0C /* GDPerformanceMonitorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B40145D1F13833B003AFC0C /* GDPerformanceMonitorDelegate.swift */; };
+		0B4014631F13833B003AFC0C /* GDPerformanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B40145E1F13833B003AFC0C /* GDPerformanceView.swift */; };
+		0B4014641F13833B003AFC0C /* GDWindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B40145F1F13833B003AFC0C /* GDWindowViewController.swift */; };
 		0B432B001EB9868B00D75930 /* launcht.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B432AFF1EB9868B00D75930 /* launcht.png */; };
 		0B43321F1ED983DE00A53A58 /* RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B43321C1ED983DE00A53A58 /* RTRootNavigationController.m */; };
 		0B4332201ED983DE00A53A58 /* UIViewController+RTRootNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B43321E1ED983DE00A53A58 /* UIViewController+RTRootNavigationController.m */; };
@@ -349,6 +355,12 @@
 		0B3857AB1EC43B0E00C0126C /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		0B3857AF1EC43E7200C0126C /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		0B3857B61EC4610D00C0126C /* UIFontViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontViewController.swift; sourceTree = "<group>"; };
+		0B4014581F13731C003AFC0C /* ActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		0B40145B1F13833B003AFC0C /* GDMarginLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDMarginLabel.swift; sourceTree = "<group>"; };
+		0B40145C1F13833B003AFC0C /* GDPerformanceMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDPerformanceMonitor.swift; sourceTree = "<group>"; };
+		0B40145D1F13833B003AFC0C /* GDPerformanceMonitorDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDPerformanceMonitorDelegate.swift; sourceTree = "<group>"; };
+		0B40145E1F13833B003AFC0C /* GDPerformanceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDPerformanceView.swift; sourceTree = "<group>"; };
+		0B40145F1F13833B003AFC0C /* GDWindowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDWindowViewController.swift; sourceTree = "<group>"; };
 		0B432AFF1EB9868B00D75930 /* launcht.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcht.png; sourceTree = "<group>"; };
 		0B43321B1ED983DE00A53A58 /* RTRootNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RTRootNavigationController.h; sourceTree = "<group>"; };
 		0B43321C1ED983DE00A53A58 /* RTRootNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RTRootNavigationController.m; sourceTree = "<group>"; };
@@ -705,6 +717,18 @@
 			path = Reachability;
 			sourceTree = "<group>";
 		};
+		0B40145A1F13833B003AFC0C /* GDPerformanceMonitoring */ = {
+			isa = PBXGroup;
+			children = (
+				0B40145B1F13833B003AFC0C /* GDMarginLabel.swift */,
+				0B40145C1F13833B003AFC0C /* GDPerformanceMonitor.swift */,
+				0B40145D1F13833B003AFC0C /* GDPerformanceMonitorDelegate.swift */,
+				0B40145E1F13833B003AFC0C /* GDPerformanceView.swift */,
+				0B40145F1F13833B003AFC0C /* GDWindowViewController.swift */,
+			);
+			path = GDPerformanceMonitoring;
+			sourceTree = "<group>";
+		};
 		0B432AFD1EB9868B00D75930 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -767,6 +791,7 @@
 			children = (
 				0B48CBC91EAF28F40069A213 /* DownloadCell.swift */,
 				0B5A4B191EC2D3B700C05501 /* FirstViewControllerCell.swift */,
+				0B4014581F13731C003AFC0C /* ActivityView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -1261,6 +1286,7 @@
 		0B79C3841E83907D00CF92B2 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				0B40145A1F13833B003AFC0C /* GDPerformanceMonitoring */,
 				0B8873861EEE838500FE22BE /* Async */,
 				0B43321A1ED983DE00A53A58 /* RTRootNavigationController */,
 				0B4A836F1ED41FD400549B0D /* DES */,
@@ -1509,6 +1535,7 @@
 				0B79C3ED1E83A14900CF92B2 /* ConstraintMakerRelatable.swift in Sources */,
 				0B5A4B141EC2A40500C05501 /* LGAlertViewWindowContainer.m in Sources */,
 				0B79C3EB1E83A14900CF92B2 /* ConstraintMakerFinalizable.swift in Sources */,
+				0B4014641F13833B003AFC0C /* GDWindowViewController.swift in Sources */,
 				0B79C3EE1E83A14900CF92B2 /* ConstraintMultiplierTarget.swift in Sources */,
 				0B5195D61ECEF6EC007AF6F3 /* LBXScanLineAnimation.swift in Sources */,
 				0B3857A31EC4372900C0126C /* ServerTrustPolicy.swift in Sources */,
@@ -1516,7 +1543,9 @@
 				0B6F05021EB85085005E8FBD /* Resource.swift in Sources */,
 				0B1C46651EBAF684009B7BDD /* UIBarButtonItemExtensions.swift in Sources */,
 				0B1C46691EBAF684009B7BDD /* UIDeviceExtensions.swift in Sources */,
+				0B4014601F13833B003AFC0C /* GDMarginLabel.swift in Sources */,
 				0B79C3E81E83A14900CF92B2 /* ConstraintMaker.swift in Sources */,
+				0B4014611F13833B003AFC0C /* GDPerformanceMonitor.swift in Sources */,
 				0B6F049E1EB84812005E8FBD /* GroupListModel.swift in Sources */,
 				0B5A4B151EC2A40500C05501 /* LGAlertViewWindowsObserver.m in Sources */,
 				0B1C466B1EBAF684009B7BDD /* UIFontExtensions.swift in Sources */,
@@ -1604,6 +1633,7 @@
 				0B3857A81EC4372900C0126C /* Validation.swift in Sources */,
 				0B5195C61ECEF674007AF6F3 /* MainTableViewController.swift in Sources */,
 				0B617A381ED29833000C2C66 /* CycleViewController.swift in Sources */,
+				0B4014621F13833B003AFC0C /* GDPerformanceMonitorDelegate.swift in Sources */,
 				0B79C3DD1E83A14900CF92B2 /* ConstraintConstantTarget.swift in Sources */,
 				0B6F04C81EB84812005E8FBD /* StarView.swift in Sources */,
 				0B1C46481EBAF684009B7BDD /* ArrayExtensions.swift in Sources */,
@@ -1657,6 +1687,7 @@
 				0B6F050F1EB85085005E8FBD /* XWRefreshNormalHeader.swift in Sources */,
 				0B48CBD81EAF28F40069A213 /* DownloadCell.swift in Sources */,
 				0B5195C71ECEF674007AF6F3 /* MyCodeViewController.swift in Sources */,
+				0B4014631F13833B003AFC0C /* GDPerformanceView.swift in Sources */,
 				0B1C46541EBAF684009B7BDD /* CGRectExtensions.swift in Sources */,
 				0B79C3F01E83A14900CF92B2 /* ConstraintPriorityTarget.swift in Sources */,
 				0B4332201ED983DE00A53A58 /* UIViewController+RTRootNavigationController.m in Sources */,
@@ -1671,6 +1702,7 @@
 				0B5A4B0E1EC2A40500C05501 /* LGAlertViewButtonProperties.m in Sources */,
 				0B1C46761EBAF684009B7BDD /* UIViewExtensions.swift in Sources */,
 				0B5F45AC1EC015FC0042D19E /* MJRefreshBackGifFooter.m in Sources */,
+				0B4014591F13731C003AFC0C /* ActivityView.swift in Sources */,
 				0B79C3DF1E83A14900CF92B2 /* ConstraintDSL.swift in Sources */,
 				0B5F45B11EC015FC0042D19E /* MJRefreshStateHeader.m in Sources */,
 				0B68F7681E84BD0800280D1B /* ADModel.swift in Sources */,
@@ -1867,6 +1899,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MyTools/HeaderBridge.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1884,6 +1917,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MyTools/HeaderBridge.h";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

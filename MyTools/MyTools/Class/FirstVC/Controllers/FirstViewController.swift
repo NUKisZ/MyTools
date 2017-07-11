@@ -142,6 +142,7 @@ class FirstViewController: TableViewBaseController {
             make.top.equalTo(albumBtn.snp.bottom)
             make.height.equalTo(30)
         }
+        
         accEventBtn.uxy_acceptEventInterval=2
         accEventBtn.addTarget(self, action: #selector(accEventBtnAction), for: .touchUpInside)
         accEventBtn.setTitle("SwiftRuntime", for: .normal)
