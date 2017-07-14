@@ -60,6 +60,10 @@ class BackViewController: BaseViewController {
         actView.titleString = "加载中..."
         view.addSubview(actView)
         
+        let phoneTextField = PhoneField(frame: CGRect(x: 0, y: 64, w: 100, h: 50))
+        view.addSubview(phoneTextField)
+        
+        
         
         
         
