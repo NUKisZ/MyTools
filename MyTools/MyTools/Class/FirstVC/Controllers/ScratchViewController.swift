@@ -8,20 +8,17 @@
 
 import UIKit
 
-class ScratchViewController: UIViewController {
+class ScratchViewController: BaseViewController {
     
     fileprivate var label:UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         label = ZKTools.createLabel(CGRect(x: 20, y: 200, w: 200, h: 25), title: nil, textAlignment: .center, font: nil, textColor: nil)
         view.addSubview(label)
         //创建刮刮卡组件
-        let scratchCard = ScratchCard(frame: CGRect(x:20, y:70, width:241, height:106),
-                                      couponImage: UIImage(named: "coupon.png")!,
-                                      maskImage: UIImage(named: "mask.png")!)
+        let scratchCard = ScratchCard(frame: CGRect(x:20, y:70, width:241, height:106),couponImage: UIImage(named: "coupon.png")!,maskImage: UIImage(named: "mask.png")!)
         //设置代理
         scratchCard.delegate = self
         self.view.addSubview(scratchCard)
