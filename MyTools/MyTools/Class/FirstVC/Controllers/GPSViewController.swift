@@ -56,22 +56,24 @@ class GPSViewController: BaseViewController {
     }
     
     private func initView(){
+        let width = kScreenWidth-20
         longitudeLabel=UILabel()
-        longitudeLabel.preferredMaxLayoutWidth = kScreenWidth
+        longitudeLabel.preferredMaxLayoutWidth = width
         latitudeLabel=UILabel()
-        latitudeLabel.preferredMaxLayoutWidth = kScreenWidth
+        latitudeLabel.preferredMaxLayoutWidth = width
         heightLabel=UILabel()
-        heightLabel.preferredMaxLayoutWidth = kScreenWidth
+        heightLabel.preferredMaxLayoutWidth = width
         horizontalLabel=UILabel()
-        horizontalLabel.preferredMaxLayoutWidth = kScreenWidth
+        horizontalLabel.preferredMaxLayoutWidth = width
         verticalLabel=UILabel()
-        verticalLabel.preferredMaxLayoutWidth = kScreenWidth
+        verticalLabel.preferredMaxLayoutWidth = width
         courseLabel=UILabel()
-        courseLabel.preferredMaxLayoutWidth = kScreenWidth
+        courseLabel.preferredMaxLayoutWidth = width
         speedLabel=UILabel()
-        speedLabel.preferredMaxLayoutWidth = kScreenWidth
+        speedLabel.preferredMaxLayoutWidth = width
         locationLabel=UILabel()
-        locationLabel.preferredMaxLayoutWidth = kScreenWidth
+        locationLabel.numberOfLines = 0
+        locationLabel.preferredMaxLayoutWidth = width
         view.addSubview(longitudeLabel)
         view.addSubview(latitudeLabel)
         view.addSubview(heightLabel)
@@ -147,9 +149,35 @@ class GPSViewController: BaseViewController {
             if error == nil {
                 guard pls != nil else {return}
                 if let place = pls?.first{
-                    print((pls?.first?.subLocality)!)//定位到的区
+                    print(place.subLocality!)//定位到的区
+                    var country = ""
+                    if place.country != nil{
+                        country = place.country!
+                    }
+                    
+                    var administrativeArea = ""
+                    if place.administrativeArea != nil {
+                        administrativeArea = place.administrativeArea!
+                    }
+                    
+                    var locality = ""
+                    if place.locality != nil {
+                        locality = place.locality!
+                    }
+                    var subLocality = ""
+                    if place.subLocality != nil{
+                        subLocality = place.subLocality!
+                    }
+                    var thoroughfare = ""
+                    if place.thoroughfare != nil{
+                        thoroughfare = place.thoroughfare!
+                    }
+                    var subThoroughfare = ""
+                    if place.subThoroughfare != nil{
+                        subThoroughfare = place.subThoroughfare!
+                    }
                     DispatchQueue.main.async {
-                        self?.locationLabel.text = "您的位置:" + place.country! + place.administrativeArea! + place.locality! + (pls?.first?.subLocality)!
+                        self?.locationLabel.text =  "您的位置:" + country + administrativeArea + locality + subLocality + thoroughfare + subThoroughfare
                     }
                     
                 }

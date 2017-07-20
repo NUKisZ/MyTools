@@ -1586,7 +1586,7 @@
 				TargetAttributes = {
 					0B79C36E1E8388D600CF92B2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 6285H2477J;
+						DevelopmentTeam = 462CLBGT3J;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -2044,12 +2044,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 6285H2477J;
+				DEVELOPMENT_TEAM = 462CLBGT3J;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = MyTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pashanhu.mengwushe1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pashanhu.mengwushe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MyTools/HeaderBridge.h";
 				SWIFT_VERSION = 3.0;
@@ -2062,12 +2062,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 6285H2477J;
+				DEVELOPMENT_TEAM = 462CLBGT3J;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = MyTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pashanhu.mengwushe1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pashanhu.mengwushe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MyTools/HeaderBridge.h";
 				SWIFT_VERSION = 3.0;
