@@ -12,6 +12,19 @@ class NewTaskViewController: BaseViewController {
     
     var textView:UITextView?
 
+    convenience init(_: Any) {
+        self.init()
+    }
+    /// 重写方法
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    /// UIViewController中标记子类必须要实现的方法
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -16,6 +16,7 @@
 #import "NSString+DES.h"
 #import <CommonCrypto/CommonCrypto.h>
 #import "RTRootNavigationController.h"
+#import "WMPageController.h"
 //#import "UINavigationController+FDFullscreenPopGesture.h"
 
 #endif /* HeaderBridge_h */

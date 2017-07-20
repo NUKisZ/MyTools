@@ -145,6 +145,13 @@
 		0B5A4B161EC2A40500C05501 /* UIWindow+LGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B0B1EC2A40500C05501 /* UIWindow+LGAlertView.m */; };
 		0B5A4B181EC2D03100C05501 /* TableViewBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B171EC2D03100C05501 /* TableViewBaseController.swift */; };
 		0B5A4B1A1EC2D3B700C05501 /* FirstViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B191EC2D3B700C05501 /* FirstViewControllerCell.swift */; };
+		0B5DAA241F20542900DC9E4B /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA1B1F20542900DC9E4B /* WMMenuItem.m */; };
+		0B5DAA251F20542900DC9E4B /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA1D1F20542900DC9E4B /* WMMenuView.m */; };
+		0B5DAA261F20542900DC9E4B /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA1F1F20542900DC9E4B /* WMProgressView.m */; };
+		0B5DAA271F20542900DC9E4B /* WMScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA211F20542900DC9E4B /* WMScrollView.m */; };
+		0B5DAA281F20542900DC9E4B /* WMPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA231F20542900DC9E4B /* WMPageController.m */; };
+		0B5DAA2A1F20544900DC9E4B /* WMPageTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA291F20544900DC9E4B /* WMPageTestViewController.swift */; };
+		0B5DAA2C1F205CEF00DC9E4B /* GPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA2B1F205CEF00DC9E4B /* GPSViewController.swift */; };
 		0B5DBEBB1ED6AA2C002BAE5E /* PhotoLibraryDidChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DBEBA1ED6AA2C002BAE5E /* PhotoLibraryDidChangeViewController.swift */; };
 		0B5DBEBD1ED6DE4D002BAE5E /* VideoShotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DBEBC1ED6DE4D002BAE5E /* VideoShotViewController.swift */; };
 		0B5F45741EC015EF0042D19E /* WKWebViewBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5F45731EC015EF0042D19E /* WKWebViewBaseViewController.swift */; };
@@ -461,6 +468,18 @@
 		0B5A4B0B1EC2A40500C05501 /* UIWindow+LGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+LGAlertView.m"; sourceTree = "<group>"; };
 		0B5A4B171EC2D03100C05501 /* TableViewBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewBaseController.swift; sourceTree = "<group>"; };
 		0B5A4B191EC2D3B700C05501 /* FirstViewControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewControllerCell.swift; sourceTree = "<group>"; };
+		0B5DAA1A1F20542900DC9E4B /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
+		0B5DAA1B1F20542900DC9E4B /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
+		0B5DAA1C1F20542900DC9E4B /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
+		0B5DAA1D1F20542900DC9E4B /* WMMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuView.m; sourceTree = "<group>"; };
+		0B5DAA1E1F20542900DC9E4B /* WMProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProgressView.h; sourceTree = "<group>"; };
+		0B5DAA1F1F20542900DC9E4B /* WMProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProgressView.m; sourceTree = "<group>"; };
+		0B5DAA201F20542900DC9E4B /* WMScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMScrollView.h; sourceTree = "<group>"; };
+		0B5DAA211F20542900DC9E4B /* WMScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMScrollView.m; sourceTree = "<group>"; };
+		0B5DAA221F20542900DC9E4B /* WMPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMPageController.h; sourceTree = "<group>"; };
+		0B5DAA231F20542900DC9E4B /* WMPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMPageController.m; sourceTree = "<group>"; };
+		0B5DAA291F20544900DC9E4B /* WMPageTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WMPageTestViewController.swift; sourceTree = "<group>"; };
+		0B5DAA2B1F205CEF00DC9E4B /* GPSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GPSViewController.swift; sourceTree = "<group>"; };
 		0B5DBEBA1ED6AA2C002BAE5E /* PhotoLibraryDidChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoLibraryDidChangeViewController.swift; sourceTree = "<group>"; };
 		0B5DBEBC1ED6DE4D002BAE5E /* VideoShotViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoShotViewController.swift; sourceTree = "<group>"; };
 		0B5F45731EC015EF0042D19E /* WKWebViewBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKWebViewBaseViewController.swift; sourceTree = "<group>"; };
@@ -824,6 +843,8 @@
 				0B5F7B5B1EE163E2003754BC /* SIMInfoViewController.swift */,
 				0B60C32C1F1853AE0066AE4C /* ScratchViewController.swift */,
 				0B60C32E1F185AFA0066AE4C /* GalleryViewController.swift */,
+				0B5DAA291F20544900DC9E4B /* WMPageTestViewController.swift */,
+				0B5DAA2B1F205CEF00DC9E4B /* GPSViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1020,6 +1041,31 @@
 				0B5A4B0B1EC2A40500C05501 /* UIWindow+LGAlertView.m */,
 			);
 			path = LGAlertView;
+			sourceTree = "<group>";
+		};
+		0B5DAA181F20542900DC9E4B /* WMPageController */ = {
+			isa = PBXGroup;
+			children = (
+				0B5DAA191F20542900DC9E4B /* WMMenuView */,
+				0B5DAA221F20542900DC9E4B /* WMPageController.h */,
+				0B5DAA231F20542900DC9E4B /* WMPageController.m */,
+			);
+			path = WMPageController;
+			sourceTree = "<group>";
+		};
+		0B5DAA191F20542900DC9E4B /* WMMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				0B5DAA1A1F20542900DC9E4B /* WMMenuItem.h */,
+				0B5DAA1B1F20542900DC9E4B /* WMMenuItem.m */,
+				0B5DAA1C1F20542900DC9E4B /* WMMenuView.h */,
+				0B5DAA1D1F20542900DC9E4B /* WMMenuView.m */,
+				0B5DAA1E1F20542900DC9E4B /* WMProgressView.h */,
+				0B5DAA1F1F20542900DC9E4B /* WMProgressView.m */,
+				0B5DAA201F20542900DC9E4B /* WMScrollView.h */,
+				0B5DAA211F20542900DC9E4B /* WMScrollView.m */,
+			);
+			path = WMMenuView;
 			sourceTree = "<group>";
 		};
 		0B5F45751EC015FC0042D19E /* MJRefresh */ = {
@@ -1365,6 +1411,7 @@
 		0B79C3841E83907D00CF92B2 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				0B5DAA181F20542900DC9E4B /* WMPageController */,
 				0B40145A1F13833B003AFC0C /* GDPerformanceMonitoring */,
 				0B8873861EEE838500FE22BE /* Async */,
 				0B43321A1ED983DE00A53A58 /* RTRootNavigationController */,
@@ -1539,7 +1586,7 @@
 				TargetAttributes = {
 					0B79C36E1E8388D600CF92B2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 462CLBGT3J;
+						DevelopmentTeam = 6285H2477J;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1634,6 +1681,7 @@
 				0B3857A31EC4372900C0126C /* ServerTrustPolicy.swift in Sources */,
 				0B79C3F31E83A14900CF92B2 /* ConstraintView+Extensions.swift in Sources */,
 				0B6F05021EB85085005E8FBD /* Resource.swift in Sources */,
+				0B5DAA2C1F205CEF00DC9E4B /* GPSViewController.swift in Sources */,
 				0B1C46651EBAF684009B7BDD /* UIBarButtonItemExtensions.swift in Sources */,
 				0B1C46691EBAF684009B7BDD /* UIDeviceExtensions.swift in Sources */,
 				0B4014601F13833B003AFC0C /* GDMarginLabel.swift in Sources */,
@@ -1688,6 +1736,7 @@
 				0B1C46621EBAF684009B7BDD /* TimerExtensions.swift in Sources */,
 				0B5A4B181EC2D03100C05501 /* TableViewBaseController.swift in Sources */,
 				0B5A4B101EC2A40500C05501 /* LGAlertViewController.m in Sources */,
+				0B5DAA271F20542900DC9E4B /* WMScrollView.m in Sources */,
 				0B47944B1EC58F6C003437D0 /* PhoneCodeViewController.swift in Sources */,
 				0B6F05051EB85085005E8FBD /* UIButton+Kingfisher.swift in Sources */,
 				0B79C3F81E83A14900CF92B2 /* LayoutConstraint.swift in Sources */,
@@ -1737,6 +1786,7 @@
 				0B5F45741EC015EF0042D19E /* WKWebViewBaseViewController.swift in Sources */,
 				0BE60A1D1EADF87700D21D8C /* TaskManager.swift in Sources */,
 				0B5195A61ECEEE2D007AF6F3 /* CGColor+.swift in Sources */,
+				0B5DAA261F20542900DC9E4B /* WMProgressView.m in Sources */,
 				0B5A4B121EC2A40500C05501 /* LGAlertViewTextField.m in Sources */,
 				0B5F45B31EC015FC0042D19E /* MJRefreshConst.m in Sources */,
 				0B60C3281F18533D0066AE4C /* ScratchCard.swift in Sources */,
@@ -1749,6 +1799,7 @@
 				0B3857A01EC4372900C0126C /* Response.swift in Sources */,
 				0B5F45AE1EC015FC0042D19E /* MJRefreshBackStateFooter.m in Sources */,
 				0B6F050E1EB85085005E8FBD /* XWRefreshHeader.swift in Sources */,
+				0B5DAA241F20542900DC9E4B /* WMMenuItem.m in Sources */,
 				0B5195B21ECEEE2D007AF6F3 /* SystemImage+.swift in Sources */,
 				0B6F049D1EB84812005E8FBD /* DetailModel.swift in Sources */,
 				0B1C46501EBAF684009B7BDD /* BoolExtensions.swift in Sources */,
@@ -1767,6 +1818,7 @@
 				0B5195DA1ECEF6EC007AF6F3 /* LBXScanViewStyle.swift in Sources */,
 				0B1C466D1EBAF684009B7BDD /* UIImageViewExtensions.swift in Sources */,
 				0B43321F1ED983DE00A53A58 /* RTRootNavigationController.m in Sources */,
+				0B5DAA281F20542900DC9E4B /* WMPageController.m in Sources */,
 				0B6F050A1EB85085005E8FBD /* XWRefreshAutoNormalFooter.swift in Sources */,
 				0B5195C81ECEF674007AF6F3 /* QQScanViewController.swift in Sources */,
 				0B6F04951EB84812005E8FBD /* HomeViewController.swift in Sources */,
@@ -1826,11 +1878,13 @@
 				0B60C33E1F185C6B0066AE4C /* LinearCollectionViewLayout.swift in Sources */,
 				0B79C3EC1E83A14900CF92B2 /* ConstraintMakerPriortizable.swift in Sources */,
 				0B5F45B71EC015FD0042D19E /* UIView+MJExtension.m in Sources */,
+				0B5DAA2A1F20544900DC9E4B /* WMPageTestViewController.swift in Sources */,
 				0B1C464D1EBAF684009B7BDD /* BlockSwipe.swift in Sources */,
 				0B79C3731E8388D600CF92B2 /* AppDelegate.swift in Sources */,
 				0B6F04C41EB84812005E8FBD /* DetailButton.swift in Sources */,
 				0B5195A91ECEEE2D007AF6F3 /* CIColor+.swift in Sources */,
 				0B1C46681EBAF684009B7BDD /* UIColorExtensions.swift in Sources */,
+				0B5DAA251F20542900DC9E4B /* WMMenuView.m in Sources */,
 				0B5195D71ECEF6EC007AF6F3 /* LBXScanNetAnimation.swift in Sources */,
 				0B5195D51ECEF6EC007AF6F3 /* LBXPermissions.swift in Sources */,
 				0B79C3901E83907D00CF92B2 /* CacheTool.swift in Sources */,
@@ -1990,12 +2044,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 462CLBGT3J;
+				DEVELOPMENT_TEAM = 6285H2477J;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = MyTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pashanhu.mengwushe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pashanhu.mengwushe1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MyTools/HeaderBridge.h";
 				SWIFT_VERSION = 3.0;
@@ -2008,12 +2062,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				DEVELOPMENT_TEAM = 462CLBGT3J;
+				DEVELOPMENT_TEAM = 6285H2477J;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = MyTools/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.pashanhu.mengwushe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pashanhu.mengwushe1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/MyTools/HeaderBridge.h";
 				SWIFT_VERSION = 3.0;

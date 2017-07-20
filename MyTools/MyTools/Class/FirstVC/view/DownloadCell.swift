@@ -53,7 +53,6 @@ class DownloadCell: UITableViewCell {
             
         }
     }
-    
     func updateData(task:DownloadTask){
         self.downloadTask = task
         labelName.text = self.downloadTask?.url.lastPathComponent
