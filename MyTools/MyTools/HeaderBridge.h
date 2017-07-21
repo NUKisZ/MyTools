@@ -19,4 +19,13 @@
 #import "WMPageController.h"
 //#import "UINavigationController+FDFullscreenPopGesture.h"
 
+
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
+#import <ShareSDKConnector/ShareSDKConnector.h>
+
+#import <FacebookConnector/FacebookConnector.h>
+#import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
+
+#import "MBProgressHUD.h"
 #endif /* HeaderBridge_h */

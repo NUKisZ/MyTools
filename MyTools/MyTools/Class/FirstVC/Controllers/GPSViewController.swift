@@ -11,15 +11,15 @@ import CoreLocation
 class GPSViewController: BaseViewController {
 
     //定位管理器
-    let locationManager:CLLocationManager = CLLocationManager()
-    var longitudeLabel:UILabel!//经度
-    var latitudeLabel:UILabel!//纬度
-    var heightLabel:UILabel!//高度,海拔
-    var horizontalLabel:UILabel!//水平精度
-    var verticalLabel:UILabel!//垂直精度
-    var courseLabel:UILabel!//获取方向
-    var speedLabel:UILabel!//速度
-    var locationLabel:UILabel!//位置
+    fileprivate let locationManager:CLLocationManager = CLLocationManager()
+    fileprivate var longitudeLabel:UILabel!//经度
+    fileprivate var latitudeLabel:UILabel!//纬度
+    fileprivate var heightLabel:UILabel!//高度,海拔
+    fileprivate var horizontalLabel:UILabel!//水平精度
+    fileprivate var verticalLabel:UILabel!//垂直精度
+    fileprivate var courseLabel:UILabel!//获取方向
+    fileprivate var speedLabel:UILabel!//速度
+    fileprivate var locationLabel:UILabel!//位置
     init(){
         super.init(nibName: nil, bundle: nil)
     }
@@ -139,7 +139,7 @@ class GPSViewController: BaseViewController {
     
 
     //将经纬度解析成字符串
-    func reverseActon(latitude: CLLocationDegrees, longitude: CLLocationDegrees){
+    fileprivate func reverseActon(latitude: CLLocationDegrees, longitude: CLLocationDegrees){
         //位置
         let  geoCoder = CLGeocoder()
         let loc = CLLocation(latitude: latitude, longitude: longitude)

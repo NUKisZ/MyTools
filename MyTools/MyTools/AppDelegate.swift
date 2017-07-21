@@ -50,6 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
 
+        Share()
         window?.rootViewController = MainTabBarViewController()
         window?.makeKeyAndVisible()
         return true
@@ -100,6 +101,50 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    private func Share(){
+        ShareSDK.registerActivePlatforms(
+            [
+                SSDKPlatformType.typeFacebook.rawValue,
+                SSDKPlatformType.typeTwitter.rawValue,
+                SSDKPlatformType.typeYouTube.rawValue,
+                SSDKPlatformType.typeCopy.rawValue,
+                SSDKPlatformType.typeGooglePlus.rawValue,
+                SSDKPlatformType.typeFacebookMessenger.rawValue,
+            ],
+            onImport: {(platform : SSDKPlatformType) -> Void in
+                switch platform
+                {
+                case SSDKPlatformType.typeFacebook:
+                    ShareSDKConnector.connectFacebookMessenger(FacebookConnector.classForCoder())
+                case SSDKPlatformType.typeFacebookMessenger:
+                    ShareSDKConnector.connectFacebookMessenger(FBSDKMessengerSharer.classForCoder())
+                case SSDKPlatformType.typeTwitter:
+                    break
+                case SSDKPlatformType.typeYouTube:
+                    break
+                default:
+                    break
+                }
+        },
+            onConfiguration: {(platform : SSDKPlatformType , appInfo : NSMutableDictionary?) -> Void in
+                switch platform
+                {
+                case SSDKPlatformType.typeFacebook:
+                    //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
+                    appInfo?.ssdkSetupFacebook(byApiKey: "149256552318401", appSecret: "458f503ccee25ad1c01b0c2923e3da6c", displayName: "ShareSDK", authType: SSDKAuthTypeBoth)
+                    
+                case SSDKPlatformType.typeTwitter:
+                    appInfo?.ssdkSetupTwitter(byConsumerKey: "sKDghGO5klKGC9dgX4CkNM1sK", consumerSecret: "lsXro2RyWrNgje4cG1S3JZ7zCBF73pMJ1wQ6A7SgjMm4gwaZwU", redirectUri: "https://www.uilucky.com")
+                    
+                case SSDKPlatformType.typeYouTube:
+                    appInfo?.ssdkSetupYouTube(byClientId: "", clientSecret: "", redirectUri: "")
+                default:
+                    break
+                }
+        })
+    }
+    
+    
 
 }
 

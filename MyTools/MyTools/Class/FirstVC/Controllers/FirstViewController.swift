@@ -36,8 +36,8 @@ class FirstViewController: TableViewBaseController {
         createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64-44), style: .plain, separatorStyle: .none)
         tableView?.delegate = self
         tableView?.dataSource = self
-        dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描","轮播图","监听照片库变化","视频截图","SIM信息","刮刮卡","Gallery画廊效果（左右滑动浏览图片）","WMPageController","GPS"]
-        actionArray = ["goBackVCBtnAction","cacheClick","downloadVCAction","webViewAction","albumBtnAction","clickUIFontVC","getPhoneCode","EFQRCode","QRCodeScan","cycleClick","photoLibraryDidChange","videoShotClick","simInfoClick","scratchClick","galleryClick","WMPageControllerClick","GPSClick"]
+        dataArray = ["全屏返回测试","缓存大小","下载界面","WebView","选择图片","多种字体","获取手机验证码","二维码生成","二维码扫描","轮播图","监听照片库变化","视频截图","SIM信息","刮刮卡","Gallery画廊效果（左右滑动浏览图片）","WMPageController","GPS","分享"]
+        actionArray = ["goBackVCBtnAction","cacheClick","downloadVCAction","webViewAction","albumBtnAction","clickUIFontVC","getPhoneCode","EFQRCode","QRCodeScan","cycleClick","photoLibraryDidChange","videoShotClick","simInfoClick","scratchClick","galleryClick","WMPageControllerClick","GPSClick","ShareClick"]
         
 //        navigationController?.setNavigationBarHidden(true, animated: false)
         //去空格
@@ -297,6 +297,12 @@ class FirstViewController: TableViewBaseController {
     }
     @objc fileprivate func GPSClick(){
         let vc = GPSViewController()
+        hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
+        hidesBottomBarWhenPushed = false
+    }
+    @objc fileprivate func ShareClick(){
+        let vc = ShareViewController()
         hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
         hidesBottomBarWhenPushed = false
