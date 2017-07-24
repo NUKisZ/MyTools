@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B094FB21F25C7F300BF3798 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B094FAE1F25C7F300BF3798 /* Bolts.framework */; };
+		0B094FB31F25C7F300BF3798 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B094FAF1F25C7F300BF3798 /* FBSDKCoreKit.framework */; };
+		0B094FB41F25C7F300BF3798 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B094FB01F25C7F300BF3798 /* FBSDKLoginKit.framework */; };
+		0B094FB51F25C7F300BF3798 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B094FB11F25C7F300BF3798 /* FBSDKShareKit.framework */; };
+		0B094FB71F25D49A00BF3798 /* FBSDKMessengerShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B094FB61F25D49A00BF3798 /* FBSDKMessengerShareKit.framework */; };
 		0B1C46481EBAF684009B7BDD /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C46161EBAF684009B7BDD /* ArrayExtensions.swift */; };
 		0B1C46491EBAF684009B7BDD /* BlockButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C46171EBAF684009B7BDD /* BlockButton.swift */; };
 		0B1C464A1EBAF684009B7BDD /* BlockLongPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1C46181EBAF684009B7BDD /* BlockLongPress.swift */; };
@@ -334,6 +339,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B094FAE1F25C7F300BF3798 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		0B094FAF1F25C7F300BF3798 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		0B094FB01F25C7F300BF3798 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		0B094FB11F25C7F300BF3798 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		0B094FB61F25D49A00BF3798 /* FBSDKMessengerShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKMessengerShareKit.framework; sourceTree = "<group>"; };
 		0B1C46161EBAF684009B7BDD /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtensions.swift; sourceTree = "<group>"; };
 		0B1C46171EBAF684009B7BDD /* BlockButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockButton.swift; sourceTree = "<group>"; };
 		0B1C46181EBAF684009B7BDD /* BlockLongPress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockLongPress.swift; sourceTree = "<group>"; };
@@ -724,9 +734,13 @@
 				0B4A5E7E1F21D9250023F525 /* libstdc++.tbd in Frameworks */,
 				0B4A5E7C1F21D91C0023F525 /* libz.tbd in Frameworks */,
 				0B4A5E7A1F21D9130023F525 /* libicucore.tbd in Frameworks */,
+				0B094FB71F25D49A00BF3798 /* FBSDKMessengerShareKit.framework in Frameworks */,
+				0B094FB31F25C7F300BF3798 /* FBSDKCoreKit.framework in Frameworks */,
 				0B4A5E6F1F21D8730023F525 /* FacebookConnector.framework in Frameworks */,
 				0B4A5E6D1F21D8730023F525 /* ShareSDKUI.framework in Frameworks */,
+				0B094FB51F25C7F300BF3798 /* FBSDKShareKit.framework in Frameworks */,
 				0B4A5E671F21D8730023F525 /* MOBFoundation.framework in Frameworks */,
+				0B094FB41F25C7F300BF3798 /* FBSDKLoginKit.framework in Frameworks */,
 				0B4A5E741F21D8730023F525 /* Bolts.framework in Frameworks */,
 				0B4A5E6B1F21D8730023F525 /* ShareSDKExtension.framework in Frameworks */,
 				0B4A5E721F21D8730023F525 /* TwitterConnector.framework in Frameworks */,
@@ -735,6 +749,7 @@
 				0B4A5E6E1F21D8730023F525 /* CopyConnector.framework in Frameworks */,
 				0B4A5E731F21D8730023F525 /* YouTubeConnector.framework in Frameworks */,
 				0B4A5E751F21D8730023F525 /* FBSDKCoreKit.framework in Frameworks */,
+				0B094FB21F25C7F300BF3798 /* Bolts.framework in Frameworks */,
 				0B4A5E701F21D8730023F525 /* GooglePlusConnector.framework in Frameworks */,
 				0B4A5E711F21D8730023F525 /* MailConnector.framework in Frameworks */,
 				0B4A5E6A1F21D8730023F525 /* ShareSDKConfigFile.framework in Frameworks */,
@@ -1105,6 +1120,11 @@
 		0B4A836C1ED408CC00549B0D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B094FB61F25D49A00BF3798 /* FBSDKMessengerShareKit.framework */,
+				0B094FAE1F25C7F300BF3798 /* Bolts.framework */,
+				0B094FAF1F25C7F300BF3798 /* FBSDKCoreKit.framework */,
+				0B094FB01F25C7F300BF3798 /* FBSDKLoginKit.framework */,
+				0B094FB11F25C7F300BF3798 /* FBSDKShareKit.framework */,
 				0B4A5E7F1F21D92C0023F525 /* JavaScriptCore.framework */,
 				0B4A5E7D1F21D9250023F525 /* libstdc++.tbd */,
 				0B4A5E7B1F21D91C0023F525 /* libz.tbd */,
@@ -2245,6 +2265,7 @@
 					"$(PROJECT_DIR)/MyTools/SDK/ShareSDK/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/MyTools/SDK/ShareSDK/ShareSDK/Support/Required",
 					"$(PROJECT_DIR)/MyTools/SDK/ShareSDK/ShareSDK/Support/PlatformSDK/FacebookMessengerSDK",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = MyTools/Info.plist;
@@ -2279,6 +2300,7 @@
 					"$(PROJECT_DIR)/MyTools/SDK/ShareSDK/ShareSDK/Support/PlatformSDK/QQSDK",
 					"$(PROJECT_DIR)/MyTools/SDK/ShareSDK/ShareSDK/Support/Required",
 					"$(PROJECT_DIR)/MyTools/SDK/ShareSDK/ShareSDK/Support/PlatformSDK/FacebookMessengerSDK",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = MyTools/Info.plist;
