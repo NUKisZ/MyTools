@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 public let kNetworkReachabilityChangedNotification = "kNetworkReachabilityChangedNotification"
+@available(iOS 9.0, *)
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -50,10 +52,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
 
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         Share()
         window?.rootViewController = MainTabBarViewController()
         window?.makeKeyAndVisible()
         return true
+    }
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[.sourceApplication] as! String, annotation: options[.annotation])
+        return handled
+    }
+    func applicationProtectedDataDidBecomeAvailable(_ application: UIApplication) {
+        FBSDKAppEvents.activateApp()
     }
 //    func reachabilityChanged(n:Notification){
 //        if(n.object is Reachability){
@@ -101,6 +113,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
     private func Share(){
         ShareSDK.registerActivePlatforms(
             [
@@ -130,14 +143,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 switch platform
                 {
                 case SSDKPlatformType.typeFacebook:
-                    //设置新浪微博应用信息,其中authType设置为使用SSO＋Web形式授权
+                    
                     appInfo?.ssdkSetupFacebook(byApiKey: "149256552318401", appSecret: "458f503ccee25ad1c01b0c2923e3da6c", displayName: "ShareSDK", authType: SSDKAuthTypeBoth)
                     
                 case SSDKPlatformType.typeTwitter:
                     appInfo?.ssdkSetupTwitter(byConsumerKey: "sKDghGO5klKGC9dgX4CkNM1sK", consumerSecret: "lsXro2RyWrNgje4cG1S3JZ7zCBF73pMJ1wQ6A7SgjMm4gwaZwU", redirectUri: "https://www.uilucky.com")
                     
                 case SSDKPlatformType.typeYouTube:
-                    appInfo?.ssdkSetupYouTube(byClientId: "", clientSecret: "", redirectUri: "")
+                    appInfo?.ssdkSetupYouTube(byClientId: "528737955579.apps.googleusercontent.com", clientSecret: "t3m711acpu2mrk28sfgki2g4acdqt0c8", redirectUri: "http://localhost")
                 default:
                     break
                 }

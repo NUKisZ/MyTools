@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+import FBSDKShareKit
+import FBSDKLoginKit
 class ShareViewController: BaseViewController {
 
     var shareType:SSDKPlatformType!
@@ -16,8 +17,59 @@ class ShareViewController: BaseViewController {
 
         let shareBtn = ZKTools.createButton(CGRect(x: 20, y: 70, w: 50, h: 30), title: "分享", imageName: nil, bgImageName: nil, target: self, action: #selector(shareAction))
         view.addSubview(shareBtn)
+        
+        let fbBtn = ZKTools.createButton(CGRect(x: 100, y: 70, width: 100, height: 30), title: "FaceBook", imageName: nil, bgImageName: nil, target: self, action: #selector(fbAction))
+        view.addSubview(fbBtn)
+        
+        let FBMessageBtn = ZKTools.createButton(CGRect(x: 20, y: 140, width: 100, height: 30), title: "Message", imageName: nil, bgImageName: nil, target: self, action: #selector(messageAction))
+        view.addSubview(FBMessageBtn)
+        let buttonWidth:CGFloat = 50
+        let fbme = FBSDKMessengerShareButton.circularButton(with: .blue, width: buttonWidth)
+        fbme?.addTarget(self, action: #selector(messageAction), for: .touchUpInside)
+        view.addSubview(fbme!)
+
+        
+        let loginButton = FBSDKLoginButton()
+        
+        loginButton.center = view.center
+        loginButton.readPermissions=["public_profile","email","user_friends"]
+        loginButton.delegate = self
+        view.addSubview(loginButton)
+        if((FBSDKAccessToken.current()) != nil){
+            print("用户已经登陆")
+            if let token = FBSDKAccessToken.current(){
+                print(token)
+                
+                print(token.appID)
+                print(token.userID )
+                print(token.tokenString)
+                
+            }
+            
+            
+        }
+        
+    }
+    @objc private func messageAction(){
+        let image = UIImage(named: "swift.png")
+        FBSDKMessengerSharer.share(image, with: nil)
     }
 
+    @objc private func fbAction(){
+        let content = FBSDKShareLinkContent()
+        content.contentURL = URL(string: "https://www.uilucky.com")
+        
+//        let dialog = FBSDKShareDialog()
+//        dialog.fromViewController = self;
+//        dialog.shareContent = content
+//        dialog.mode = FBSDKShareDialogMode.shareSheet
+//        dialog.show()
+        FBSDKShareDialog.show(from: self, with: content, delegate: nil)
+        
+        
+    
+    
+    }
     @objc private func shareAction(){
         
         let shareParames = NSMutableDictionary()
@@ -42,8 +94,19 @@ class ShareViewController: BaseViewController {
             self?.shareType = .typeTwitter
             self?.share(shareType: (self?.shareType)!, shareParames: shareParames)
         }
+        let youtubeAction = UIAlertAction(title: "YouTube", style: .default) {
+            [weak self]
+            (action) in
+            self?.shareType = .typeYouTube
+            self?.share(shareType: (self?.shareType)!, shareParames: shareParames)
+            
+        }
+        let canceAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         alertVC.addAction(faceAction)
         alertVC.addAction(twitterAction)
+        alertVC.addAction(youtubeAction)
+        
+        alertVC.addAction(canceAction)
         present(alertVC, animated: true, completion: nil)
         
     }
@@ -88,6 +151,17 @@ class ShareViewController: BaseViewController {
 
 }
 
-extension ShareViewController:UIAlertViewDelegate{
-    
+extension ShareViewController:FBSDKLoginButtonDelegate{
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        print(result)
+        print(result.token.userID)
+        print(result.token.appID)
+        print(result.token.tokenString)
+        print(result.grantedPermissions)
+        print(result.declinedPermissions)
+        print(result.isCancelled)
+    }
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("退出")
+    }
 }
