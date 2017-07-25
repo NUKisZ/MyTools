@@ -11,12 +11,12 @@ import FBSDKShareKit
 import FBSDKLoginKit
 class ShareViewController: BaseViewController {
 
-    var shareType:SSDKPlatformType!
+    //var shareType:SSDKPlatformType!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let shareBtn = ZKTools.createButton(CGRect(x: 20, y: 70, w: 50, h: 30), title: "分享", imageName: nil, bgImageName: nil, target: self, action: #selector(shareAction))
-        view.addSubview(shareBtn)
+//        let shareBtn = ZKTools.createButton(CGRect(x: 20, y: 70, w: 50, h: 30), title: "分享", imageName: nil, bgImageName: nil, target: self, action: #selector(shareAction))
+//        view.addSubview(shareBtn)
         
         let fbBtn = ZKTools.createButton(CGRect(x: 100, y: 70, width: 100, height: 30), title: "FaceBook", imageName: nil, bgImageName: nil, target: self, action: #selector(fbAction))
         view.addSubview(fbBtn)
@@ -89,10 +89,22 @@ class ShareViewController: BaseViewController {
             
         }
         
+        
+        
+        
+        
+        
+        
+        
+        
     }
     @objc private func messageAction(){
-        let image = UIImage(named: "swift.png")
-        FBSDKMessengerSharer.share(image, with: nil)
+//        let image = UIImage(named: "swift.png")
+//        FBSDKMessengerSharer.share(image, with: nil)
+        let avc = UIActivityViewController(activityItems: ["abc",URL(string: "https://www.uilucky.com")!], applicationActivities: nil)
+        avc.excludedActivityTypes=[UIActivityType.airDrop];
+        presentVC(avc)
+        
     }
 
     @objc private func fbAction(){
@@ -110,6 +122,7 @@ class ShareViewController: BaseViewController {
     
     
     }
+    /*
     @objc private func shareAction(){
         
         let shareParames = NSMutableDictionary()
@@ -172,7 +185,7 @@ class ShareViewController: BaseViewController {
             }
             
         }
-    }
+    }*/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
