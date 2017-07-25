@@ -175,6 +175,12 @@
 		0B5A4B161EC2A40500C05501 /* UIWindow+LGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B0B1EC2A40500C05501 /* UIWindow+LGAlertView.m */; };
 		0B5A4B181EC2D03100C05501 /* TableViewBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B171EC2D03100C05501 /* TableViewBaseController.swift */; };
 		0B5A4B1A1EC2D3B700C05501 /* FirstViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4B191EC2D3B700C05501 /* FirstViewControllerCell.swift */; };
+		0B5C15761F26EE4100446358 /* FBFriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C15751F26EE4100446358 /* FBFriendsModel.swift */; };
+		0B5C15821F26F3E100446358 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C157D1F26F3E100446358 /* SwiftyJSON.swift */; };
+		0B5C158C1F271FA800446358 /* FBPersonInforModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C158B1F271FA800446358 /* FBPersonInforModel.swift */; };
+		0B5C158E1F27210C00446358 /* FBPictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C158D1F27210C00446358 /* FBPictureModel.swift */; };
+		0B5C15921F272E4900446358 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5C15901F272E4900446358 /* TwitterCore.framework */; };
+		0B5C15931F272E4900446358 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5C15911F272E4900446358 /* TwitterKit.framework */; };
 		0B5DAA241F20542900DC9E4B /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA1B1F20542900DC9E4B /* WMMenuItem.m */; };
 		0B5DAA251F20542900DC9E4B /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA1D1F20542900DC9E4B /* WMMenuView.m */; };
 		0B5DAA261F20542900DC9E4B /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA1F1F20542900DC9E4B /* WMProgressView.m */; };
@@ -529,6 +535,12 @@
 		0B5A4B0B1EC2A40500C05501 /* UIWindow+LGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+LGAlertView.m"; sourceTree = "<group>"; };
 		0B5A4B171EC2D03100C05501 /* TableViewBaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewBaseController.swift; sourceTree = "<group>"; };
 		0B5A4B191EC2D3B700C05501 /* FirstViewControllerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewControllerCell.swift; sourceTree = "<group>"; };
+		0B5C15751F26EE4100446358 /* FBFriendsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFriendsModel.swift; sourceTree = "<group>"; };
+		0B5C157D1F26F3E100446358 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		0B5C158B1F271FA800446358 /* FBPersonInforModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBPersonInforModel.swift; sourceTree = "<group>"; };
+		0B5C158D1F27210C00446358 /* FBPictureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBPictureModel.swift; sourceTree = "<group>"; };
+		0B5C15901F272E4900446358 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
+		0B5C15911F272E4900446358 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		0B5DAA1A1F20542900DC9E4B /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
 		0B5DAA1B1F20542900DC9E4B /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
 		0B5DAA1C1F20542900DC9E4B /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
@@ -735,11 +747,13 @@
 				0B4A5E7C1F21D91C0023F525 /* libz.tbd in Frameworks */,
 				0B4A5E7A1F21D9130023F525 /* libicucore.tbd in Frameworks */,
 				0B094FB71F25D49A00BF3798 /* FBSDKMessengerShareKit.framework in Frameworks */,
+				0B5C15921F272E4900446358 /* TwitterCore.framework in Frameworks */,
 				0B094FB31F25C7F300BF3798 /* FBSDKCoreKit.framework in Frameworks */,
 				0B4A5E6F1F21D8730023F525 /* FacebookConnector.framework in Frameworks */,
 				0B4A5E6D1F21D8730023F525 /* ShareSDKUI.framework in Frameworks */,
 				0B094FB51F25C7F300BF3798 /* FBSDKShareKit.framework in Frameworks */,
 				0B4A5E671F21D8730023F525 /* MOBFoundation.framework in Frameworks */,
+				0B5C15931F272E4900446358 /* TwitterKit.framework in Frameworks */,
 				0B094FB41F25C7F300BF3798 /* FBSDKLoginKit.framework in Frameworks */,
 				0B4A5E741F21D8730023F525 /* Bolts.framework in Frameworks */,
 				0B4A5E6B1F21D8730023F525 /* ShareSDKExtension.framework in Frameworks */,
@@ -902,6 +916,7 @@
 		0B48CBC21EAF28F40069A213 /* FirstVC */ = {
 			isa = PBXGroup;
 			children = (
+				0B5C15721F26ED9900446358 /* Model */,
 				0B60C3321F185C6B0066AE4C /* Method */,
 				0B60C3341F185C6B0066AE4C /* Resources */,
 				0B48CBC31EAF28F40069A213 /* Controllers */,
@@ -1014,6 +1029,7 @@
 		0B4A5E101F21D6B30023F525 /* SDK */ = {
 			isa = PBXGroup;
 			children = (
+				0B5C158F1F272E4900446358 /* Twitter */,
 				0B4A5E111F21D6B30023F525 /* ShareSDK */,
 			);
 			path = SDK;
@@ -1242,6 +1258,33 @@
 				0B5A4B0B1EC2A40500C05501 /* UIWindow+LGAlertView.m */,
 			);
 			path = LGAlertView;
+			sourceTree = "<group>";
+		};
+		0B5C15721F26ED9900446358 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B5C15751F26EE4100446358 /* FBFriendsModel.swift */,
+				0B5C158B1F271FA800446358 /* FBPersonInforModel.swift */,
+				0B5C158D1F27210C00446358 /* FBPictureModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B5C15771F26F3E100446358 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				0B5C157D1F26F3E100446358 /* SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		0B5C158F1F272E4900446358 /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				0B5C15901F272E4900446358 /* TwitterCore.framework */,
+				0B5C15911F272E4900446358 /* TwitterKit.framework */,
+			);
+			path = Twitter;
 			sourceTree = "<group>";
 		};
 		0B5DAA181F20542900DC9E4B /* WMPageController */ = {
@@ -1613,6 +1656,7 @@
 		0B79C3841E83907D00CF92B2 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				0B5C15771F26F3E100446358 /* SwiftyJSON */,
 				0B4A5E851F21F5C70023F525 /* MBProgressHUD */,
 				0B5DAA181F20542900DC9E4B /* WMPageController */,
 				0B40145A1F13833B003AFC0C /* GDPerformanceMonitoring */,
@@ -1867,6 +1911,7 @@
 				0B5195A71ECEEE2D007AF6F3 /* CGImage+.swift in Sources */,
 				0B79C3E71E83A14900CF92B2 /* ConstraintLayoutSupportDSL.swift in Sources */,
 				0B4A5E881F21F5C70023F525 /* MBProgressHUD.m in Sources */,
+				0B5C158C1F271FA800446358 /* FBPersonInforModel.swift in Sources */,
 				0B79C3B31E83978500CF92B2 /* BaseViewController.swift in Sources */,
 				0B1C46701EBAF684009B7BDD /* UIStoryboardExtensions.swift in Sources */,
 				0B5195B11ECEEE2D007AF6F3 /* SystemColor+.swift in Sources */,
@@ -2026,6 +2071,7 @@
 				0B79C3E01E83A14900CF92B2 /* ConstraintInsets.swift in Sources */,
 				0B48CBD61EAF28F40069A213 /* FirstViewController.swift in Sources */,
 				0B5195DA1ECEF6EC007AF6F3 /* LBXScanViewStyle.swift in Sources */,
+				0B5C15761F26EE4100446358 /* FBFriendsModel.swift in Sources */,
 				0B1C466D1EBAF684009B7BDD /* UIImageViewExtensions.swift in Sources */,
 				0B43321F1ED983DE00A53A58 /* RTRootNavigationController.m in Sources */,
 				0B5DAA281F20542900DC9E4B /* WMPageController.m in Sources */,
@@ -2089,6 +2135,7 @@
 				0B79C3EC1E83A14900CF92B2 /* ConstraintMakerPriortizable.swift in Sources */,
 				0B5F45B71EC015FD0042D19E /* UIView+MJExtension.m in Sources */,
 				0B5DAA2A1F20544900DC9E4B /* WMPageTestViewController.swift in Sources */,
+				0B5C158E1F27210C00446358 /* FBPictureModel.swift in Sources */,
 				0B1C464D1EBAF684009B7BDD /* BlockSwipe.swift in Sources */,
 				0B79C3731E8388D600CF92B2 /* AppDelegate.swift in Sources */,
 				0B6F04C41EB84812005E8FBD /* DetailButton.swift in Sources */,
@@ -2097,6 +2144,7 @@
 				0B5DAA251F20542900DC9E4B /* WMMenuView.m in Sources */,
 				0B5195D71ECEF6EC007AF6F3 /* LBXScanNetAnimation.swift in Sources */,
 				0B5195D51ECEF6EC007AF6F3 /* LBXPermissions.swift in Sources */,
+				0B5C15821F26F3E100446358 /* SwiftyJSON.swift in Sources */,
 				0B79C3901E83907D00CF92B2 /* CacheTool.swift in Sources */,
 				0B1C46581EBAF684009B7BDD /* DictionaryExtensions.swift in Sources */,
 				0B5DBEBB1ED6AA2C002BAE5E /* PhotoLibraryDidChangeViewController.swift in Sources */,
@@ -2266,10 +2314,11 @@
 					"$(PROJECT_DIR)/MyTools/SDK/ShareSDK/ShareSDK/Support/Required",
 					"$(PROJECT_DIR)/MyTools/SDK/ShareSDK/ShareSDK/Support/PlatformSDK/FacebookMessengerSDK",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MyTools/SDK/Twitter",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = MyTools/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -2301,10 +2350,11 @@
 					"$(PROJECT_DIR)/MyTools/SDK/ShareSDK/ShareSDK/Support/Required",
 					"$(PROJECT_DIR)/MyTools/SDK/ShareSDK/ShareSDK/Support/PlatformSDK/FacebookMessengerSDK",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/MyTools/SDK/Twitter",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				INFOPLIST_FILE = MyTools/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

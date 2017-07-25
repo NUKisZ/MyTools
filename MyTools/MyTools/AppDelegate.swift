@@ -52,7 +52,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
 
+        //注册FBSDK
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        Twitter.sharedInstance().start(withConsumerKey: "sKDghGO5klKGC9dgX4CkNM1sK", consumerSecret: "lsXro2RyWrNgje4cG1S3JZ7zCBF73pMJ1wQ6A7SgjMm4gwaZwU")
+        
         Share()
         window?.rootViewController = MainTabBarViewController()
         window?.makeKeyAndVisible()

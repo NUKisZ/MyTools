@@ -142,6 +142,10 @@ class ZKTools: NSObject {
         if let name = imageName{
             imageView.image = UIImage(named: name)
         }
+        if let urlString = imageUrl{
+            let url = URL(string: urlString)
+            imageView.kf.setImage(with: url)
+        }
         return imageView
     }
     

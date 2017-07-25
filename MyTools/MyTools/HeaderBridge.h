@@ -27,5 +27,9 @@
 #import <FacebookConnector/FacebookConnector.h>
 #import <FBSDKMessengerShareKit/FBSDKMessengerShareKit.h>
 
+#import <TwitterKit/TwitterKit.h>
+
+
+
 #import "MBProgressHUD.h"
 #endif /* HeaderBridge_h */

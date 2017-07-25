@@ -26,6 +26,8 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb149256552318401</string>
+                <string>twitterkit-sKDghGO5klKGC9dgX4CkNM1sK</string>
+                
 			</array>
 		</dict>
 	</array>
@@ -49,6 +51,8 @@
 		<string>fb-messenger-api20140430</string>
 		<string>fb-messenger-api</string>
 		<string>fbshareextension</string>
+        <string>twitter</string>
+        <string>twitterauth</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

@@ -28,6 +28,13 @@ class ShareViewController: BaseViewController {
         fbme?.addTarget(self, action: #selector(messageAction), for: .touchUpInside)
         view.addSubview(fbme!)
 
+        let friendsLabel = ZKTools.createLabel(CGRect(x: 20, y: 210, width: 300, height: 30), title: "使用App的好友共:", textAlignment: .center, font: nil, textColor: nil)
+        view.addSubview(friendsLabel)
+        let imageView = ZKTools.createImageView(CGRect(x: 20, y: 250, w: 50, h: 50), imageName: nil, imageUrl: nil)
+        view.addSubview(imageView)
+        
+        
+        
         
         let loginButton = FBSDKLoginButton()
         
@@ -43,6 +50,39 @@ class ShareViewController: BaseViewController {
                 print(token.appID)
                 print(token.userID )
                 print(token.tokenString)
+                let graphPath = "/me?fields=email,name,first_name,picture,friends"
+                
+                let request = FBSDKGraphRequest(graphPath: graphPath, parameters: nil, httpMethod: "GET")
+                let _ = request?.start(completionHandler: {
+                    //[weak self]
+                    (connection, result, error) in
+                    print(connection as Any)
+                    print(result as Any)
+                    if let resul = result{
+                        if (resul as AnyObject).isKind(of:NSDictionary.self){
+                            let model = FBPersonInforModel.parseWithDict(dict: resul as! Dictionary<String,Any>)
+                            if (model.friends?.data?.count)!>0{
+                                friendsLabel.text = "使用App的共同好友:" + "\(String(describing: model.friends?.data?.count))" + "人"
+                                if let data = model.friends?.data {
+                                    if let name = data[0].name{
+                                        print(name)
+                                    }
+                                }
+                                
+                            }
+                            if let picUrl = model.picture?.data?.url{
+                                imageView.kf.setImage(with: URL(string: picUrl))
+                            }
+                            
+
+                        }
+                    }
+                    
+                    if error != nil{
+                        print(error as Any)
+                    }
+                })
+                
                 
             }
             
