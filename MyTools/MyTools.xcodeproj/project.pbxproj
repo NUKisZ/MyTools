@@ -181,6 +181,8 @@
 		0B5C158E1F27210C00446358 /* FBPictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C158D1F27210C00446358 /* FBPictureModel.swift */; };
 		0B5C15921F272E4900446358 /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5C15901F272E4900446358 /* TwitterCore.framework */; };
 		0B5C15931F272E4900446358 /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B5C15911F272E4900446358 /* TwitterKit.framework */; };
+		0B5C15961F273E0900446358 /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B5C15941F273E0900446358 /* TwitterKitResources.bundle */; };
+		0B5C15971F273E0900446358 /* TwitterShareExtensionUIResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B5C15951F273E0900446358 /* TwitterShareExtensionUIResources.bundle */; };
 		0B5DAA241F20542900DC9E4B /* WMMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA1B1F20542900DC9E4B /* WMMenuItem.m */; };
 		0B5DAA251F20542900DC9E4B /* WMMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA1D1F20542900DC9E4B /* WMMenuView.m */; };
 		0B5DAA261F20542900DC9E4B /* WMProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DAA1F1F20542900DC9E4B /* WMProgressView.m */; };
@@ -541,6 +543,8 @@
 		0B5C158D1F27210C00446358 /* FBPictureModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBPictureModel.swift; sourceTree = "<group>"; };
 		0B5C15901F272E4900446358 /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
 		0B5C15911F272E4900446358 /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
+		0B5C15941F273E0900446358 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		0B5C15951F273E0900446358 /* TwitterShareExtensionUIResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterShareExtensionUIResources.bundle; path = TwitterKit.framework/TwitterShareExtensionUIResources.bundle; sourceTree = "<group>"; };
 		0B5DAA1A1F20542900DC9E4B /* WMMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuItem.h; sourceTree = "<group>"; };
 		0B5DAA1B1F20542900DC9E4B /* WMMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMMenuItem.m; sourceTree = "<group>"; };
 		0B5DAA1C1F20542900DC9E4B /* WMMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMMenuView.h; sourceTree = "<group>"; };
@@ -1281,6 +1285,8 @@
 		0B5C158F1F272E4900446358 /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
+				0B5C15941F273E0900446358 /* TwitterKitResources.bundle */,
+				0B5C15951F273E0900446358 /* TwitterShareExtensionUIResources.bundle */,
 				0B5C15901F272E4900446358 /* TwitterCore.framework */,
 				0B5C15911F272E4900446358 /* TwitterKit.framework */,
 			);
@@ -1869,6 +1875,7 @@
 				0B60C3421F185C6B0066AE4C /* js.png in Resources */,
 				0B5F45B21EC015FC0042D19E /* MJRefresh.bundle in Resources */,
 				0B60C3431F185C6B0066AE4C /* php.png in Resources */,
+				0B5C15971F273E0900446358 /* TwitterShareExtensionUIResources.bundle in Resources */,
 				0B6F04931EB84812005E8FBD /* DetailViewController.xib in Resources */,
 				0B6F04C61EB84812005E8FBD /* GroupListCell.xib in Resources */,
 				0B6F04981EB84812005E8FBD /* StarsBackground.png in Resources */,
@@ -1878,6 +1885,7 @@
 				0B432B001EB9868B00D75930 /* launcht.png in Resources */,
 				0B60C3401F185C6B0066AE4C /* html.png in Resources */,
 				0B60C3471F185C6B0066AE4C /* xcode.png in Resources */,
+				0B5C15961F273E0900446358 /* TwitterKitResources.bundle in Resources */,
 				0B79C3A01E8390B400CF92B2 /* 提示底.png in Resources */,
 				0B5F45B91EC0160C0042D19E /* netFail.jpg in Resources */,
 				0B60C3461F185C6B0066AE4C /* swift.png in Resources */,
