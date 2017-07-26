@@ -33,9 +33,6 @@ class ShareViewController: BaseViewController {
         let imageView = ZKTools.createImageView(CGRect(x: 20, y: 250, w: 50, h: 50), imageName: nil, imageUrl: nil)
         view.addSubview(imageView)
         
-        
-        
-        
         let loginButton = FBSDKLoginButton()
         
         loginButton.center = view.center
@@ -91,19 +88,23 @@ class ShareViewController: BaseViewController {
         
         
         
-        
-        
-        
-        
-        
-        
     }
     @objc private func messageAction(){
 //        let image = UIImage(named: "swift.png")
 //        FBSDKMessengerSharer.share(image, with: nil)
-        let avc = UIActivityViewController(activityItems: ["abc",URL(string: "https://www.uilucky.com")!], applicationActivities: nil)
-        avc.excludedActivityTypes=[UIActivityType.airDrop];
-        presentVC(avc)
+//        let avc = UIActivityViewController(activityItems: ["abc",URL(string: "https://www.uilucky.com")!], applicationActivities: nil)
+//        avc.excludedActivityTypes=[UIActivityType.airDrop];
+//        presentVC(avc)
+        let composer = TWTRComposer()
+        composer.setText("asdfasdf")
+        composer.setURL(URL(string: "https://www.uilucky.com"))
+        composer.show(from: self) { (result) in
+            if(result == .done){
+                print("成功")
+            }else{
+                print("取消")
+            }
+        }
         
     }
 

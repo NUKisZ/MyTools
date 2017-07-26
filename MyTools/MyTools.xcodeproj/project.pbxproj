@@ -144,6 +144,7 @@
 		0B5195D91ECEF6EC007AF6F3 /* LBXScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5195D21ECEF6EC007AF6F3 /* LBXScanViewController.swift */; };
 		0B5195DA1ECEF6EC007AF6F3 /* LBXScanViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5195D31ECEF6EC007AF6F3 /* LBXScanViewStyle.swift */; };
 		0B5195DB1ECEF6EC007AF6F3 /* LBXScanWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5195D41ECEF6EC007AF6F3 /* LBXScanWrapper.swift */; };
+		0B557AF31F2862000065A199 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B557AF21F2862000065A199 /* YouTubeViewController.swift */; };
 		0B5A4B0C1EC2A40500C05501 /* LGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4AF61EC2A40500C05501 /* LGAlertView.m */; };
 		0B5A4B0D1EC2A40500C05501 /* LGAlertViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4AF81EC2A40500C05501 /* LGAlertViewButton.m */; };
 		0B5A4B0E1EC2A40500C05501 /* LGAlertViewButtonProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4AFA1EC2A40500C05501 /* LGAlertViewButtonProperties.m */; };
@@ -476,6 +477,7 @@
 		0B5195D21ECEF6EC007AF6F3 /* LBXScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewController.swift; sourceTree = "<group>"; };
 		0B5195D31ECEF6EC007AF6F3 /* LBXScanViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewStyle.swift; sourceTree = "<group>"; };
 		0B5195D41ECEF6EC007AF6F3 /* LBXScanWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanWrapper.swift; sourceTree = "<group>"; };
+		0B557AF21F2862000065A199 /* YouTubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
 		0B5A4AF51EC2A40500C05501 /* LGAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertView.h; sourceTree = "<group>"; };
 		0B5A4AF61EC2A40500C05501 /* LGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertView.m; sourceTree = "<group>"; };
 		0B5A4AF71EC2A40500C05501 /* LGAlertViewButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertViewButton.h; sourceTree = "<group>"; };
@@ -899,6 +901,7 @@
 				0B5DAA291F20544900DC9E4B /* WMPageTestViewController.swift */,
 				0B5DAA2B1F205CEF00DC9E4B /* GPSViewController.swift */,
 				0B4A5E831F21E3440023F525 /* ShareViewController.swift */,
+				0B557AF21F2862000065A199 /* YouTubeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1813,6 +1816,7 @@
 				0B6339AD1F162ADB0020C907 /* PhoneField.swift in Sources */,
 				0B6F04921EB84812005E8FBD /* DetailViewController.swift in Sources */,
 				0B3857A71EC4372900C0126C /* Timeline.swift in Sources */,
+				0B557AF31F2862000065A199 /* YouTubeViewController.swift in Sources */,
 				0B3857A11EC4372900C0126C /* ResponseSerialization.swift in Sources */,
 				0B1C46571EBAF684009B7BDD /* DateExtensions.swift in Sources */,
 				0B1C465E1EBAF684009B7BDD /* NSAttributedStringExtensions.swift in Sources */,

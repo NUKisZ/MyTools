@@ -26,13 +26,23 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb149256552318401</string>
-                <string>twitterkit-sKDghGO5klKGC9dgX4CkNM1sK</string>
-                
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>twitterkit-sKDghGO5klKGC9dgX4CkNM1sK</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>149256552318401</string>
+	<key>FacebookDisplayName</key>
+	<string>凌羽</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>youtube</string>
@@ -51,8 +61,8 @@
 		<string>fb-messenger-api20140430</string>
 		<string>fb-messenger-api</string>
 		<string>fbshareextension</string>
-        <string>twitter</string>
-        <string>twitterauth</string>
+		<string>twitter</string>
+		<string>twitterauth</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
@@ -65,10 +75,6 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-	<key>FacebookAppID</key>
-	<string>149256552318401</string>
-	<key>FacebookDisplayName</key>
-	<string>凌羽</string>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>需要使用你的媒体库</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
