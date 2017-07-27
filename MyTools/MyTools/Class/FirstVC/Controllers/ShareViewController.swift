@@ -11,12 +11,12 @@ import FBSDKShareKit
 import FBSDKLoginKit
 class ShareViewController: BaseViewController {
 
-    //var shareType:SSDKPlatformType!
+    var tableView:UITableView!
+    var model:FBFriendsModel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let shareBtn = ZKTools.createButton(CGRect(x: 20, y: 70, w: 50, h: 30), title: "分享", imageName: nil, bgImageName: nil, target: self, action: #selector(shareAction))
-//        view.addSubview(shareBtn)
+        createTableView()
         
         let fbBtn = ZKTools.createButton(CGRect(x: 100, y: 70, width: 100, height: 30), title: "FaceBook", imageName: nil, bgImageName: nil, target: self, action: #selector(fbAction))
         view.addSubview(fbBtn)
@@ -47,8 +47,8 @@ class ShareViewController: BaseViewController {
                 print(token.appID)
                 print(token.userID )
                 print(token.tokenString)
-                let graphPath = "/me?fields=email,name,first_name,picture,friends"
-                
+                //let graphPath = "/me?fields=about,email,friends,picture,birthday,name"
+                let graphPath = "/me/friends?fields=picture,name"
                 let request = FBSDKGraphRequest(graphPath: graphPath, parameters: nil, httpMethod: "GET")
                 let _ = request?.start(completionHandler: {
                     //[weak self]
@@ -57,20 +57,33 @@ class ShareViewController: BaseViewController {
                     print(result as Any)
                     if let resul = result{
                         if (resul as AnyObject).isKind(of:NSDictionary.self){
-                            let model = FBPersonInforModel.parseWithDict(dict: resul as! Dictionary<String,Any>)
-                            if (model.friends?.data?.count)!>0{
-                                friendsLabel.text = "使用App的共同好友:" + "\(String(describing: model.friends?.data?.count))" + "人"
-                                if let data = model.friends?.data {
+//                            let model = FBPersonInforModel.parseWithDict(dict: resul as! Dictionary<String,Any>)
+//                            if (model.friends?.data?.count)!>0{
+//                                friendsLabel.text = "使用App的共同好友:" + "\(String(describing: model.friends?.data?.count))" + "人"
+//                                if let data = model.friends?.data {
+//                                    if let name = data[0].name{
+//                                        print(name)
+//                                    }
+//                                }
+//                                
+//                            }
+//                            if let picUrl = model.picture?.data?.url{
+//                                imageView.kf.setImage(with: URL(string: picUrl))
+//                            }
+                            let model = FBFriendsModel.parseWithDict(dict: resul as! Dictionary<String,Any>)
+                            if (model.data?.count)!>0{
+                                self.model = model
+                                self.tableView.reloadData()
+                                friendsLabel.text = "使用App的共同好友:" + "\(String(describing: model.data?.count))" + "人"
+                                if let data = model.data {
                                     if let name = data[0].name{
                                         print(name)
                                     }
+                                    if let picUrl = data[0].picture?.data?.url{
+                                        imageView.kf.setImage(with: URL(string: picUrl))
+                                    }
                                 }
-                                
                             }
-                            if let picUrl = model.picture?.data?.url{
-                                imageView.kf.setImage(with: URL(string: picUrl))
-                            }
-                            
 
                         }
                     }
@@ -97,7 +110,8 @@ class ShareViewController: BaseViewController {
 //        presentVC(avc)
         let composer = TWTRComposer()
         composer.setText("asdfasdf")
-        composer.setURL(URL(string: "https://www.uilucky.com"))
+        //composer.setURL(URL(string: "https://www.uilucky.com"))
+        composer.setURL(URL(string: "http://eshare.vod.otvcloud.com/otv/yfy/D/11/03/00000409445/409445_2300k_1920x1080.mp4"))
         composer.show(from: self) { (result) in
             if(result == .done){
                 print("成功")
@@ -110,8 +124,8 @@ class ShareViewController: BaseViewController {
 
     @objc private func fbAction(){
         let content = FBSDKShareLinkContent()
-        content.contentURL = URL(string: "https://www.uilucky.com")
-        
+        //content.contentURL = URL(string: "https://www.uilucky.com")
+        content.contentURL = URL(string: "http://eshare.vod.otvcloud.com/otv/yfy/D/11/03/00000409445/409445_2300k_1920x1080.mp4")
 //        let dialog = FBSDKShareDialog()
 //        dialog.fromViewController = self;
 //        dialog.shareContent = content
@@ -123,70 +137,16 @@ class ShareViewController: BaseViewController {
     
     
     }
-    /*
-    @objc private func shareAction(){
-        
-        let shareParames = NSMutableDictionary()
-        shareParames.ssdkSetupShareParams(byText: "分享内容",
-                                          images : UIImage(named: "swift.png"),
-                                          url : NSURL(string:"http://mob.com") as URL!,
-                                          title : "分享标题",
-                                          type : SSDKContentType.image)
-        
-        
-        
-        let alertVC = UIAlertController(title: "分享", message: nil, preferredStyle: .actionSheet)
-        let faceAction = UIAlertAction(title: "FaceBook", style: .default) {
-            [weak self]
-            (action) in
-            self?.shareType = .typeFacebook
-            self?.share(shareType: (self?.shareType)!, shareParames: shareParames)
-        }
-        let twitterAction = UIAlertAction(title: "Twitter", style: .default) {
-            [weak self]
-            (action) in
-            self?.shareType = .typeTwitter
-            self?.share(shareType: (self?.shareType)!, shareParames: shareParames)
-        }
-        let youtubeAction = UIAlertAction(title: "YouTube", style: .default) {
-            [weak self]
-            (action) in
-            self?.shareType = .typeYouTube
-            self?.share(shareType: (self?.shareType)!, shareParames: shareParames)
-            
-        }
-        let canceAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-        alertVC.addAction(faceAction)
-        alertVC.addAction(twitterAction)
-        alertVC.addAction(youtubeAction)
-        
-        alertVC.addAction(canceAction)
-        present(alertVC, animated: true, completion: nil)
+    
+    
+    private func createTableView(){
+        tableView = UITableView(frame: CGRect(x: 0, y: kScreenHeight/2, w: kScreenWidth, h: 300), style: .plain)
+        tableView.delegate = self
+        tableView.dataSource = self
+        view.addSubview(tableView)
         
     }
-    private func share(shareType:SSDKPlatformType, shareParames:NSMutableDictionary){
-        //2.进行分享
-        ShareSDK.share(shareType, parameters: shareParames) {
-            [weak self]
-            (state : SSDKResponseState, nil, entity : SSDKContentEntity?, error :Error?) in
-            
-            switch state{
-                
-            case SSDKResponseState.success:
-                MBToast.showToast(showView: (self?.view)!, toast: "分享成功")
-                print("分享成功")
-            case SSDKResponseState.fail:
-                print("授权失败,错误描述:\(String(describing: error))")
-            case SSDKResponseState.cancel:
-                MBToast.showToast(toast: "分享取消")
-                print("操作取消")
-                
-            default:
-                break
-            }
-            
-        }
-    }*/
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -217,5 +177,24 @@ extension ShareViewController:FBSDKLoginButtonDelegate{
     }
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("退出")
+    }
+}
+extension ShareViewController:UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if model == nil{
+            return 0
+        }
+        return (model.data?.count)!
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cellId = "cellid"
+        var cell = tableView.dequeueReusableCell(withIdentifier: cellId)
+        if cell == nil{
+            cell = UITableViewCell(style: .default, reuseIdentifier: cellId)
+        }
+        
+        cell?.textLabel?.text = model.data?[indexPath.row].name
+        cell?.imageView?.kf.setImage(with: URL(string: (model.data?[indexPath.row].picture?.data?.url)!))
+        return cell!
     }
 }

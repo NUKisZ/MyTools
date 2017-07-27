@@ -168,7 +168,7 @@ class FirstViewController: TableViewBaseController {
 //        }
         
         let alert = LGAlertView(progressViewAndTitle: "测试", message: "测试", style: .alert, progressLabelText: "测试", buttonTitles: ["确定"], cancelButtonTitle: "取消", destructiveButtonTitle: nil)
-        alert.isCancelOnTouch = false
+        alert.isCancelOnTouch = true
         updateProgressWithAlertView(alertView: alert)
         alert.show(animated: false, completionHandler: nil)
         

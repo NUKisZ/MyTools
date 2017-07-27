@@ -21,6 +21,10 @@
 
 
 #import <ShareSDK/ShareSDK.h>
+#import <ShareSDK/SSDKHttpServiceModel.h>
+#import <ShareSDK/SSDKVideoUploadCenter.h>
+
+#import <ShareSDKExtension/ShareSDK+Extension.h>
 #import <ShareSDKUI/ShareSDK+SSUI.h>
 #import <ShareSDKConnector/ShareSDKConnector.h>
 

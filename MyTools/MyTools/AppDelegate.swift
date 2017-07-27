@@ -125,46 +125,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     
     private func Share(){
-//        ShareSDK.registerActivePlatforms(
-//            [
-//                SSDKPlatformType.typeFacebook.rawValue,
-//                SSDKPlatformType.typeTwitter.rawValue,
-//                SSDKPlatformType.typeYouTube.rawValue,
-//                SSDKPlatformType.typeCopy.rawValue,
-//                SSDKPlatformType.typeGooglePlus.rawValue,
-//                SSDKPlatformType.typeFacebookMessenger.rawValue,
-//            ],
-//            onImport: {(platform : SSDKPlatformType) -> Void in
-//                switch platform
-//                {
-//                case SSDKPlatformType.typeFacebook:
-//                    ShareSDKConnector.connectFacebookMessenger(FacebookConnector.classForCoder())
-//                case SSDKPlatformType.typeFacebookMessenger:
-//                    ShareSDKConnector.connectFacebookMessenger(FBSDKMessengerSharer.classForCoder())
-//                case SSDKPlatformType.typeTwitter:
-//                    break
-//                case SSDKPlatformType.typeYouTube:
-//                    break
-//                default:
-//                    break
-//                }
-//        },
-//            onConfiguration: {(platform : SSDKPlatformType , appInfo : NSMutableDictionary?) -> Void in
-//                switch platform
-//                {
-//                case SSDKPlatformType.typeFacebook:
-//                    
-//                    appInfo?.ssdkSetupFacebook(byApiKey: "149256552318401", appSecret: "458f503ccee25ad1c01b0c2923e3da6c", displayName: "ShareSDK", authType: SSDKAuthTypeBoth)
-//                    
-//                case SSDKPlatformType.typeTwitter:
-//                    appInfo?.ssdkSetupTwitter(byConsumerKey: "sKDghGO5klKGC9dgX4CkNM1sK", consumerSecret: "lsXro2RyWrNgje4cG1S3JZ7zCBF73pMJ1wQ6A7SgjMm4gwaZwU", redirectUri: "https://www.uilucky.com")
-//                    
-//                case SSDKPlatformType.typeYouTube:
-//                    appInfo?.ssdkSetupYouTube(byClientId: "528737955579.apps.googleusercontent.com", clientSecret: "t3m711acpu2mrk28sfgki2g4acdqt0c8", redirectUri: "http://localhost")
-//                default:
-//                    break
-//                }
-//        })
+        ShareSDK.registerActivePlatforms(
+            [
+                SSDKPlatformType.typeFacebook.rawValue,
+                SSDKPlatformType.typeTwitter.rawValue,
+                SSDKPlatformType.typeYouTube.rawValue,
+                SSDKPlatformType.typeCopy.rawValue,
+                SSDKPlatformType.typeGooglePlus.rawValue,
+                SSDKPlatformType.typeFacebookMessenger.rawValue,
+            ],
+            onImport: {(platform : SSDKPlatformType) -> Void in
+                switch platform
+                {
+                case SSDKPlatformType.typeFacebook:
+                    ShareSDKConnector.connectFacebookMessenger(FacebookConnector.classForCoder())
+                case SSDKPlatformType.typeFacebookMessenger:
+                    ShareSDKConnector.connectFacebookMessenger(FBSDKMessengerSharer.classForCoder())
+                case SSDKPlatformType.typeTwitter:
+                    break
+                case SSDKPlatformType.typeYouTube:
+                    break
+                default:
+                    break
+                }
+        },
+            onConfiguration: {(platform : SSDKPlatformType , appInfo : NSMutableDictionary?) -> Void in
+                switch platform
+                {
+                case SSDKPlatformType.typeFacebook:
+                    
+                    appInfo?.ssdkSetupFacebook(byApiKey: "149256552318401", appSecret: "458f503ccee25ad1c01b0c2923e3da6c", displayName: "ShareSDK", authType: SSDKAuthTypeBoth)
+                    
+                case SSDKPlatformType.typeTwitter:
+                    appInfo?.ssdkSetupTwitter(byConsumerKey: "sKDghGO5klKGC9dgX4CkNM1sK", consumerSecret: "lsXro2RyWrNgje4cG1S3JZ7zCBF73pMJ1wQ6A7SgjMm4gwaZwU", redirectUri: "https://www.uilucky.com")
+                    
+                case SSDKPlatformType.typeYouTube:
+                    appInfo?.ssdkSetupYouTube(byClientId: "528737955579-t3m711acpu2mrk28sfgki2g4acdqt0c8.apps.googleusercontent.com", clientSecret: "", redirectUri: "http://localhost")
+                default:
+                    break
+                }
+        })
     }
     
     

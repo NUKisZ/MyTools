@@ -72,12 +72,20 @@ class FBFriendsModel: NSObject {
 class FBFriendsDataModel: NSObject {
     var id:String?
     var name:String?
+    var picture:FBPictureModel?
     override func setValue(_ value: Any?, forUndefinedKey key: String) {
         
     }
     class func parseJson(dict:Dictionary<String,Any>)->FBFriendsDataModel{
         let model = FBFriendsDataModel()
         model.setValuesForKeys(dict)
+        if let pictureDict = dict["picture"]{
+            if (pictureDict as AnyObject).isKind(of: NSDictionary.self){
+                let pictureModel = FBPictureModel.parseWithDict(dict: pictureDict as! Dictionary<String,Any>)
+                model.picture = pictureModel
+            }
+            
+        }
         
         return model
     }
