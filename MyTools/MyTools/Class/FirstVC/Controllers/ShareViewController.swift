@@ -194,7 +194,7 @@ extension ShareViewController:UITableViewDelegate,UITableViewDataSource{
         }
         
         cell?.textLabel?.text = model.data?[indexPath.row].name
-        cell?.imageView?.kf.setImage(with: URL(string: (model.data?[indexPath.row].picture?.data?.url)!))
+        cell?.imageView?.kf.setImage(with: URL(string: (model.data?[indexPath.row].picture?.data?.url)!), placeholder: UIImage(named:"xcode.png"), options: nil, progressBlock: nil, completionHandler: nil)
         return cell!
     }
 }
