@@ -21,6 +21,8 @@ class BackViewController: BaseViewController {
     private var label:UILabel!
     private var lock:NSLock!
     private var ticker = 20
+    private var actView:ActivityView!
+    private var phoneTextField:PhoneField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,12 +57,12 @@ class BackViewController: BaseViewController {
         thread1.start()
         thread2.start()
         
-        let actView = ActivityView(frame: CGRect(x: 0, y: 0, w: 100, h: 100))
+        actView = ActivityView(frame: CGRect(x: 0, y: 0, w: 100, h: 100))
         actView.center = view.center
         actView.titleString = "加载中..."
         view.addSubview(actView)
         
-        let phoneTextField = PhoneField(frame: CGRect(x: 0, y: 64, w: 100, h: 50))
+        phoneTextField = PhoneField(frame: CGRect(x: 0, y: 64, w: 180, h: 50))
         view.addSubview(phoneTextField)
         
         
@@ -69,7 +71,8 @@ class BackViewController: BaseViewController {
         
     }
     @objc private func btnAction(){
-        self.delegate?.backTest(str: "泄漏测试")
+        self.delegate?.backTest(str: "测试")
+        print(phoneTextField.phoneNumber)
         navigationController?.popViewController(animated: true)
     }
     @objc private func createAttTextLabel(){
@@ -112,6 +115,7 @@ class BackViewController: BaseViewController {
                 DispatchQueue.main.async {
                     [weak self] in
                     self?.label.text = str
+                    self?.actView.disMiss()
                 }
                 return
             }

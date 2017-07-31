@@ -44,6 +44,7 @@ class MOBPlatformViewController: BaseViewController {
         }
         isShare = true
         if parameters.count == 0 {
+            
             let alertView = UIAlertView(title: "", message: "请先设置分享参数", delegate: nil, cancelButtonTitle: "取消", otherButtonTitles: "确定")
             alertView.show()
             return

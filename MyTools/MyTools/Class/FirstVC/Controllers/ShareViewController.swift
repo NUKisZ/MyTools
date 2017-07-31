@@ -13,6 +13,8 @@ class ShareViewController: BaseViewController {
 
     var tableView:UITableView!
     var model:FBFriendsModel!
+    var friendsLabel:UILabel!
+    var imageView:UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,9 +30,9 @@ class ShareViewController: BaseViewController {
         fbme?.addTarget(self, action: #selector(messageAction), for: .touchUpInside)
         view.addSubview(fbme!)
 
-        let friendsLabel = ZKTools.createLabel(CGRect(x: 20, y: 210, width: 300, height: 30), title: "使用App的好友共:", textAlignment: .center, font: nil, textColor: nil)
+        friendsLabel = ZKTools.createLabel(CGRect(x: 20, y: 210, width: 300, height: 30), title: "使用App的好友共:", textAlignment: .center, font: nil, textColor: nil)
         view.addSubview(friendsLabel)
-        let imageView = ZKTools.createImageView(CGRect(x: 20, y: 250, w: 50, h: 50), imageName: nil, imageUrl: nil)
+        imageView = ZKTools.createImageView(CGRect(x: 20, y: 250, w: 50, h: 50), imageName: nil, imageUrl: nil)
         view.addSubview(imageView)
         
         let loginButton = FBSDKLoginButton()
@@ -39,6 +41,15 @@ class ShareViewController: BaseViewController {
         loginButton.readPermissions=["public_profile","email","user_friends"]
         loginButton.delegate = self
         view.addSubview(loginButton)
+        
+        fbAccessToken()
+        NotificationCenter.default.addObserver(self, selector: #selector(fbAccessToken), name: NSNotification.Name.FBSDKProfileDidChange, object: nil)
+        
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    @objc private func fbAccessToken(){
         if((FBSDKAccessToken.current()) != nil){
             print("用户已经登陆")
             if let token = FBSDKAccessToken.current(){
@@ -47,9 +58,10 @@ class ShareViewController: BaseViewController {
                 print(token.appID)
                 print(token.userID )
                 print(token.tokenString)
-                //let graphPath = "/me?fields=about,email,friends,picture,birthday,name"
-                let graphPath = "/me/friends?fields=picture,name"
-                let request = FBSDKGraphRequest(graphPath: graphPath, parameters: nil, httpMethod: "GET")
+                let graphPath = "/me"
+                //let graphPath = "/me/friends?fields=picture,name"
+                let parameters = ["fields":"about,email,friends{picture,name},picture,birthday,name"]
+                let request = FBSDKGraphRequest(graphPath: graphPath, parameters: parameters, httpMethod: "GET")
                 let _ = request?.start(completionHandler: {
                     //[weak self]
                     (connection, result, error) in
@@ -57,34 +69,23 @@ class ShareViewController: BaseViewController {
                     print(result as Any)
                     if let resul = result{
                         if (resul as AnyObject).isKind(of:NSDictionary.self){
-//                            let model = FBPersonInforModel.parseWithDict(dict: resul as! Dictionary<String,Any>)
-//                            if (model.friends?.data?.count)!>0{
-//                                friendsLabel.text = "使用App的共同好友:" + "\(String(describing: model.friends?.data?.count))" + "人"
-//                                if let data = model.friends?.data {
-//                                    if let name = data[0].name{
-//                                        print(name)
-//                                    }
-//                                }
-//                                
-//                            }
-//                            if let picUrl = model.picture?.data?.url{
-//                                imageView.kf.setImage(with: URL(string: picUrl))
-//                            }
-                            let model = FBFriendsModel.parseWithDict(dict: resul as! Dictionary<String,Any>)
-                            if (model.data?.count)!>0{
-                                self.model = model
+                            let model = FBPersonInforModel.parseWithDict(dict: resul as! Dictionary<String,Any>)
+                            if (model.friends?.data?.count)!>0{
+                                self.model = model.friends
                                 self.tableView.reloadData()
-                                friendsLabel.text = "使用App的共同好友:" + "\(String(describing: model.data?.count))" + "人"
-                                if let data = model.data {
+                                self.friendsLabel.text = "使用App的共同好友:" + "\(String(describing: model.friends?.data?.count))" + "人"
+                                if let data = model.friends?.data {
                                     if let name = data[0].name{
                                         print(name)
                                     }
-                                    if let picUrl = data[0].picture?.data?.url{
-                                        imageView.kf.setImage(with: URL(string: picUrl))
-                                    }
                                 }
+                                
                             }
-
+                            if let picUrl = model.picture?.data?.url{
+                                self.imageView.kf.setImage(with: URL(string: picUrl))
+                            }
+                            
+                            
                         }
                     }
                     
@@ -98,10 +99,8 @@ class ShareViewController: BaseViewController {
             
             
         }
-        
-        
-        
     }
+    
     @objc private func messageAction(){
 //        let image = UIImage(named: "swift.png")
 //        FBSDKMessengerSharer.share(image, with: nil)
@@ -112,9 +111,11 @@ class ShareViewController: BaseViewController {
         composer.setText("asdfasdf")
         //composer.setURL(URL(string: "https://www.uilucky.com"))
         composer.setURL(URL(string: "http://eshare.vod.otvcloud.com/otv/yfy/D/11/03/00000409445/409445_2300k_1920x1080.mp4"))
+        composer.setImage(UIImage(named: "xcode.png"))
         composer.show(from: self) { (result) in
             if(result == .done){
                 print("成功")
+                
             }else{
                 print("取消")
             }
@@ -123,19 +124,23 @@ class ShareViewController: BaseViewController {
     }
 
     @objc private func fbAction(){
+        let photo = FBSDKSharePhoto()
+        photo.image = UIImage(named: "xcode.png")
+        let photoContent = FBSDKSharePhotoContent()
+        photoContent.photos = [photo]
         let content = FBSDKShareLinkContent()
+        //let content = FBSDKShareMediaContent()
         //content.contentURL = URL(string: "https://www.uilucky.com")
         content.contentURL = URL(string: "http://eshare.vod.otvcloud.com/otv/yfy/D/11/03/00000409445/409445_2300k_1920x1080.mp4")
+        //content.media = [photo]
 //        let dialog = FBSDKShareDialog()
 //        dialog.fromViewController = self;
 //        dialog.shareContent = content
 //        dialog.mode = FBSDKShareDialogMode.shareSheet
 //        dialog.show()
-        FBSDKShareDialog.show(from: self, with: content, delegate: nil)
+        //FBSDKShareDialog.show(from: nil, with: content, delegate: nil)
+        FBSDKShareDialog.show(from: self, with: content, delegate: self)
         
-        
-    
-    
     }
     
     
@@ -168,12 +173,8 @@ class ShareViewController: BaseViewController {
 extension ShareViewController:FBSDKLoginButtonDelegate{
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         print(result)
-        print(result.token.userID)
-        print(result.token.appID)
-        print(result.token.tokenString)
-        print(result.grantedPermissions)
-        print(result.declinedPermissions)
-        print(result.isCancelled)
+        
+        
     }
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
         print("退出")
@@ -196,5 +197,20 @@ extension ShareViewController:UITableViewDelegate,UITableViewDataSource{
         cell?.textLabel?.text = model.data?[indexPath.row].name
         cell?.imageView?.kf.setImage(with: URL(string: (model.data?[indexPath.row].picture?.data?.url)!), placeholder: UIImage(named:"xcode.png"), options: nil, progressBlock: nil, completionHandler: nil)
         return cell!
+    }
+}
+extension ShareViewController:FBSDKSharingDelegate{
+    func sharer(_ sharer: FBSDKSharing!, didCompleteWithResults results: [AnyHashable : Any]!) {
+        
+        print("分享成功")
+        print(sharer.shareContent)
+        print(sharer.shareContent.hashtag)
+        print(results)
+    }
+    func sharer(_ sharer: FBSDKSharing!, didFailWithError error: Error!) {
+        print("分享失败")
+    }
+    func sharerDidCancel(_ sharer: FBSDKSharing!) {
+        print("取消分享")
     }
 }

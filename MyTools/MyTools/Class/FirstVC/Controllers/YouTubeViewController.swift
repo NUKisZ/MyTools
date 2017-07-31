@@ -23,11 +23,13 @@ class YouTubeViewController: MOBPlatformViewController {
         shareTypeArray = ["视频","视频 上传进度"]
         selectorNameArray = ["shareVideo","shareVideoUploadProgress"]
         let filePath = Bundle.main.path(forResource: "cat", ofType: "mp4")
-        print(filePath)
+        print(filePath ?? "路径为空")
         let url = URL(fileURLWithPath: Bundle.main.path(forResource: "cat", ofType: "mp4")!)
         //let url = URL(string: "http://eshare.vod.otvcloud.com/otv/yfy/D/11/03/00000409445/409445_2300k_1920x1080.mp4")
         shareParameters.ssdkSetupShareParams(byText: nil, images: nil, url: url, title: nil, type: SSDKContentType.video)
-        
+        let md5 = "123456"
+        let md5String = ZKTools.stringToMD5(string: md5).uppercased()
+        print(md5String)
     }
 
     func shareVideo(){

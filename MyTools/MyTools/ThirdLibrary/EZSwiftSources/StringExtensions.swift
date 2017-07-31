@@ -34,10 +34,10 @@ extension String {
     }
     
     /// EZSE: Cut string from integerIndex to the end
-    public subscript(integerIndex: Int) -> Character {
-        let index = characters.index(startIndex, offsetBy: integerIndex)
-        return self[index]
-    }
+//    public subscript(integerIndex: Int) -> Character {
+//        let index = characters.index(startIndex, offsetBy: integerIndex)
+//        return self[index]
+//    }
     
     /// EZSE: Cut string from range
     public subscript(integerRange: Range<Int>) -> String {

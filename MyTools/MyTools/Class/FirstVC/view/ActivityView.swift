@@ -11,6 +11,7 @@ import UIKit
 class ActivityView: UIView {
 
     private var titleLabel:UILabel!
+    private var act:UIActivityIndicatorView!
     public var titleString:String?{
         didSet{
             titleLabel.text = titleString
@@ -18,7 +19,7 @@ class ActivityView: UIView {
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let act = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        act = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
         act.color = UIColor.red
         act.center = CGPoint(x: frame.size.width/2, y: frame.size.height/2)
         addSubview(act)
@@ -33,6 +34,14 @@ class ActivityView: UIView {
         layer.cornerRadius = 15
         layer.masksToBounds = true
         
+    }
+    deinit {
+        print("ActivityView --- deinit ---")
+    }
+    public func disMiss(){
+        act.stopAnimating()
+        self.removeSubviews()
+        self.removeFromSuperview()
     }
     
     required init?(coder aDecoder: NSCoder) {

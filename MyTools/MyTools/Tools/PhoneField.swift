@@ -15,6 +15,13 @@ class PhoneField: UITextField {
     
     //保持上一次的文本范围
     var _previousRange:UITextRange!
+    private var digitsText:String!=""
+    
+    public var phoneNumber:String!{
+        get{
+            return digitsText
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,9 +69,8 @@ class PhoneField: UITextField {
                                              to: textField.selectedTextRange!.start)
         
         //过滤掉非数字字符，只保留数字
-        var digitsText = getDigitsText(string: textField.text!,
+        digitsText = getDigitsText(string: textField.text!,
                                        cursorPosition: &cursorPostion)
-        
         //避免超过11位的输入
         if digitsText.characters.count > 11 {
             textField.text = _previousText
@@ -101,8 +107,8 @@ class PhoneField: UITextField {
         for uni in string.unicodeScalars {
             //如果是数字则添加到返回结果中
             if CharacterSet.decimalDigits.contains(uni) {
-                let str = string[i] as Character
-                result.append(str)
+                //let str = string[i] as Character
+                result.append(string[i])
                 
             }
                 //非数字则跳过，如果这个非法字符在光标位置之前，则光标需要向前移动
@@ -134,8 +140,8 @@ class PhoneField: UITextField {
                     cursorPosition = cursorPosition + 1
                 }
             }
-            let str = string[i] as Character
-            result.append(str)
+            //let str = string[i] as Character
+            result.append(string[i])
         }
         
         return result
