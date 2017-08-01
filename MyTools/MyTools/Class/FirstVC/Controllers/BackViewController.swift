@@ -66,9 +66,6 @@ class BackViewController: BaseViewController {
         view.addSubview(phoneTextField)
         
         
-        
-        
-        
     }
     @objc private func btnAction(){
         self.delegate?.backTest(str: "测试")

@@ -169,6 +169,14 @@ class ZKTools: NSObject {
         vc.present(alert, animated: true, completion: nil)
         
     }
+    class func showAlertInWindowsLast(_ msg:String,onViewController vc :UIViewController){
+//        let window = UIApplication.shared.windows.last
+//        if (window?.isKind(of: UIViewController.self))!{
+//            let vc = window as UIViewController
+//            ZKTools.showAlert(msg, onViewController: vc)
+//        }
+        
+    }
     #if false
     class func weiXinLogin(vc:UIViewController){
             let req = SendAuthReq()

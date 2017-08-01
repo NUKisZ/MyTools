@@ -21,6 +21,7 @@ class PhoneField: UITextField {
         get{
             return digitsText
         }
+        
     }
     
     override init(frame: CGRect) {

@@ -11,13 +11,49 @@ import FBSDKShareKit
 import FBSDKLoginKit
 class ShareViewController: BaseViewController {
 
-    var tableView:UITableView!
-    var model:FBFriendsModel!
-    var friendsLabel:UILabel!
-    var imageView:UIImageView!
+    var shareTwitter = "https://www.uilucky.com/AppData/app.html"
+    let shareFaceBook = "https://www.uilucky.com/AppData/applink.html"
+    fileprivate var tableView:UITableView!
+    fileprivate var model:FBFriendsModel!
+    fileprivate var friendsLabel:UILabel!
+    fileprivate var imageView:UIImageView!
+    private var appLinkReturnToRefererView:BFAppLinkReturnToRefererView?
+    private var appLink:BFAppLink?
+    var button:UIButton{
+        
+        let btn = UIButton(type: .custom)
+        btn.frame = CGRect(x: 100, y: 120, w: 100, h: 100)
+        btn.backgroundColor = UIColor.red
+        return btn
+        
+    }
+    lazy var dataArray = NSMutableArray()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if ((self.appLinkReturnToRefererView) != nil){
+            self.appLinkReturnToRefererView?.isHidden = true
+        }
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        if (appDelegate.parsedUrl != nil){
+            self.appLink = appDelegate.parsedUrl?.appLinkReferer
+            showRefererBackView()
+        }
+        appDelegate.parsedUrl = nil
+    }
+    private func showRefererBackView(){
+        if (appLinkReturnToRefererView == nil){
+            let backLinkView = BFAppLinkReturnToRefererView(frame: CGRect(x: 0, y: 30, w: 320, h: 40))
+            appLinkReturnToRefererView = backLinkView
+        }
+        appLinkReturnToRefererView?.isHidden = false
+        let alc = BFAppLinkReturnToRefererController()
+        alc?.view = appLinkReturnToRefererView
+        alc?.showView(forRefererAppLink: appLink)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        print(shareTwitter)
         createTableView()
         
         let fbBtn = ZKTools.createButton(CGRect(x: 100, y: 70, width: 100, height: 30), title: "FaceBook", imageName: nil, bgImageName: nil, target: self, action: #selector(fbAction))
@@ -44,6 +80,8 @@ class ShareViewController: BaseViewController {
         
         fbAccessToken()
         NotificationCenter.default.addObserver(self, selector: #selector(fbAccessToken), name: NSNotification.Name.FBSDKProfileDidChange, object: nil)
+        let ss:NSString = "aaaa"
+        
         
     }
     deinit {
@@ -110,9 +148,11 @@ class ShareViewController: BaseViewController {
         let composer = TWTRComposer()
         composer.setText("asdfasdf")
         //composer.setURL(URL(string: "https://www.uilucky.com"))
-        composer.setURL(URL(string: "http://eshare.vod.otvcloud.com/otv/yfy/D/11/03/00000409445/409445_2300k_1920x1080.mp4"))
-        composer.setImage(UIImage(named: "xcode.png"))
-        composer.show(from: self) { (result) in
+        //composer.setURL(URL(string: "http://eshare.vod.otvcloud.com/otv/yfy/D/11/03/00000409445/409445_2300k_1920x1080.mp4"))
+        composer.setURL(URL(string:shareTwitter))
+        //composer.setURL(URL(string:"https://youtu.be/RjUlKAv5ejU"))
+        //composer.setImage(UIImage(named: "xcode.png"))
+        composer.show(from: self.navigationController!) { (result) in
             if(result == .done){
                 print("成功")
                 
@@ -124,14 +164,16 @@ class ShareViewController: BaseViewController {
     }
 
     @objc private func fbAction(){
+        
+        
         let photo = FBSDKSharePhoto()
         photo.image = UIImage(named: "xcode.png")
         let photoContent = FBSDKSharePhotoContent()
         photoContent.photos = [photo]
         let content = FBSDKShareLinkContent()
         //let content = FBSDKShareMediaContent()
-        //content.contentURL = URL(string: "https://www.uilucky.com")
-        content.contentURL = URL(string: "http://eshare.vod.otvcloud.com/otv/yfy/D/11/03/00000409445/409445_2300k_1920x1080.mp4")
+        content.contentURL = URL(string: shareFaceBook)
+        //content.contentURL = URL(string: "http://eshare.vod.otvcloud.com/otv/yfy/D/11/03/00000409445/409445_2300k_1920x1080.mp4")
         //content.media = [photo]
 //        let dialog = FBSDKShareDialog()
 //        dialog.fromViewController = self;
@@ -203,7 +245,7 @@ extension ShareViewController:FBSDKSharingDelegate{
     func sharer(_ sharer: FBSDKSharing!, didCompleteWithResults results: [AnyHashable : Any]!) {
         
         print("分享成功")
-        print(sharer.shareContent)
+        print(sharer.shareContent.placeID)
         print(sharer.shareContent.hashtag)
         print(results)
     }

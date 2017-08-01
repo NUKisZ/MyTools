@@ -303,6 +303,7 @@ class FirstViewController: TableViewBaseController {
     }
     @objc fileprivate func ShareClick(){
         let vc = ShareViewController()
+        vc.shareTwitter = "asdfadfasdfasdf"
         hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)
         hidesBottomBarWhenPushed = false

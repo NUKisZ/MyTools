@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var performanceView: GDPerformanceMonitor?
+    var parsedUrl:BFURL?
+    var refererAppLink = NSDictionary()
 //    private var reachability:Reachability?
     private var manager:NetworkReachabilityManager?
 
@@ -65,7 +67,56 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        print(url.description)
+        print(url)
+        print("app open options")
+        let urlString = url.description
+        let arrayString = urlString.components(separatedBy: "&&")
+        if arrayString.count>2{
+            if arrayString[0]=="lingyu://twitter" || arrayString[0]=="lingyu://facebook"{
+                let nav = window?.rootViewController
+                let Type = type(of: nav)
+                print(Type)
+                if let _ = (nav?.isKind(of: MainTabBarViewController.self)){
+                    let tabBar = nav as! MainTabBarViewController
+                    let eachVC = tabBar.viewControllers?[tabBar.selectedIndex]
+                    if let vc = eachVC{
+                        if vc.isKind(of: UINavigationController.self){
+                            let navController = vc as! UINavigationController
+                            let shareVC = ShareViewController()
+                            shareVC.hidesBottomBarWhenPushed = true
+                            navController.pushViewController(shareVC, animated: true)
+                            return true
+                        }
+                    }
+                    
+                }
+                if let viewController = nav{
+                    viewController.navigationController?.pushViewController(ShareViewController(), animated: true)
+                    return true
+                }
+                if  let _ = (nav?.isKind(of: UINavigationController.self)){
+                    
+                    //nav?.pushViewController(ShareViewController(), animated: true)
+                    return true
+                }
+                
+            }
+            return false
+        }
+        let parsedUrl = BFURL(inboundURL: url, sourceApplication: options[.sourceApplication] as! String)
+        self.parsedUrl = BFURL(url: url)
+        let appLinkData = parsedUrl?.appLinkData
+        if let dict = appLinkData{
+            refererAppLink = dict["referer_app_link"] as! NSDictionary
+        }
+        
+        if((parsedUrl?.appLinkData) != nil){
+            let targetUrl = parsedUrl?.targetURL
+            UIAlertView(title: "Received link", message: targetUrl?.absoluteString, delegate: nil, cancelButtonTitle: "OK").show()
+        }
+        
+        
+        
         if (url.description.hasPrefix("fb")){
             let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[.sourceApplication] as! String, annotation: options[.annotation])
             return handled
@@ -77,6 +128,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationProtectedDataDidBecomeAvailable(_ application: UIApplication) {
         FBSDKAppEvents.activateApp()
     }
+    
+    
+    
 //    func reachabilityChanged(n:Notification){
 //        if(n.object is Reachability){
 //            let reach = n.object as! Reachability
