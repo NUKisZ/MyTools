@@ -11,7 +11,7 @@ import FBSDKShareKit
 import FBSDKLoginKit
 class ShareViewController: BaseViewController {
 
-    var shareTwitter = "https://www.uilucky.com/AppData/app.html"
+    let shareTwitter = "https://www.uilucky.com/AppData/app.html"
     let shareFaceBook = "https://www.uilucky.com/AppData/applink.html"
     fileprivate var tableView:UITableView!
     fileprivate var model:FBFriendsModel!
@@ -25,6 +25,7 @@ class ShareViewController: BaseViewController {
         btn.frame = CGRect(x: 100, y: 120, w: 100, h: 100)
         btn.backgroundColor = UIColor.red
         return btn
+
         
     }
     lazy var dataArray = NSMutableArray()
