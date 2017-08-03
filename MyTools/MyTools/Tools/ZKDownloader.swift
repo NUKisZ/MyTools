@@ -10,9 +10,10 @@ import UIKit
 public enum ZKDownloaderType:Int{
     case `default` = 0
 }
-protocol ZKDownloaderDelegate:NSObjectProtocol{
+@objc protocol ZKDownloaderDelegate:NSObjectProtocol{
     func downloader(_ download:ZKDownloader,didFailWithError error:NSError)
     func downloader(_ download:ZKDownloader,didFinishWithData data:Data?)
+//    @objc optional func downloader(_ download:ZKDownloader,didCan cancel:String)
 }
 class ZKDownloader: NSObject {
     
@@ -33,7 +34,10 @@ class ZKDownloader: NSObject {
                 if httpRes.statusCode == 200{
                     //正确返回
                     self.delegate?.downloader(self, didFinishWithData: data)
-                    
+//                    if (self.delegate?.responds(to: #selector(self.delegate?.downloader(_:didCan:)))) == true{
+//                        print("adfasdfadsf")
+//                        self.delegate?.downloader!(self, didCan: "1231231313131")
+//                    }
                 }else {
                     //500之类的错误
                     //print(httpRes.statusCode)

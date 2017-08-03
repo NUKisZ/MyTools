@@ -19,6 +19,7 @@ class ShareViewController: BaseViewController {
     fileprivate var imageView:UIImageView!
     private var appLinkReturnToRefererView:BFAppLinkReturnToRefererView?
     private var appLink:BFAppLink?
+    
     var button:UIButton{
         
         let btn = UIButton(type: .custom)
@@ -28,7 +29,6 @@ class ShareViewController: BaseViewController {
 
         
     }
-    lazy var dataArray = NSMutableArray()
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if ((self.appLinkReturnToRefererView) != nil){
@@ -53,10 +53,8 @@ class ShareViewController: BaseViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-
         print(shareTwitter)
         createTableView()
-        
         let fbBtn = ZKTools.createButton(CGRect(x: 100, y: 70, width: 100, height: 30), title: "FaceBook", imageName: nil, bgImageName: nil, target: self, action: #selector(fbAction))
         view.addSubview(fbBtn)
         
@@ -81,7 +79,6 @@ class ShareViewController: BaseViewController {
         
         fbAccessToken()
         NotificationCenter.default.addObserver(self, selector: #selector(fbAccessToken), name: NSNotification.Name.FBSDKProfileDidChange, object: nil)
-        let ss:NSString = "aaaa"
         
         
     }

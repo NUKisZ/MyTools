@@ -384,6 +384,7 @@ extension FirstViewController:ZKDownloaderDelegate{
             kUserDefaults.synchronize()
         }
     }
+    
 }
 extension FirstViewController:BackViewControllerDelegate{
     func backTest(str: String) {
