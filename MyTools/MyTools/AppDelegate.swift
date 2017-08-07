@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var performanceView: GDPerformanceMonitor?
     var parsedUrl:BFURL?
     var refererAppLink = NSDictionary()
+    var service:PPSPingServices?
 //    private var reachability:Reachability?
     private var manager:NetworkReachabilityManager?
 
@@ -60,6 +61,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Twitter.sharedInstance().start(withConsumerKey: "sKDghGO5klKGC9dgX4CkNM1sK", consumerSecret: "lsXro2RyWrNgje4cG1S3JZ7zCBF73pMJ1wQ6A7SgjMm4gwaZwU")
         
         Share()
+        //ppsPing()
+        reachaBility()
         window?.rootViewController = MainTabBarViewController()
         window?.makeKeyAndVisible()
         return true
@@ -221,7 +224,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
     }
     
-    
+    func ppsPing(){
+        service = PPSPingServices.service(withAddress: "www.uilucky.com")
+        service?.start(callbackHandler: { (summary, dic) in
+            if let sum = summary{
+                switch sum.status{
+                case PPSPingStatusDidStart:
+                    print("Start")
+                case PPSPingStatusDidFailToSendPacket:
+                    print("SendPacket")
+                case PPSPingStatusDidReceivePacket:
+                    print("ReceivePacket")
+                case PPSPingStatusDidReceiveUnexpectedPacket:
+                    print("ReceiveUnexpectedPacket")
+                case PPSPingStatusDidTimeout:
+                    print("Timeout")
+                case PPSPingStatusError:
+                    print("Error")
+                case PPSPingStatusFinished:
+                    print("Finished")
+                default:
+                    break
+                }
+                print(sum.rtt)
+                print(sum.host)
+                
+                
+            }
+            
+            
+        })
+    }
+    func reachaBility(){
+        let reachaBility = Reachability(hostName: "https://www.baidu.com")
+        if (reachaBility?.startNotifier())==true{
+            print("通")
+        }else{
+            print("不通")
+        }
+    }
 
 }
 

@@ -18,11 +18,11 @@ class CycleViewController: BaseViewController, SliderGalleryControllerDelegate {
     var sliderGallery : SliderGalleryController!
     
     //图片集合
-    var images = ["http://bizhi.zhuoku.com/bizhi2008/0516/3d/3d_desktop_13.jpg",
+    var images = [
                   "http://tupian.enterdesk.com/2012/1015/zyz/03/5.jpg",
                   "http://img.web07.cn/UpImg/Desk/201301/12/desk230393121053551.jpg",
-                  "http://wallpaper.160.com/Wallpaper/Image/1280_960/1280_960_37227.jpg",
-                  "http://bizhi.zhuoku.com/wall/jie/20061124/cartoon2/cartoon014.jpg"]
+                  "http://wallpaper.160.com/Wallpaper/Image/1280_960/1280_960_37227.jpg"
+                  ]
     
     override func viewDidLoad() {
         super.viewDidLoad()

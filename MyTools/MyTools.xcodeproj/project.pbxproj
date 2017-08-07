@@ -296,6 +296,9 @@
 		0B6F05101EB85085005E8FBD /* XWRefreshStateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F04ED1EB85085005E8FBD /* XWRefreshStateHeader.swift */; };
 		0B6F05111EB85085005E8FBD /* UIScrollViewExtension-XW.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F04EF1EB85085005E8FBD /* UIScrollViewExtension-XW.swift */; };
 		0B6F05121EB85085005E8FBD /* xw_icon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0B6F04F11EB85085005E8FBD /* xw_icon.bundle */; };
+		0B7466EE1F38059E00BC56E7 /* PPSPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7466E91F38059E00BC56E7 /* PPSPing.m */; };
+		0B7466EF1F38059E00BC56E7 /* PPSPingServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7466EB1F38059E00BC56E7 /* PPSPingServices.m */; };
+		0B7466F01F38059E00BC56E7 /* PPSPingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B7466ED1F38059E00BC56E7 /* PPSPingSummary.m */; };
 		0B79C3731E8388D600CF92B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3721E8388D600CF92B2 /* AppDelegate.swift */; };
 		0B79C3751E8388D600CF92B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3741E8388D600CF92B2 /* ViewController.swift */; };
 		0B79C3781E8388D600CF92B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B79C3761E8388D600CF92B2 /* Main.storyboard */; };
@@ -345,6 +348,8 @@
 		0B79C3F81E83A14900CF92B2 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3D61E83A14900CF92B2 /* LayoutConstraint.swift */; };
 		0B79C3F91E83A14900CF92B2 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3D71E83A14900CF92B2 /* LayoutConstraintItem.swift */; };
 		0B79C3FA1E83A14900CF92B2 /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79C3D91E83A14900CF92B2 /* UILayoutSupport+Extensions.swift */; };
+		0BB4CFAD1F3814B400699C49 /* PingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB4CFAC1F3814B400699C49 /* PingViewController.swift */; };
+		0BB4CFD51F38549800699C49 /* BearNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB4CFD41F38549800699C49 /* BearNavigationViewController.swift */; };
 		0BE60A0E1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60A0D1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m */; };
 		0BE60A151EADAD8100D21D8C /* ZKDownloadTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60A141EADAD8100D21D8C /* ZKDownloadTaskManager.swift */; };
 		0BE60A1D1EADF87700D21D8C /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE60A1C1EADF87700D21D8C /* TaskManager.swift */; };
@@ -688,6 +693,13 @@
 		0B6F04ED1EB85085005E8FBD /* XWRefreshStateHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XWRefreshStateHeader.swift; sourceTree = "<group>"; };
 		0B6F04EF1EB85085005E8FBD /* UIScrollViewExtension-XW.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollViewExtension-XW.swift"; sourceTree = "<group>"; };
 		0B6F04F11EB85085005E8FBD /* xw_icon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = xw_icon.bundle; sourceTree = "<group>"; };
+		0B7466E71F38059E00BC56E7 /* PPSICMPHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSICMPHeader.h; sourceTree = "<group>"; };
+		0B7466E81F38059E00BC56E7 /* PPSPing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSPing.h; sourceTree = "<group>"; };
+		0B7466E91F38059E00BC56E7 /* PPSPing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSPing.m; sourceTree = "<group>"; };
+		0B7466EA1F38059E00BC56E7 /* PPSPingServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSPingServices.h; sourceTree = "<group>"; };
+		0B7466EB1F38059E00BC56E7 /* PPSPingServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSPingServices.m; sourceTree = "<group>"; };
+		0B7466EC1F38059E00BC56E7 /* PPSPingSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSPingSummary.h; sourceTree = "<group>"; };
+		0B7466ED1F38059E00BC56E7 /* PPSPingSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSPingSummary.m; sourceTree = "<group>"; };
 		0B79C36F1E8388D600CF92B2 /* MyTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B79C3721E8388D600CF92B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B79C3741E8388D600CF92B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -743,6 +755,8 @@
 		0B79C3D81E83A14900CF92B2 /* SnapKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnapKit.h; sourceTree = "<group>"; };
 		0B79C3D91E83A14900CF92B2 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
 		0B8873871EEE838500FE22BE /* Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		0BB4CFAC1F3814B400699C49 /* PingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingViewController.swift; sourceTree = "<group>"; };
+		0BB4CFD41F38549800699C49 /* BearNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BearNavigationViewController.swift; sourceTree = "<group>"; };
 		0BE60A0C1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		0BE60A0D1EAD96B700D21D8C /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		0BE60A141EADAD8100D21D8C /* ZKDownloadTaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZKDownloadTaskManager.swift; sourceTree = "<group>"; };
@@ -960,6 +974,7 @@
 				0B4A5E831F21E3440023F525 /* ShareViewController.swift */,
 				0B557AF21F2862000065A199 /* YouTubeViewController.swift */,
 				0B5FEEC31F2974DD0051B661 /* MOBPlatformViewController.swift */,
+				0BB4CFAC1F3814B400699C49 /* PingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1632,6 +1647,20 @@
 			path = Icon;
 			sourceTree = "<group>";
 		};
+		0B7466E61F38059E00BC56E7 /* PPSPing */ = {
+			isa = PBXGroup;
+			children = (
+				0B7466E71F38059E00BC56E7 /* PPSICMPHeader.h */,
+				0B7466E81F38059E00BC56E7 /* PPSPing.h */,
+				0B7466E91F38059E00BC56E7 /* PPSPing.m */,
+				0B7466EA1F38059E00BC56E7 /* PPSPingServices.h */,
+				0B7466EB1F38059E00BC56E7 /* PPSPingServices.m */,
+				0B7466EC1F38059E00BC56E7 /* PPSPingSummary.h */,
+				0B7466ED1F38059E00BC56E7 /* PPSPingSummary.m */,
+			);
+			path = PPSPing;
+			sourceTree = "<group>";
+		};
 		0B79C3661E8388D600CF92B2 = {
 			isa = PBXGroup;
 			children = (
@@ -1674,6 +1703,7 @@
 		0B79C3841E83907D00CF92B2 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				0B7466E61F38059E00BC56E7 /* PPSPing */,
 				0B5C15771F26F3E100446358 /* SwiftyJSON */,
 				0B4A5E851F21F5C70023F525 /* MBProgressHUD */,
 				0B5DAA181F20542900DC9E4B /* WMPageController */,
@@ -1735,6 +1765,7 @@
 		0B79C3A31E8394E800CF92B2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				0BB4CFD41F38549800699C49 /* BearNavigationViewController.swift */,
 				0B5F45731EC015EF0042D19E /* WKWebViewBaseViewController.swift */,
 				0B79C3A41E8394E800CF92B2 /* MainTabBarViewController.swift */,
 				0B79C3B21E83978500CF92B2 /* BaseViewController.swift */,
@@ -1936,6 +1967,7 @@
 				0B5C158C1F271FA800446358 /* FBPersonInforModel.swift in Sources */,
 				0B79C3B31E83978500CF92B2 /* BaseViewController.swift in Sources */,
 				0B1C46701EBAF684009B7BDD /* UIStoryboardExtensions.swift in Sources */,
+				0B7466EE1F38059E00BC56E7 /* PPSPing.m in Sources */,
 				0B5195B11ECEEE2D007AF6F3 /* SystemColor+.swift in Sources */,
 				0B6F05001EB85085005E8FBD /* KingfisherOptionsInfo.swift in Sources */,
 				0B1C464A1EBAF684009B7BDD /* BlockLongPress.swift in Sources */,
@@ -2048,6 +2080,7 @@
 				0B1C46661EBAF684009B7BDD /* UIButtonExtensions.swift in Sources */,
 				0B6F05031EB85085005E8FBD /* String+MD5.swift in Sources */,
 				0B79C39E1E8390B400CF92B2 /* ProgressHUD.swift in Sources */,
+				0BB4CFAD1F3814B400699C49 /* PingViewController.swift in Sources */,
 				0B1C46711EBAF684009B7BDD /* UISwitchExtensions.swift in Sources */,
 				0B6F050D1EB85085005E8FBD /* XWRefreshGifHeader.swift in Sources */,
 				0B6F04FE1EB85085005E8FBD /* Kingfisher.swift in Sources */,
@@ -2057,6 +2090,7 @@
 				0B4014621F13833B003AFC0C /* GDPerformanceMonitorDelegate.swift in Sources */,
 				0B79C3DD1E83A14900CF92B2 /* ConstraintConstantTarget.swift in Sources */,
 				0B6F04C81EB84812005E8FBD /* StarView.swift in Sources */,
+				0B7466F01F38059E00BC56E7 /* PPSPingSummary.m in Sources */,
 				0B1C46481EBAF684009B7BDD /* ArrayExtensions.swift in Sources */,
 				0B6F05111EB85085005E8FBD /* UIScrollViewExtension-XW.swift in Sources */,
 				0B60C32F1F185AFA0066AE4C /* GalleryViewController.swift in Sources */,
@@ -2119,6 +2153,7 @@
 				0B1C46541EBAF684009B7BDD /* CGRectExtensions.swift in Sources */,
 				0B79C3F01E83A14900CF92B2 /* ConstraintPriorityTarget.swift in Sources */,
 				0B4332201ED983DE00A53A58 /* UIViewController+RTRootNavigationController.m in Sources */,
+				0B7466EF1F38059E00BC56E7 /* PPSPingServices.m in Sources */,
 				0B1C46791EBAF684009B7BDD /* UserDefaultsExtension.swift in Sources */,
 				0B1C465A1EBAF684009B7BDD /* ErrorTypeExtensions.swift in Sources */,
 				0B48CBDA1EAF28F40069A213 /* ThirdViewController.swift in Sources */,
@@ -2158,6 +2193,7 @@
 				0B60C33E1F185C6B0066AE4C /* LinearCollectionViewLayout.swift in Sources */,
 				0B79C3EC1E83A14900CF92B2 /* ConstraintMakerPriortizable.swift in Sources */,
 				0B5F45B71EC015FD0042D19E /* UIView+MJExtension.m in Sources */,
+				0BB4CFD51F38549800699C49 /* BearNavigationViewController.swift in Sources */,
 				0B5DAA2A1F20544900DC9E4B /* WMPageTestViewController.swift in Sources */,
 				0B5C158E1F27210C00446358 /* FBPictureModel.swift in Sources */,
 				0B1C464D1EBAF684009B7BDD /* BlockSwipe.swift in Sources */,

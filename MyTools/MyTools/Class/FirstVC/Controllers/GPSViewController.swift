@@ -213,7 +213,8 @@ extension GPSViewController:CLLocationManagerDelegate{
         //获取方向
         courseLabel.text = "方向：\(currLocation.course)"
         //获取速度
-        speedLabel.text = "速度：\(currLocation.speed)"
+        let speed = currLocation.speed * 3600 / 1000
+        speedLabel.text = "速度：\(currLocation.speed)m/s,\(speed)km/h"
         self.reverseActon(latitude: currLocation.coordinate.latitude, longitude: currLocation.coordinate.longitude)
     }
 }

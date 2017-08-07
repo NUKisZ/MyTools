@@ -48,7 +48,7 @@ class MainTabBarViewController: UITabBarController {
             
             //导航
             //let navCtrl = RTRootNavigationController(rootViewController: vc)
-            let navCtrl = UINavigationController(rootViewController: vc)
+            let navCtrl = BearNavigationViewController(rootViewController: vc)
             array.append(navCtrl)
             
             

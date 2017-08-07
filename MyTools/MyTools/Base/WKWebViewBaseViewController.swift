@@ -230,8 +230,6 @@ extension WKWebViewBaseViewController:WKNavigationDelegate,WKUIDelegate{
         }
         //webView.title                //web的title
         //webView.evaluateJavaScript("javascript:refreshmessage()", completionHandler: nil) //执行js方法
-            
-        
         
     }
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {

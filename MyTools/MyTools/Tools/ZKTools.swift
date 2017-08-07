@@ -475,6 +475,12 @@ public extension UIDevice {
         }
     }
 }
+//extension UINavigationController {
+//    open override var preferredStatusBarStyle: UIStatusBarStyle{
+//        return (self.topViewController?.preferredStatusBarStyle)!
+//    }
+//    
+//}
 func UIImage2CGimage(_ image: UIImage?) -> CGImage? {
     if let tryImage = image, let tryCIImage = CIImage(image: tryImage) {
         return CIContext().createCGImage(tryCIImage, from: tryCIImage.extent)
