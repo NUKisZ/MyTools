@@ -144,6 +144,9 @@
 		0B5195D91ECEF6EC007AF6F3 /* LBXScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5195D21ECEF6EC007AF6F3 /* LBXScanViewController.swift */; };
 		0B5195DA1ECEF6EC007AF6F3 /* LBXScanViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5195D31ECEF6EC007AF6F3 /* LBXScanViewStyle.swift */; };
 		0B5195DB1ECEF6EC007AF6F3 /* LBXScanWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5195D41ECEF6EC007AF6F3 /* LBXScanWrapper.swift */; };
+		0B5243271F39AAB700A91568 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5243261F39AAB600A91568 /* UIView+Shake.swift */; };
+		0B5243291F39AAE500A91568 /* 说明.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0B5243281F39AAE500A91568 /* 说明.rtf */; };
+		0B52432B1F39AB3F00A91568 /* ViewShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B52432A1F39AB3F00A91568 /* ViewShakeViewController.swift */; };
 		0B557AF31F2862000065A199 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B557AF21F2862000065A199 /* YouTubeViewController.swift */; };
 		0B5A4B0C1EC2A40500C05501 /* LGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4AF61EC2A40500C05501 /* LGAlertView.m */; };
 		0B5A4B0D1EC2A40500C05501 /* LGAlertViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4AF81EC2A40500C05501 /* LGAlertViewButton.m */; };
@@ -503,6 +506,9 @@
 		0B5195D21ECEF6EC007AF6F3 /* LBXScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewController.swift; sourceTree = "<group>"; };
 		0B5195D31ECEF6EC007AF6F3 /* LBXScanViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanViewStyle.swift; sourceTree = "<group>"; };
 		0B5195D41ECEF6EC007AF6F3 /* LBXScanWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBXScanWrapper.swift; sourceTree = "<group>"; };
+		0B5243261F39AAB600A91568 /* UIView+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
+		0B5243281F39AAE500A91568 /* 说明.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "说明.rtf"; sourceTree = "<group>"; };
+		0B52432A1F39AB3F00A91568 /* ViewShakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewShakeViewController.swift; sourceTree = "<group>"; };
 		0B557AF21F2862000065A199 /* YouTubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
 		0B5A4AF51EC2A40500C05501 /* LGAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertView.h; sourceTree = "<group>"; };
 		0B5A4AF61EC2A40500C05501 /* LGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertView.m; sourceTree = "<group>"; };
@@ -975,6 +981,7 @@
 				0B557AF21F2862000065A199 /* YouTubeViewController.swift */,
 				0B5FEEC31F2974DD0051B661 /* MOBPlatformViewController.swift */,
 				0BB4CFAC1F3814B400699C49 /* PingViewController.swift */,
+				0B52432A1F39AB3F00A91568 /* ViewShakeViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1168,6 +1175,15 @@
 				0B5195D41ECEF6EC007AF6F3 /* LBXScanWrapper.swift */,
 			);
 			path = SwiftScan;
+			sourceTree = "<group>";
+		};
+		0B5243251F39AAB600A91568 /* ViewShake */ = {
+			isa = PBXGroup;
+			children = (
+				0B5243261F39AAB600A91568 /* UIView+Shake.swift */,
+				0B5243281F39AAE500A91568 /* 说明.rtf */,
+			);
+			path = ViewShake;
 			sourceTree = "<group>";
 		};
 		0B5A4AF41EC2A40500C05501 /* LGAlertView */ = {
@@ -1734,6 +1750,7 @@
 		0B79C38C1E83907D00CF92B2 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				0B5243251F39AAB600A91568 /* ViewShake */,
 				0B60C3211F18533D0066AE4C /* ScratchCard */,
 				0B6339AC1F162ADB0020C907 /* PhoneField.swift */,
 				0B617A351ED297D8000C2C66 /* SliderGalleryController.swift */,
@@ -1921,6 +1938,7 @@
 				0B5F45B21EC015FC0042D19E /* MJRefresh.bundle in Resources */,
 				0B5FEEC21F2973E80051B661 /* videoIcon@2x.png in Resources */,
 				0B60C3431F185C6B0066AE4C /* php.png in Resources */,
+				0B5243291F39AAE500A91568 /* 说明.rtf in Resources */,
 				0B5C15971F273E0900446358 /* TwitterShareExtensionUIResources.bundle in Resources */,
 				0B6F04931EB84812005E8FBD /* DetailViewController.xib in Resources */,
 				0B6F04C61EB84812005E8FBD /* GroupListCell.xib in Resources */,
@@ -2213,6 +2231,7 @@
 				0B6F04F71EB85085005E8FBD /* ImageCache.swift in Sources */,
 				0B617A361ED297D8000C2C66 /* SliderGalleryController.swift in Sources */,
 				0B5A4B1A1EC2D3B700C05501 /* FirstViewControllerCell.swift in Sources */,
+				0B52432B1F39AB3F00A91568 /* ViewShakeViewController.swift in Sources */,
 				0B38579B1EC4372900C0126C /* MultipartFormData.swift in Sources */,
 				0B5F45AA1EC015FC0042D19E /* MJRefreshAutoNormalFooter.m in Sources */,
 				0B1C46631EBAF684009B7BDD /* UIAlertControllerExtensions.swift in Sources */,
@@ -2233,6 +2252,7 @@
 				0B3857A41EC4372900C0126C /* SessionDelegate.swift in Sources */,
 				0B617A3C1ED298CA000C2C66 /* ImageHelper.swift in Sources */,
 				0B6F04F81EB85085005E8FBD /* ImageDownloader.swift in Sources */,
+				0B5243271F39AAB700A91568 /* UIView+Shake.swift in Sources */,
 				0B6F04F91EB85085005E8FBD /* ImagePrefetcher.swift in Sources */,
 				0B1C464E1EBAF684009B7BDD /* BlockTap.swift in Sources */,
 				0B6F04F21EB85085005E8FBD /* AnimatedImageView.swift in Sources */,

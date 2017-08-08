@@ -26,7 +26,7 @@ class MOBPlatformViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        createTableView(frame: CGRect(x: 0, y: 64, width: kScreenWidth, height: kScreenHeight-64-49), style: .grouped, separatorStyle: .none)
+        createTableView(frame: CGRect(x: 0, y: 64, width: kScreenWidth, height: kScreenHeight-64), style: .grouped, separatorStyle: .none)
         automaticallyAdjustsScrollViewInsets = false
     }
 
@@ -44,9 +44,7 @@ class MOBPlatformViewController: BaseViewController {
         }
         isShare = true
         if parameters.count == 0 {
-            
-            let alertView = UIAlertView(title: "", message: "请先设置分享参数", delegate: nil, cancelButtonTitle: "取消", otherButtonTitles: "确定")
-            alertView.show()
+            ZKTools.alertViewCtroller(vc: self, title: nil, message: "请先设置分享参数", cancelActionTitle: "取消", sureActionTitle: "确定", action: nil)
             return
         }
         ShareSDK.share(platformType, parameters: parameters) { (state, userData, contentEntity, error) in
@@ -75,9 +73,8 @@ class MOBPlatformViewController: BaseViewController {
             default:
                 break
             }
+            ZKTools.alertViewCtroller(vc: self, title: titel, message: typeStr, cancelActionTitle: nil, sureActionTitle: "确定", action: nil)
             
-            let alertView = UIAlertView(title: titel, message: typeStr, delegate: nil, cancelButtonTitle: "确定", otherButtonTitles: "其他")
-            alertView.show()
         }
         
     }
@@ -87,18 +84,16 @@ class MOBPlatformViewController: BaseViewController {
             switch state{
                 case .success:
                     titel = "授权成功"
-                    print(user?.rawData)
-                    let alertView = UIAlertView(title: titel, message: "", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "确定")
-                    alertView.show()
+                    print(user?.rawData as Any)
+                    ZKTools.alertViewCtroller(vc: self, title: titel, message: "", cancelActionTitle: nil, sureActionTitle: "确定", action: nil)
+                
             case .fail:
                 titel = "授权失败"
-                print("error:\(error)")
-                let alertView = UIAlertView(title: titel, message: "", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "确定")
-                alertView.show()
+                print("error:\(String(describing: error))")
+                ZKTools.alertViewCtroller(vc: self, title: titel, message: "", cancelActionTitle: nil, sureActionTitle: "确定", action: nil)
             case .cancel:
                 titel = "取消授权"
-                let alertView = UIAlertView(title: titel, message: "", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "确定")
-                alertView.show()
+                ZKTools.alertViewCtroller(vc: self, title: titel, message: "", cancelActionTitle: nil, sureActionTitle: "确定", action: nil)
             default:
                 break
                 
@@ -112,8 +107,7 @@ class MOBPlatformViewController: BaseViewController {
         }else{
             titel = "未安装"
         }
-        let alertView = UIAlertView(title: titel, message: "", delegate: nil, cancelButtonTitle: nil, otherButtonTitles: "确定")
-        alertView.show()
+        ZKTools.alertViewCtroller(vc: self, title: titel, message: "", cancelActionTitle: nil, sureActionTitle: "确定", action: nil)
     }
 
     fileprivate func funcWithSelectorName(selectorName:String){
@@ -180,9 +174,8 @@ extension MOBPlatformViewController:UITableViewDelegate,UITableViewDataSource{
         case 0:
             if indexPath.row<authSelectorNameArray.count{
                 if ShareSDK.hasAuthorized(platformType){
-                    let alertView = UIAlertView(title: "是否取消授权", message: "", delegate: nil, cancelButtonTitle: "暂不", otherButtonTitles: "确认")
-                    alertView.tag = 1000
-                    alertView.show()
+                    ZKTools.alertViewCtroller(vc: self, title: "是否取消授权", message: "", cancelActionTitle: "暂不", sureActionTitle: "确定", action: nil)
+                    
                 }else{
                     let selectorName = authSelectorNameArray[indexPath.row] as! String
                     funcWithSelectorName(selectorName: selectorName)

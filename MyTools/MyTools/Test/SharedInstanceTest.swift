@@ -7,13 +7,13 @@
 //
 
 import UIKit
-
-class SharedInstanceTest: NSObject {
+//final 禁止这个类被继承.
+public final class SharedInstanceTest: NSObject {
     var i:Int?
     private override init() {
         super.init()
     }
-    static let sharedInstance = SharedInstanceTest()
+    public static let sharedInstance = SharedInstanceTest()
     class func message(){
         print("单例测试")
     }

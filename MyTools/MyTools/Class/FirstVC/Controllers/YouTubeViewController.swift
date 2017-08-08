@@ -107,7 +107,7 @@ class YouTubeViewController: MOBPlatformViewController {
         let alertVC = UIAlertController(title: "分享", message: nil, preferredStyle: .actionSheet)
         
         let youtubeAction = UIAlertAction(title: "YouTube", style: .default) {
-            [weak self]
+            //[weak self]
             (action) in
             
             

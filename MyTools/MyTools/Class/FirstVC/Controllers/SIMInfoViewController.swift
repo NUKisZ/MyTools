@@ -70,7 +70,11 @@ extension SIMInfoViewController{
             cell?.detailTextLabel?.text = carrier?.isoCountryCode
         case 4:
             cell?.textLabel?.text = "allowsVOIP"
-            cell?.detailTextLabel?.text = (carrier?.allowsVOIP)! ? "是":"否"
+            if carrier?.allowsVOIP == true {
+                cell?.detailTextLabel?.text = "是"
+            }else{
+                cell?.detailTextLabel?.text = "否"
+            }
         default:
             break
         }
