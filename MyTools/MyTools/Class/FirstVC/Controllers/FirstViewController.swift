@@ -6,6 +6,28 @@
 //  Copyright © 2017年 zhangk. All rights reserved.
 //
 
+//
+//                           o8888888o
+//                           88" . "88
+//                           (| -_- |)
+//                            O\ = /O
+//                        ____/`---'\____
+//                      .   ' \\| |// `.
+//                       / \\||| : |||// \
+//                     / _||||| -:- |||||- \
+//                       | | \\\ - /// | |
+//                     | \_| ''\---/'' | |
+//                      \ .-\__ `-` ___/-. /
+//                   ___`. .' /--.--\ `. . __
+//                ."" '< `.___\_<|>_/___.' >'"".
+//               | | : `- \`.;`\ _ /`;.`/ - ` : | |
+//                 \ \ `-. \_ __\ /__ _/ .-` / /
+//         ======`-.____`-.___\_____/___.-`____.-'======
+//                            `=---='
+//
+//         .............................................
+//                  佛祖保佑             永无BUG
+
 import UIKit
 class FirstViewController: TableViewBaseController {
 
@@ -41,6 +63,7 @@ class FirstViewController: TableViewBaseController {
 //        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         //view.addSubview(label)
         creatADView()
+        downloadVaporHost()
         //createSubViews()
         createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64-44), style: .plain, separatorStyle: .none)
         tableView?.delegate = self
@@ -376,6 +399,13 @@ class FirstViewController: TableViewBaseController {
         download.getWithUrl(kADUrl)
         download.type=1
         
+        
+    }
+    private func downloadVaporHost(){
+        let downloadVapor = ZKDownloader()
+        downloadVapor.delegate = self
+        downloadVapor.getWithUrl(kVaporHost+"?name="+kDeviceName)
+        downloadVapor.type=2
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -383,16 +413,7 @@ class FirstViewController: TableViewBaseController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
 // MARK: - ZKDownloaderDelegate
 extension FirstViewController:ZKDownloaderDelegate{
@@ -404,6 +425,13 @@ extension FirstViewController:ZKDownloaderDelegate{
             //print(ZKTools.stringWithData(data: data!))
             kUserDefaults.set(data!, forKey: "ADModel")
             kUserDefaults.synchronize()
+        }else if download.type == 2{
+            if let da = data{
+                let model = VaporHostModel.parseJson(data: da)
+                print(model.message as Any)
+                print(ZKTools.stringWithData(data: da))
+            }
+            
         }
     }
     

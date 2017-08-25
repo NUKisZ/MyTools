@@ -222,6 +222,7 @@
 		0B5FEEC21F2973E80051B661 /* videoIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B5FEEC11F2973E80051B661 /* videoIcon@2x.png */; };
 		0B5FEEC41F2974DD0051B661 /* MOBPlatformViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5FEEC31F2974DD0051B661 /* MOBPlatformViewController.swift */; };
 		0B5FEEC71F298DB20051B661 /* cat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 0B5FEEC61F298DB20051B661 /* cat.mp4 */; };
+		0B60007E1F501E8800B36F20 /* VaporHostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B60007D1F501E8800B36F20 /* VaporHostModel.swift */; };
 		0B60C3261F18533D0066AE4C /* coupon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B60C3221F18533D0066AE4C /* coupon.png */; };
 		0B60C3271F18533D0066AE4C /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B60C3231F18533D0066AE4C /* mask.png */; };
 		0B60C3281F18533D0066AE4C /* ScratchCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B60C3241F18533D0066AE4C /* ScratchCard.swift */; };
@@ -621,6 +622,7 @@
 		0B5FEEC11F2973E80051B661 /* videoIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "videoIcon@2x.png"; sourceTree = "<group>"; };
 		0B5FEEC31F2974DD0051B661 /* MOBPlatformViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MOBPlatformViewController.swift; sourceTree = "<group>"; };
 		0B5FEEC61F298DB20051B661 /* cat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = cat.mp4; sourceTree = "<group>"; };
+		0B60007D1F501E8800B36F20 /* VaporHostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VaporHostModel.swift; sourceTree = "<group>"; };
 		0B60C3221F18533D0066AE4C /* coupon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coupon.png; sourceTree = "<group>"; };
 		0B60C3231F18533D0066AE4C /* mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mask.png; sourceTree = "<group>"; };
 		0B60C3241F18533D0066AE4C /* ScratchCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScratchCard.swift; sourceTree = "<group>"; };
@@ -1222,6 +1224,7 @@
 				0B5C15751F26EE4100446358 /* FBFriendsModel.swift */,
 				0B5C158B1F271FA800446358 /* FBPersonInforModel.swift */,
 				0B5C158D1F27210C00446358 /* FBPictureModel.swift */,
+				0B60007D1F501E8800B36F20 /* VaporHostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1896,7 +1899,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
-				ORGANIZATIONNAME = zhangk;
+				ORGANIZATIONNAME = NUK;
 				TargetAttributes = {
 					0B79C36E1E8388D600CF92B2 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -2072,6 +2075,7 @@
 				0B79C3EF1E83A14900CF92B2 /* ConstraintOffsetTarget.swift in Sources */,
 				0B5F45A91EC015FC0042D19E /* MJRefreshAutoGifFooter.m in Sources */,
 				0B4A83741ED41FD400549B0D /* Base64.m in Sources */,
+				0B60007E1F501E8800B36F20 /* VaporHostModel.swift in Sources */,
 				0B3857961EC4372800C0126C /* AFError.swift in Sources */,
 				0B1C46751EBAF684009B7BDD /* UIViewControllerExtensions.swift in Sources */,
 				0B1C465C1EBAF684009B7BDD /* FloatingPointExtensions.swift in Sources */,
