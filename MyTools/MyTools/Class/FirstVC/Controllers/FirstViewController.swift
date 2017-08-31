@@ -86,6 +86,8 @@ class FirstViewController: TableViewBaseController {
         let dese = des.encrypt()
         print(dese as Any)
         
+        changeNavBackGroundColor(leftColor: "efaf0f", rightColor: "acdd00")
+        
         
     }
     
@@ -385,6 +387,7 @@ class FirstViewController: TableViewBaseController {
             (adUrl) in
             let adVC = ADViewController()
             adVC.adUrl = adUrl
+            adVC.hidesBottomBarWhenPushed = true
             self?.navigationController?.pushViewController(adVC, animated: true)
         }
         adView.showTime = 5
@@ -457,6 +460,12 @@ extension FirstViewController{
         cell?.textLabel?.text = dataArray[indexPath.row] as? String
         
         return cell!
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        cell.layer.transform = CATransform3DMakeScale(0.1, 0.1, 1)
+        UIView.animate(withDuration: 0.25) { 
+            cell.layer.transform = CATransform3DMakeScale(1, 1, 1)
+        }
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //取消选中状态
