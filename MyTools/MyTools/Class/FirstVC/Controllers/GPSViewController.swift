@@ -55,6 +55,7 @@ class GPSViewController: BaseViewController {
         }
     }
     
+    
     private func initView(){
         let width = kScreenWidth-20
         longitudeLabel=UILabel()
@@ -214,7 +215,7 @@ extension GPSViewController:CLLocationManagerDelegate{
         courseLabel.text = "方向：\(currLocation.course)"
         //获取速度
         let speed = currLocation.speed * 3600 / 1000
-        speedLabel.text = "速度：\(currLocation.speed)m/s,\(speed)km/h"
+        speedLabel.text = "速度：\(String(format:"%.2f",currLocation.speed))m/s,\(String(format:"%.2f",speed))km/h"
         self.reverseActon(latitude: currLocation.coordinate.latitude, longitude: currLocation.coordinate.longitude)
     }
 }

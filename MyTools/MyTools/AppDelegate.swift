@@ -13,11 +13,14 @@ public let kNetworkReachabilityChangedNotification = "kNetworkReachabilityChange
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    //English is ok 
+    //中文也是好的.
+    //This is Xcode 8.3.2
     var window: UIWindow?
     var performanceView: GDPerformanceMonitor?
     var parsedUrl:BFURL?
     var refererAppLink = NSDictionary()
-    var service:PPSPingServices?
+//    var service:PPSPingServices?
 //    private var reachability:Reachability?
     private var manager:NetworkReachabilityManager?
 
@@ -225,6 +228,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func ppsPing(){
+        /*
         service = PPSPingServices.service(withAddress: "www.uilucky.com")
         service?.start(callbackHandler: { (summary, dic) in
             if let sum = summary{
@@ -253,7 +257,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             
-        })
+        })*/
     }
     func reachaBility(){
         let reachaBility = Reachability(hostName: "https://www.baidu.com")

@@ -19,7 +19,7 @@
 #import "WMPageController.h"
 //#import "UINavigationController+FDFullscreenPopGesture.h"
 
-#import "PPSPing.h"
+//#import "PPSPing.h"
 
 #import <ShareSDK/ShareSDK.h>
 #import <ShareSDK/SSDKHttpServiceModel.h>

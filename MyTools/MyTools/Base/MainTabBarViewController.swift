@@ -8,6 +8,7 @@
 
 import UIKit
 class MainTabBarViewController: UITabBarController {
+    private var beforeTag = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,7 +16,27 @@ class MainTabBarViewController: UITabBarController {
         // Do any additional setup after loading the view.
         createViewControllers()
     }
+    override func loadView() {
+        super.loadView()
+        var i = 0
+        for tabbarItemButton in tabBar.subviews {
+            if (tabbarItemButton.isKind(of: NSClassFromString("UITabBarButton")!)){
+                tabbarItemButton.tag = i;
+                i = i + 1
+                let btn = tabbarItemButton as! UIButton
+                btn.addTarget(self, action: #selector(tabbarButtonClick(tabbarBtn:)), for: .touchUpInside)
+                
+            }
+        }
+    }
+    func tabbarButtonClick(tabbarBtn:UIButton){
+        
+    }
     private func createViewControllers() {
+        
+        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName:UIFont.systemFont(ofSize: 11),NSForegroundColorAttributeName:UIColor.colorWithRGBA(red: 44, green: 185, blue: 176, alpha: 1.0)], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSFontAttributeName:UIFont.systemFont(ofSize: 11),NSForegroundColorAttributeName:UIColor.colorWithRGBA(red: 44, green: 185, blue: 176, alpha: 1.0)], for: .selected)
+        
         //标题
         let titleArray = ["一","二","三"]
         

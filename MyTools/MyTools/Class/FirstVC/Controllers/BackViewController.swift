@@ -28,6 +28,7 @@ class BackViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
         automaticallyAdjustsScrollViewInsets = false
+        
         let btn = UIButton(type: .system)
         btn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
         view.addSubview(btn)
@@ -102,7 +103,6 @@ class BackViewController: BaseViewController {
         attLabel.numberOfLines = 0
         attLabel.attributedText = attrStr
     }
-    
     @objc private func saleTickets(thread:Thread){
         while true {
             lock.lock()

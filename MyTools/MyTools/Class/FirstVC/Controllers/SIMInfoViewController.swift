@@ -9,7 +9,7 @@
 import UIKit
 import CoreTelephony
 class SIMInfoViewController: TableViewBaseController {
-
+    private var timer:Timer!
     var simInfo:CTTelephonyNetworkInfo!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +21,18 @@ class SIMInfoViewController: TableViewBaseController {
         }
         automaticallyAdjustsScrollViewInsets = false
         createTableView(frame: CGRect(x: 0, y: 64, w: kScreenWidth, h: kScreenHeight-64), style: .plain, separatorStyle: .singleLine)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(tickDown), userInfo: nil, repeats: true)
+        
+        
     }
-
+    override func viewDidDisappear(_ animated: Bool) {
+        timer.invalidate()
+        timer = nil
+    }
+    
+    @objc private func tickDown(){
+        print("执行了打印")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

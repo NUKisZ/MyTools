@@ -22,6 +22,16 @@ class ScratchViewController: BaseViewController {
         //设置代理
         scratchCard.delegate = self
         self.view.addSubview(scratchCard)
+        let btn = UIButton(type: .system)
+        btn.frame = CGRect(x: 50, y: 300, w: 50, h: 50)
+        btn.setTitle("下一面", for: .normal)
+        btn.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
+        view.addSubview(btn)
+    }
+    func nextAction(){
+        let vc = GPSViewController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     

@@ -14,7 +14,7 @@ class PingViewController: BaseViewController {
     var pingLabel:UILabel!
     var pingHost:UILabel!
     var btn:UIButton!
-    var server:PPSPingServices!
+    //var server:PPSPingServices!
     var isPing:Bool = true
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +43,7 @@ class PingViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     func pingClick(){
+        /*
         if(isPing){
             isPing = false
             btn.setTitle("cancel", for: .normal)
@@ -63,7 +64,7 @@ class PingViewController: BaseViewController {
             isPing = true
             btn.setTitle("ping", for: .normal)
             server.cancel()
-        }
+        }*/
     }
 
     override func didReceiveMemoryWarning() {
