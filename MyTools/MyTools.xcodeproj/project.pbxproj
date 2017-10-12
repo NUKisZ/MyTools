@@ -147,6 +147,9 @@
 		0B5243271F39AAB700A91568 /* UIView+Shake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5243261F39AAB600A91568 /* UIView+Shake.swift */; };
 		0B5243291F39AAE500A91568 /* 说明.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0B5243281F39AAE500A91568 /* 说明.rtf */; };
 		0B52432B1F39AB3F00A91568 /* ViewShakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B52432A1F39AB3F00A91568 /* ViewShakeViewController.swift */; };
+		0B5354FA1F8F3C4F005E8787 /* PPSPing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5354F51F8F3C4E005E8787 /* PPSPing.m */; };
+		0B5354FB1F8F3C4F005E8787 /* PPSPingServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5354F71F8F3C4E005E8787 /* PPSPingServices.m */; };
+		0B5354FC1F8F3C4F005E8787 /* PPSPingSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5354F91F8F3C4E005E8787 /* PPSPingSummary.m */; };
 		0B557AF31F2862000065A199 /* YouTubeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B557AF21F2862000065A199 /* YouTubeViewController.swift */; };
 		0B5A4B0C1EC2A40500C05501 /* LGAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4AF61EC2A40500C05501 /* LGAlertView.m */; };
 		0B5A4B0D1EC2A40500C05501 /* LGAlertViewButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B5A4AF81EC2A40500C05501 /* LGAlertViewButton.m */; };
@@ -507,6 +510,13 @@
 		0B5243261F39AAB600A91568 /* UIView+Shake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Shake.swift"; sourceTree = "<group>"; };
 		0B5243281F39AAE500A91568 /* 说明.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "说明.rtf"; sourceTree = "<group>"; };
 		0B52432A1F39AB3F00A91568 /* ViewShakeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewShakeViewController.swift; sourceTree = "<group>"; };
+		0B5354F31F8F3C4E005E8787 /* PPSICMPHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSICMPHeader.h; sourceTree = "<group>"; };
+		0B5354F41F8F3C4E005E8787 /* PPSPing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSPing.h; sourceTree = "<group>"; };
+		0B5354F51F8F3C4E005E8787 /* PPSPing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSPing.m; sourceTree = "<group>"; };
+		0B5354F61F8F3C4E005E8787 /* PPSPingServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSPingServices.h; sourceTree = "<group>"; };
+		0B5354F71F8F3C4E005E8787 /* PPSPingServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSPingServices.m; sourceTree = "<group>"; };
+		0B5354F81F8F3C4E005E8787 /* PPSPingSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPSPingSummary.h; sourceTree = "<group>"; };
+		0B5354F91F8F3C4E005E8787 /* PPSPingSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPSPingSummary.m; sourceTree = "<group>"; };
 		0B557AF21F2862000065A199 /* YouTubeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YouTubeViewController.swift; sourceTree = "<group>"; };
 		0B5A4AF51EC2A40500C05501 /* LGAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGAlertView.h; sourceTree = "<group>"; };
 		0B5A4AF61EC2A40500C05501 /* LGAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGAlertView.m; sourceTree = "<group>"; };
@@ -1178,6 +1188,20 @@
 			path = ViewShake;
 			sourceTree = "<group>";
 		};
+		0B5354F21F8F3C4E005E8787 /* PPSPing */ = {
+			isa = PBXGroup;
+			children = (
+				0B5354F31F8F3C4E005E8787 /* PPSICMPHeader.h */,
+				0B5354F41F8F3C4E005E8787 /* PPSPing.h */,
+				0B5354F51F8F3C4E005E8787 /* PPSPing.m */,
+				0B5354F61F8F3C4E005E8787 /* PPSPingServices.h */,
+				0B5354F71F8F3C4E005E8787 /* PPSPingServices.m */,
+				0B5354F81F8F3C4E005E8787 /* PPSPingSummary.h */,
+				0B5354F91F8F3C4E005E8787 /* PPSPingSummary.m */,
+			);
+			path = PPSPing;
+			sourceTree = "<group>";
+		};
 		0B5A4AF41EC2A40500C05501 /* LGAlertView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1698,6 +1722,7 @@
 		0B79C3841E83907D00CF92B2 /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				0B5354F21F8F3C4E005E8787 /* PPSPing */,
 				0B5C15771F26F3E100446358 /* SwiftyJSON */,
 				0B4A5E851F21F5C70023F525 /* MBProgressHUD */,
 				0B5DAA181F20542900DC9E4B /* WMPageController */,
@@ -2042,6 +2067,7 @@
 				0B5A4B181EC2D03100C05501 /* TableViewBaseController.swift in Sources */,
 				0B5A4B101EC2A40500C05501 /* LGAlertViewController.m in Sources */,
 				0B5DAA271F20542900DC9E4B /* WMScrollView.m in Sources */,
+				0B5354FC1F8F3C4F005E8787 /* PPSPingSummary.m in Sources */,
 				0B47944B1EC58F6C003437D0 /* PhoneCodeViewController.swift in Sources */,
 				0B6F05051EB85085005E8FBD /* UIButton+Kingfisher.swift in Sources */,
 				0B79C3F81E83A14900CF92B2 /* LayoutConstraint.swift in Sources */,
@@ -2168,11 +2194,13 @@
 				0B60C32D1F1853AE0066AE4C /* ScratchViewController.swift in Sources */,
 				0B4A83751ED41FD400549B0D /* NSString+DES.m in Sources */,
 				0B79C3E91E83A14900CF92B2 /* ConstraintMakerEditable.swift in Sources */,
+				0B5354FB1F8F3C4F005E8787 /* PPSPingServices.m in Sources */,
 				0B79C3E61E83A14900CF92B2 /* ConstraintLayoutSupport.swift in Sources */,
 				0B79C3971E83907D00CF92B2 /* ZKTools.swift in Sources */,
 				0B5F45A41EC015FC0042D19E /* MJRefreshAutoFooter.m in Sources */,
 				0B5195A81ECEEE2D007AF6F3 /* CGSize+.swift in Sources */,
 				0B6F04FC1EB85085005E8FBD /* ImageView+Kingfisher.swift in Sources */,
+				0B5354FA1F8F3C4F005E8787 /* PPSPing.m in Sources */,
 				0B5F45AD1EC015FC0042D19E /* MJRefreshBackNormalFooter.m in Sources */,
 				0B1C46741EBAF684009B7BDD /* UIUserInterfaceSizeClassExtensions.swift in Sources */,
 				0B5A4B111EC2A40500C05501 /* LGAlertViewHelper.m in Sources */,

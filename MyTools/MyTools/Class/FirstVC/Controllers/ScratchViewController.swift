@@ -29,6 +29,7 @@ class ScratchViewController: BaseViewController {
         view.addSubview(btn)
     }
     func nextAction(){
+        
         let vc = GPSViewController()
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc, animated: true)

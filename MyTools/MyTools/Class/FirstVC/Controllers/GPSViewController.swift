@@ -29,6 +29,7 @@ class GPSViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         initView()
         setupView()
         //设置定位服务管理器代理

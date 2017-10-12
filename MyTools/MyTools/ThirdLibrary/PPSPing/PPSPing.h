@@ -10,7 +10,7 @@
 #import <Foundation/Foundation.h>
 
 #import "PPSPingSummary.h"
-#import "PPSPingServices.h"
+
 @class PPSPingSummary;
 @protocol PPSPingDelegate;
 
