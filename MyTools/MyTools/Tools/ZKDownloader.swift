@@ -23,8 +23,8 @@ class ZKDownloader: NSObject {
     
     func getWithUrl(_ urlString:String){
         let session = URLSession.shared
-        let url = URL(string: urlString)
-        let request = URLRequest(url: url!)
+        guard let url = URL(string: urlString) else {return}
+        let request = URLRequest(url: url)
         let task = session.dataTask(with: request) { (data, response, error) in
             if error != nil{
                 self.delegate?.downloader(self, didFailWithError: error! as NSError)
